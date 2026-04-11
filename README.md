@@ -12,10 +12,9 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 
 ## Professores responsáveis
 
+* Cleiton silva tavares
+* Diego Augusto de Faria barros
 * Rommel Vieira Carneiro
-* Nome completo do professor 2
-
-
 
 ## Instruções de utilização 
 
