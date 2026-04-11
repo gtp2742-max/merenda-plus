@@ -3,12 +3,13 @@
 Informações básicas do projeto.
 
 * **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7620100-ti-1-grupo-4-merenda.git
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [André Luiz Pinheiro Lopes](https://github.com/fulano)
+  * [Davi Lavalle Carneiro](https://github.com/davicarneiro1558195-sys)
+  * [Gabriel Tavares Pandino](https://github.com/cicrano)
+  * [Gustavo Alves Costa Sousa](https://github.com/cicrano)
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -28,17 +29,7 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Falta de organização das merendas em escolas públicas
 
 ## Objetivos
 
@@ -68,16 +59,9 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+Escolas públicas.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva o mercado para o qual a solução está sendo desenvolvida, detalhando um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc. Adicione informações sobre o público-alvo por meio de uma descrição textual ou por meio do mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+
 
 # Product Discovery
 
@@ -85,9 +69,9 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 **✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nessa etapa, vamos trabalhar com a metdologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
+![Matriz csd ](images/Matriz_csd.jpg)
+![Mapa stakeholder ](images/Mapa_stakeholder.jpg)
+
 >
 > * **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
 > * **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema
@@ -98,9 +82,9 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
 
-![Exemplo de proposta de valor](images/exemplo-persona.png)
+![Persona 1](images/Persona1.jpg)
+![Persona 2](images/Persona2.jpg)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -123,17 +107,49 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 | EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
 | --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
+| Diretora   | Como diretora escolar, quero visualizar um painel com informações da merenda,
+Como diretora escolar, quero acessar relatórios de consumo,
+Como diretora escolar, quero acessar relatórios de consumo, 
+Como diretora escolar, quero acompanhar a distribuição da merenda, 
+Como diretora escolar, quero controlar o estoque de alimentos, 
+Como diretora escolar, quero registrar digitalmente a movimentação dos alimentos, 
+Como diretora escolar, quero receber alertas sobre problemas no estoque ou consumo, 
+ |  para tomar decisões mais rápidas e seguras.
+Critérios de aceitação: o sistema deve exibir dados atualizados, apresentar gráficos simples e permitir fácil compreensão das informações.
+ para analisar o uso dos alimentos ao longo do tempo.
+Critérios de aceitação: o sistema deve gerar relatórios automáticos, permitir visualização por período e apresentar dados organizados.     
+para analisar o uso dos alimentos ao longo do tempo.
+Critérios de aceitação: o sistema deve gerar relatórios automáticos, permitir visualização por período e apresentar dados organizados.   
+para garantir que todos os alunos sejam atendidos corretamente.
+Critérios de aceitação: o sistema deve permitir registro da distribuição e apresentar controle por quantidade e frequência.
+para evitar desperdícios e falta de produtos.
+Critérios de aceitação: o sistema deve registrar entradas e saídas, atualizar o estoque automaticamente e alertar quando os itens estiverem acabando.
+para reduzir erros e dependência de anotações manuais.
+Critérios de aceitação: o sistema deve permitir cadastro fácil, armazenar os dados com segurança e manter histórico das movimentações.
+para agir rapidamente quando necessário.
+Critérios de aceitação: o sistema deve enviar notificações em casos de baixa quantidade, inconsistências ou possíveis desperdícios.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão das necessidades de cada persona. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+|
+| Mereideira         | Como merendeira, quero visualizar o cardápio do dia, 
+Como merendeira, quero registrar o preparo das refeições, 
+Como merendeira, quero informar quando um alimento estiver em falta, 
+Como merendeira, quero consultar o estoque disponível,
+Como merendeira, quero registrar o uso dos alimentos, 
+Como merendeira, quero receber orientações sobre o preparo das refeições, 
+      | para preparar corretamente as refeições planejadas.
+Critérios de aceitação: o sistema deve exibir o cardápio diário de forma clara, com os alimentos e quantidades necessárias.
+para manter controle do que foi produzido.
+Critérios de aceitação: o sistema deve permitir registrar o que foi preparado, com data e quantidade.
+para evitar problemas no preparo das refeições.
+Critérios de aceitação: o sistema deve permitir sinalizar falta de itens e enviar essa informação para a gestão.
+ para saber quais alimentos posso utilizar.
+Critérios de aceitação: o sistema deve mostrar os itens disponíveis, com quantidades atualizadas.
+para manter o estoque sempre atualizado.
+Critérios de aceitação: o sistema deve descontar automaticamente os itens utilizados e atualizar o estoque em tempo real.
+para garantir qualidade e padrão na alimentação.
+Critérios de aceitação: o sistema deve disponibilizar instruções simples de preparo e acesso fácil às informações.
+ |
+
 
 ## Proposta de Valor
 
@@ -141,11 +157,10 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ##### Proposta de valor para Persona XPTO ⚠️ EXEMPLO ⚠️
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+![Proposta de valor Diretora](images/Proposta_de_Valor_Diretora.jpg)
+![Proposta de valor Mereideira](images/Proposta_de_Valor_Mereideira.jpg)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
+
 
 ## Projeto de Interface
 
