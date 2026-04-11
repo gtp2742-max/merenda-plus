@@ -105,50 +105,20 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Diretora   | Como diretora escolar, quero visualizar um painel com informações da merenda,
-Como diretora escolar, quero acessar relatórios de consumo,
-Como diretora escolar, quero acessar relatórios de consumo, 
-Como diretora escolar, quero acompanhar a distribuição da merenda, 
-Como diretora escolar, quero controlar o estoque de alimentos, 
-Como diretora escolar, quero registrar digitalmente a movimentação dos alimentos, 
-Como diretora escolar, quero receber alertas sobre problemas no estoque ou consumo, 
- |  para tomar decisões mais rápidas e seguras.
-Critérios de aceitação: o sistema deve exibir dados atualizados, apresentar gráficos simples e permitir fácil compreensão das informações.
- para analisar o uso dos alimentos ao longo do tempo.
-Critérios de aceitação: o sistema deve gerar relatórios automáticos, permitir visualização por período e apresentar dados organizados.     
-para analisar o uso dos alimentos ao longo do tempo.
-Critérios de aceitação: o sistema deve gerar relatórios automáticos, permitir visualização por período e apresentar dados organizados.   
-para garantir que todos os alunos sejam atendidos corretamente.
-Critérios de aceitação: o sistema deve permitir registro da distribuição e apresentar controle por quantidade e frequência.
-para evitar desperdícios e falta de produtos.
-Critérios de aceitação: o sistema deve registrar entradas e saídas, atualizar o estoque automaticamente e alertar quando os itens estiverem acabando.
-para reduzir erros e dependência de anotações manuais.
-Critérios de aceitação: o sistema deve permitir cadastro fácil, armazenar os dados com segurança e manter histórico das movimentações.
-para agir rapidamente quando necessário.
-Critérios de aceitação: o sistema deve enviar notificações em casos de baixa quantidade, inconsistências ou possíveis desperdícios.
-
-|
-| Mereideira         | Como merendeira, quero visualizar o cardápio do dia, 
-Como merendeira, quero registrar o preparo das refeições, 
-Como merendeira, quero informar quando um alimento estiver em falta, 
-Como merendeira, quero consultar o estoque disponível,
-Como merendeira, quero registrar o uso dos alimentos, 
-Como merendeira, quero receber orientações sobre o preparo das refeições, 
-      | para preparar corretamente as refeições planejadas.
-Critérios de aceitação: o sistema deve exibir o cardápio diário de forma clara, com os alimentos e quantidades necessárias.
-para manter controle do que foi produzido.
-Critérios de aceitação: o sistema deve permitir registrar o que foi preparado, com data e quantidade.
-para evitar problemas no preparo das refeições.
-Critérios de aceitação: o sistema deve permitir sinalizar falta de itens e enviar essa informação para a gestão.
- para saber quais alimentos posso utilizar.
-Critérios de aceitação: o sistema deve mostrar os itens disponíveis, com quantidades atualizadas.
-para manter o estoque sempre atualizado.
-Critérios de aceitação: o sistema deve descontar automaticamente os itens utilizados e atualizar o estoque em tempo real.
-para garantir qualidade e padrão na alimentação.
-Critérios de aceitação: o sistema deve disponibilizar instruções simples de preparo e acesso fácil às informações.
- |
+| EU COMO (PERSONA) | QUERO/PRECISO (FUNCIONALIDADE) | PARA (MOTIVO/VALOR) |
+|------------------|--------------------------------|---------------------|
+| Diretora | visualizar um painel com informações da merenda | tomar decisões mais rápidas e seguras |
+| Diretora | acessar relatórios de consumo | analisar o uso dos alimentos ao longo do tempo |
+| Diretora | acompanhar a distribuição da merenda | garantir que todos os alunos sejam atendidos corretamente |
+| Diretora | controlar o estoque de alimentos | evitar desperdícios e falta de produtos |
+| Diretora | registrar digitalmente a movimentação dos alimentos | reduzir erros e dependência de anotações manuais |
+| Diretora | receber alertas sobre problemas no estoque ou consumo | agir rapidamente quando necessário |
+| Merendeira | visualizar o cardápio do dia | preparar corretamente as refeições planejadas |
+| Merendeira | registrar o preparo das refeições | manter controle do que foi produzido |
+| Merendeira | informar quando um alimento estiver em falta | evitar problemas no preparo das refeições |
+| Merendeira | consultar o estoque disponível | saber quais alimentos posso utilizar |
+| Merendeira | registrar o uso dos alimentos | manter o estoque sempre atualizado |
+| Merendeira | receber orientações sobre o preparo das refeições | garantir qualidade e padrão na alimentação |
 
 
 ## Proposta de Valor
