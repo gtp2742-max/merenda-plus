@@ -9,6 +9,7 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 * Davi Lavalle Carneiro
 * Gabriel Tavares Pandino
 * Gustavo Alves Costa Sousa
+* Pedro Ferretti Martins Maia
 
 ## Professores responsáveis
 
