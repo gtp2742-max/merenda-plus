@@ -2,7 +2,7 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
+* **Projeto:** Projeto Merenda
 * **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7620100-ti-1-grupo-4-merenda.git
 * **Membros da equipe:**
 
