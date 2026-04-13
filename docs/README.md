@@ -10,7 +10,7 @@ Informações básicas do projeto.
   * [Davi Lavalle Carneiro](https://github.com/davicarneiro1558195-sys)
   * [Gabriel Tavares Pandino](https://github.com/cicrano)
   * [Gustavo Alves Costa Sousa](https://github.com/alvespcrl)
-  * [Pedro Ferretti Martins Maia](https://github.com/cicrano)
+  * [Pedro Ferretti Martins Maia](https://github.com/pedroferretti31)
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -129,7 +129,18 @@ Estes são os protótipos de telas do sistema.
 
 Descrição para a tela XPTO
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+![Wireframe login](images/Wireframe_login.PNG)
+![Wireframe home merendeira](images/Wireframe_home_merendeira.PNG)
+![Wireframe cardapio](images/Wireframe_cardapio.PNG)
+![Wireframe registrar preparo](images/Wireframe_registrar_preparo.PNG)
+![Wireframe vizualização do estoque](images/Wireframe_visualizacao_do_estoque.PNG)
+![Wireframe registrar consumo](images/Wireframe_registrar_consumo.PNG)
+![Wireframe reportar problema](images/Wireframe_reportar_problema.PNG)
+![Wireframe home diretora](images/Wireframe_home_diretora.PNG)
+![Wireframe relatorios](images/Wireframe_relatorios.PNG)
+![Wireframe estoque diretora](images/Wireframe_estoque_diretora.PNG)
+![Wireframe alertas](images/Wireframe_alertas.PNG)
+![Wireframe distribuição](images/Wireframe_distribuicao.PNG)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
