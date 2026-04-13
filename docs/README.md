@@ -6,10 +6,11 @@ Informações básicas do projeto.
 * **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7620100-ti-1-grupo-4-merenda.git
 * **Membros da equipe:**
 
-  * [André Luiz Pinheiro Lopes](https://github.com/fulano)
+  * [André Luiz Pinheiro Lopes](github.com/decoprodat)
   * [Davi Lavalle Carneiro](https://github.com/davicarneiro1558195-sys)
   * [Gabriel Tavares Pandino](https://github.com/cicrano)
-  * [Gustavo Alves Costa Sousa](https://github.com/cicrano)
+  * [Gustavo Alves Costa Sousa](github.com/alvespcrl)
+  * [Pedro Ferretti Martins Maia](https://github.com/cicrano)
 
 A documentação do projeto é estruturada da seguinte forma:
 
