@@ -38,23 +38,13 @@ Desenvolver um sistema de gestão de merenda escolar que permita o controle efic
 
 ## Justificativa
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A gestão da merenda escolar é um aspecto fundamental para o bom funcionamento das instituições de ensino, uma vez que está diretamente relacionada à alimentação dos estudantes e à qualidade do ambiente educacional. No entanto, muitas escolas ainda enfrentam dificuldades no controle de estoque, na organização da distribuição de alimentos e no monitoramento do consumo, o que pode resultar em desperdícios, falta de insumos e ineficiência na administração dos recursos.
+Diante desse cenário, torna-se relevante o desenvolvimento de um sistema que auxilie no gerenciamento da merenda escolar, proporcionando maior controle sobre os alimentos disponíveis, sua validade e sua distribuição. A proposta deste projeto justifica-se pela necessidade de otimizar processos internos, reduzir desperdícios e garantir maior eficiência na utilização dos recursos destinados à alimentação escolar.
+Além disso, o sistema pode beneficiar diretamente gestores, funcionários e alunos, ao contribuir para uma gestão mais organizada e transparente. Dessa forma, o projeto apresenta relevância prática e social, ao propor uma solução tecnológica capaz de melhorar a qualidade do serviço prestado e apoiar a tomada de decisões dentro das instituições de ensino.
 
 ## Público-Alvo
 
 Escolas públicas.
-
-
 
 # Product Discovery
 
