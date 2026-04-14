@@ -106,9 +106,6 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 Estes são os protótipos de telas do sistema.
 
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
-
-Descrição para a tela XPTO
 
 ![Wireframe login](images/Wireframe_login.PNG)
 ![Wireframe home merendeira](images/Wireframe_home_merendeira.PNG)
