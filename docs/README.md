@@ -50,7 +50,6 @@ Escolas públicas.
 
 ## Etapa de Entendimento
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
 
 ![Matriz csd ](images/Matriz_csd.jpg)
 ![Mapa stakeholder ](images/Mapa_stakeholder.jpg)
@@ -90,7 +89,6 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
 
 ##### Proposta de valor para Persona XPTO ⚠️ EXEMPLO ⚠️
 
@@ -107,7 +105,6 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
 
 ##### TELA XPTO ⚠️ EXEMPLO ⚠️
 
@@ -128,13 +125,11 @@ Descrição para a tela XPTO
 
 ### User Flow
 
-**✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
 
 ![Fluxo de telas](images/user-flows.jpg)
 
 ### Protótipo Interativo
 
-**✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
 
 ✅ [Protótipo Interativo (MarvelApp)](https://marvelapp.com/prototype/97ca7h6) 
 # Metodologia
