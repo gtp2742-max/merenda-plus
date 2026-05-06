@@ -1,9 +1,10 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Merenda PLus
 authors:
-  - family-names: 
-    given-names: 
+  - family-names: Alves Costa Sousa
+    given-names: Gustavo
+
   - family-names: 
     given-names: 
   - family-names: 
@@ -14,14 +15,21 @@ authors:
     given-names: 
   - family-names: 
     given-names:
+
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Silva Tavares
+    given-names: Cleiton
+
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Augusto de Faria barros
+    given-names: Diego
+
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vieira Carneiro
+    given-names: Rommel
 keywords:
   - 
   - 
