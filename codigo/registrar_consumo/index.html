@@ -14,13 +14,13 @@
         <form action="" class="d-flex justify-content-around ">
             <div class="border border-black p-5">
                 <p>Refeição do dia:</p>
-                <input type="text" style="width:300px">
+                <input type="text" style="width:300px" required>
                 <p>Porções previstas:</p>
-                <input type="number">
+                <input type="number" required>
             </div>
             <div>
                 <p>Data:</p>
-                <input type="date">
+                <input type="date" required>
                 <p>Tipo da Refeição:</p>
                 <input type="radio" name="tipo" id="almoco" checked>
                 <label for="almoco">Almoço</label>
@@ -34,11 +34,11 @@
         <h5 class="text-center">Lançamento de Consumo</h5>
         <form action="" class="text-center">
             <p>Quantidade servida(porções):</p>
-            <input type="number" class="text-center">
+            <input type="number" class="text-center" required>
             <p>Sobras (porções):</p>
-            <input type="number" class="text-center">
+            <input type="number" class="text-center" required>
             <p>Desperdicio:</p>
-            <input type="number" id="porcentagem" name="porcentagem" min="0" max="100" step="1"> %  
+            <input type="number" id="porcentagem" disabled> %  
         </form>
 
         <div class="d-flex justify-content-around">
