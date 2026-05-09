@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Consumo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="p-5">
+    <h1>Registrar consumo</h1>
+    <main class="border border-black">
+        
+        <h5 class="text-center">Sistema Merenda Escolar</h5>
+        <form action="" class="d-flex justify-content-around ">
+            <div class="border border-black p-5">
+                <p>Refeição do dia:</p>
+                <input type="text" style="width:300px">
+                <p>Porções previstas:</p>
+                <input type="number">
+            </div>
+            <div>
+                <p>Data:</p>
+                <input type="date">
+                <p>Tipo da Refeição:</p>
+                <input type="radio" name="tipo" id="almoco" checked>
+                <label for="almoco">Almoço</label>
+
+                <input type="radio" name="tipo" id="jantar">
+                <label for="jantar">Jantar</label>
+
+            </div>
+        </form>
+
+        <h5 class="text-center">Lançamento de Consumo</h5>
+        <form action="" class="text-center">
+            <p>Quantidade servida(porções):</p>
+            <input type="number" class="text-center">
+            <p>Sobras (porções):</p>
+            <input type="number" class="text-center">
+            <p>Desperdicio:</p>
+            <input type="number" id="porcentagem" name="porcentagem" min="0" max="100" step="1"> %  
+        </form>
+
+        <div class="d-flex justify-content-around">
+            <button class="rounded-2">Voltar</button>
+            <button class="rounded-2">Salvar Registros</button>
+        </div>
+
+    </main>
+</body>
+</html>
