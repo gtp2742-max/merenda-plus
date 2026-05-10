@@ -5,45 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Consumo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="script.js"></script>
+
 </head>
 <body class="p-5">
     <h1>Registrar consumo</h1>
     <main class="border border-black">
         
         <h5 class="text-center">Sistema Merenda Escolar</h5>
-        <form action="" class="d-flex justify-content-around ">
+        <form action="" class="d-flex justify-content-around " id="form1">
             <div class="border border-black p-5">
                 <p>Refeição do dia:</p>
-                <input type="text" style="width:300px" required>
+                <input type="text" style="width:300px" id="refeicao_dia" required>
                 <p>Porções previstas:</p>
-                <input type="number" required>
+                <input type="number" id="porcoes" required>
             </div>
             <div>
                 <p>Data:</p>
-                <input type="date" required>
+                <input type="date" id="data" required>
                 <p>Tipo da Refeição:</p>
-                <input type="radio" name="tipo" id="almoco" checked>
+                <input type="radio" name="tipo" checked value="Almoço">
                 <label for="almoco">Almoço</label>
 
-                <input type="radio" name="tipo" id="jantar">
+                <input type="radio" name="tipo" value="Jantar">
                 <label for="jantar">Jantar</label>
 
             </div>
         </form>
 
         <h5 class="text-center">Lançamento de Consumo</h5>
-        <form action="" class="text-center">
+        <form action="" class="text-center" id="form2">
             <p>Quantidade servida(porções):</p>
-            <input type="number" class="text-center" required>
+            <input type="number" class="text-center" id="qtdservida" required>
             <p>Sobras (porções):</p>
-            <input type="number" class="text-center" required>
+            <input type="number" class="text-center" id="sobras" required>
             <p>Desperdicio:</p>
-            <input type="number" id="porcentagem" disabled> %  
+            <input style="color: black; " type="number" id="desperdicio" disabled> %  
+            
         </form>
 
         <div class="d-flex justify-content-around">
-            <button class="rounded-2">Voltar</button>
-            <button class="rounded-2">Salvar Registros</button>
+            <button class="btn btn-outline-dark">Voltar</button>
+            <button class="btn btn-outline-dark" id="btnSalvar">Salvar Registros</button>
         </div>
 
     </main>
