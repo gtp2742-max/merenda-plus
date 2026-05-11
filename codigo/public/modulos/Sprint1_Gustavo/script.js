@@ -8,6 +8,12 @@ fetch("http://localhost:3000/preparos")
 
 const listaAlimentos = document.getElementById("listaAlimentos")
 
+const btnMostrar = document.getElementById("btnMostrar");
+const areaAdicionar =
+        document.getElementById("areaAdicionar");
+    btnMostrar.addEventListener("click", () => {
+        areaAdicionar.style.display = "block";
+    })
 const botao = document.getElementById("btnAdicionar");
 botao.addEventListener("click", () => {
 
@@ -15,16 +21,17 @@ botao.addEventListener("click", () => {
     const quantidade = document.getElementById("quantidadeAlimento").value;
     const lista = document.getElementById("listaAlimentos");
 
-    lista.inner += `
+    lista.innerHTML+= `
     
-        <div class="row border-bottom p-2">
+          
+        <div class="row border-bottom py-2">
 
             <div class="col-6">
                 ${nome}
             </div>
 
-            <div class="col-6">
-                ${quantidade}
+            <div class="col-6 text-center">
+                ${quantidade}kg
             </div>
 
         </div>
@@ -34,17 +41,20 @@ botao.addEventListener("click", () => {
 
     document.getElementById("quantidadeAlimento").value = "";
 
+    areaAdicionar.style.display = "none";
 })
 
 
 dados[0].alimentos.forEach(alimento => {
     listaAlimentos.innerHTML += `
         <div class ="row border-bottom p-2">
+
             <div class="col-6">
             ${alimento.nome}
             </div>
-            <div class="col-6">
-            ${alimento.quantidade}
+
+            <div class="col-6 text-center">
+            ${alimento.quantidade}kg
             </div>
         </div>
 
