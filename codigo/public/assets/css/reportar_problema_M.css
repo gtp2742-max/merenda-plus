@@ -1,0 +1,26 @@
+body{
+    background-color:rgb(220, 238, 220) ;
+    padding: 0 20px;
+}
+h1{
+    color: rgb(8, 90, 8);
+}
+h4{
+    color: rgb(11, 90, 11);
+}
+.form-check.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .form-check-input{
+    border-color: gray;
+  }
+.form-label{
+    font-family: Arial, Helvetica, sans-serif;
+}
