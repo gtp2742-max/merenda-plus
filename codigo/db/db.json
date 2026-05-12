@@ -22,7 +22,6 @@
       "id": 3
     }
   ],
-
   "estoque": [
     {
       "id": 1,
@@ -53,7 +52,6 @@
       "validade": "2026-07-01"
     }
   ],
-
   "preparos": [
     {
       "id": 1,
@@ -77,12 +75,12 @@
       "observacao": "Substituído óleo por azeite"
     }
   ],
-
   "consumos": [
     {
       "id": 1,
+      "refeicaoDoDia": "Carne, batata, feijão e salada",
       "data": "2026-05-18",
-      "refeicao": "Almoço",
+      "refeicaoTipo": "Almoço",
       "quantidadeServida": 120,
       "quantidadeSobra": 10
     }
