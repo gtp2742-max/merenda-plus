@@ -66,15 +66,16 @@ function carregarValidade() {
 }
 
 // buscar
-botaoBuscar.addEventListener('click', function () {
-  tabela.innerHTML = "";
-  indexAtual = 0;
-
-  const termo = pesquisa.value.toLowerCase();
-
+botaoBuscar.addEventListener('click', () => {
+   const termo = pesquisa.value.toLowerCase();
+   tabela.innerHTML = "";
   filtrados = estoque.filter(item =>
     item.nome.toLowerCase().includes(termo)
   );
+  
+  indexAtual = 0;
+
+
 
   if (filtrados.length > 0) {
     mostrarMais();
@@ -85,9 +86,14 @@ botaoBuscar.addEventListener('click', function () {
   pesquisa.value = "";
 });
 
-
 function mostrarMais () {
-  const parte = filtrados.slice(indexAtual, indexAtual + limite);
+  if (indexAtual === 0) {
+    tabela.innerHTML = "";
+  }
+
+  const base = filtrados.length > 0 ? filtrados : estoque;
+
+  const parte = base.slice(indexAtual, indexAtual + limite);
   renderizar(parte);
   indexAtual += limite;
 }
