@@ -8,7 +8,7 @@ const botaoBuscar = document.getElementById('buscar');
 const botaoMais = document.getElementById('mostrar');
 const pesquisa = document.getElementById('pesquisa');
 const tabela = document.getElementById('tabela-estoque');
-const tabelaValidade = document.getElementById("tabela-validade");
+const tabelaValidade = document.getElementById('tabela-validade');
 
 // carregar estoque
 fetch("http://localhost:3000/estoque")
@@ -17,7 +17,7 @@ fetch("http://localhost:3000/estoque")
     console.log("Dados:",JSON.stringify(dados,null,2));
     estoque = dados;
    renderizar(estoque);
-    carregarValidade();
+   carregarValidade();
   })
   .catch(err => console.log("Erro fetch:", err));
 
@@ -85,7 +85,7 @@ botaoBuscar.addEventListener('click', function () {
   pesquisa.value = "";
 });
 
-// mostrar mais
+
 function mostrarMais () {
   const parte = filtrados.slice(indexAtual, indexAtual + limite);
   renderizar(parte);
@@ -95,7 +95,6 @@ function mostrarMais () {
 // botão mostrar mais
 botaoMais.addEventListener('click', mostrarMais);
 
-// botão adicionar (simples)
 botaoAdd.addEventListener('click', () => {
   const nome = prompt("Nome:");
   const quantidade = prompt("Quantidade:");
@@ -103,6 +102,9 @@ botaoAdd.addEventListener('click', () => {
   const validade = prompt("Validade (YYYY-MM-DD):");
 
   estoque.push({ nome, quantidade, unidade, validade });
+
+  renderizar(estoque);
+  carregarValidade();
 
   alert("Adicionado (local)");
 });
