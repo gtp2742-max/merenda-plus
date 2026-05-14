@@ -27,32 +27,28 @@ botao.addEventListener("click", () => {
         quantidade: quantidade
     };
 
-    dados[0].alimentos.push(novoAlimento);
-
     lista.innerHTML+= `
     
           
-        <div class="row border-bottom py-2">
+        <div class= "item-alimento">
 
-            <div class="col-6">
+            <div>
                 ${nome}
             </div>
 
-            <div class="col-6 text-center">
+            <div>
                 ${quantidade}kg
             </div>
 
-<div class="col-2 text-center">
+            <div class="text-center">
 
-    <button
-        class="btn btn-danger btn-sm"
-        onclick="this.closest('.row').remove()">
+                <button
+                class="btn btn-danger btn-sm"
+                onclick="this.closest('.item-alimento').remove()">
+                Remover
+                </button>
 
-        Remover
-
-    </button>
-
-</div>
+            </div>
         </div>
         
     `;
@@ -65,27 +61,25 @@ botao.addEventListener("click", () => {
 })
 
 
-dados[0].alimentos.forEach((alimento, index) => {
+dados[0].alimentos.forEach((alimento) => {
     listaAlimentos.innerHTML += `
-        <div class ="row border-bottom p-2">
+        <div class ="item-alimento">
 
-            <div class="col-6">
-            ${alimento.nome}
+            <div>
+                ${alimento.nome}
             </div>
 
-            <div class="col-6 text-center">
-            ${alimento.quantidade}kg
+            <div>
+                ${alimento.quantidade}kg
             </div>
 
-            <div class="col-2 text-center">
+            <div>
 
-            <button
-            class="btn btn-danger btn-sm"
-            onclick="this.closest('.row').remove()">
-
-             Remover
-
-            </button>
+                <button
+                class="btn btn-danger btn-sm"
+                onclick="this.closest('.item-alimento').remove()">
+                 Remover
+                </button>
             </div>
         </div>
 
