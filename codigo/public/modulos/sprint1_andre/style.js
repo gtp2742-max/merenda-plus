@@ -10,7 +10,17 @@ const pesquisa = document.getElementById('pesquisa');
 const tabela = document.getElementById('tabela-estoque');
 const tabelaValidade = document.getElementById('tabela-validade');
 
-// carregar estoque
+const dadosSalvos = localStorage.getItem('meuEstoque')
+
+
+
+if (dadosSalvos) {
+  estoque = JSON.parse(dadosSalvos);
+  renderizarIniciando(estoque);
+  carregarValidade(); 
+} else {
+
+
 fetch("http://localhost:3000/estoque")
   .then(res => res.json())
   .then(dados => {
@@ -19,11 +29,20 @@ fetch("http://localhost:3000/estoque")
    renderizar(estoque);
    carregarValidade();
   })
+
+
   .catch(err => console.log("Erro fetch:", err));
+}
+
+function salvarNoLocal(){
+   localStorage.setItem('meuEstoque', JSON.stringify(estoque));
+
+}
 
 
-function renderizar(lista) {
-    tabela.innerHTML = "",
+function renderizar(lista,limpar = false) {
+    if (limpar) tabela.innerHTML = "";
+  
     lista.forEach(item => {
     const tr = document.createElement('tr');
 
@@ -36,6 +55,14 @@ function renderizar(lista) {
     tabela.appendChild(tr);
   });
 }
+
+function renderizarIniciando(lista) {
+indexAtual = 0;
+renderizar(lista.slice(0, limite), true);
+indexAtual = limite
+
+}
+
 
 function renderizarValidade(lista) {
   tabelaValidade.innerHTML = "";
@@ -59,7 +86,7 @@ function carregarValidade() {
   const proximos = estoque.filter(item => {
     const data = new Date(item.validade);
     const diff = (data - hoje) / (1000 * 60 * 60 * 24);
-    return diff <= 7;
+    return diff <= 7 && diff >= -1;
   });
 
   renderizarValidade(proximos);
@@ -86,12 +113,15 @@ botaoBuscar.addEventListener('click', () => {
   pesquisa.value = "";
 });
 
-function mostrarMais () {
-  if (indexAtual === 0) {
-    tabela.innerHTML = "";
+function mostrarMais (deveLimpar = false) {
+    const base = filtrados.length > 0 ? filtrados : estoque;
+
+  if (indexAtual >= base.length && !deveLimpar) {
+    alert ("fim dos registros")
+    return
+    
   }
 
-  const base = filtrados.length > 0 ? filtrados : estoque;
 
   const parte = base.slice(indexAtual, indexAtual + limite);
   renderizar(parte);
@@ -99,18 +129,25 @@ function mostrarMais () {
 }
 
 // botão mostrar mais
-botaoMais.addEventListener('click', mostrarMais);
+botaoMais.addEventListener('click',() => mostrarMais(false));
 
 botaoAdd.addEventListener('click', () => {
   const nome = prompt("Nome:");
   const quantidade = prompt("Quantidade:");
   const unidade = prompt("Unidade:");
   const validade = prompt("Validade (YYYY-MM-DD):");
-
+  if(nome && quantidade) {
+        const novoItem = { 
+            id: Date.now(), // Gera um ID único simples
+            nome, 
+            quantidade, 
+            unidade, 
+            validade};
   estoque.push({ nome, quantidade, unidade, validade });
+  salvarNoLocal ();
 
   renderizar(estoque);
   carregarValidade();
 
-  alert("Adicionado (local)");
+  alert("Adicionado (local)");}
 });
