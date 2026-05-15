@@ -127,3 +127,9 @@ textarea{
 .item-alimento div:nth-child(3){
     justify-content: center;
 }
+
+.acoes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

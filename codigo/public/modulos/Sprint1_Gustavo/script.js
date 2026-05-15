@@ -14,55 +14,19 @@ const areaAdicionar =
         document.getElementById("areaAdicionar");
         btnMostrar.addEventListener("click", () => {
         areaAdicionar.style.display = "block";
-    })
+    });
 
-const botao = document.getElementById("btnAdicionar");
-botao.addEventListener("click", () => {
+// Renderizar 
 
-    const nome = document.getElementById("nomeAlimento").value;
-    const quantidade = document.getElementById("quantidadeAlimento").value;
-    const lista = document.getElementById("listaAlimentos");
-    const novoAlimento = {
-        nome: nome,
-        quantidade: quantidade
-    };
-
-    lista.innerHTML+= `
-    
-          
-        <div class= "item-alimento">
-
-            <div>
-                ${nome}
-            </div>
-
-            <div>
-                ${quantidade}kg
-            </div>
-
-            <div class="text-center">
-
-                <button
-                class="btn btn-danger btn-sm"
-                onclick="this.closest('.item-alimento').remove()">
-                Remover
-                </button>
-
-            </div>
-        </div>
+    function renderizarAlimentos(){
+         
+        listaAlimentos.innerHTML = "";
         
-    `;
-
-    document.getElementById("nomeAlimento").value = "";
-
-    document.getElementById("quantidadeAlimento").value = "";
-
-    areaAdicionar.style.display = "none";
-})
+        dados[0].alimentos.forEach((alimento, index) => {
+            
+            listaAlimentos.innerHTML += `
 
 
-dados[0].alimentos.forEach((alimento) => {
-    listaAlimentos.innerHTML += `
         <div class ="item-alimento">
 
             <div>
@@ -70,38 +34,140 @@ dados[0].alimentos.forEach((alimento) => {
             </div>
 
             <div>
-                ${alimento.quantidade}kg
+                ${alimento.quantidade}
             </div>
 
-            <div>
+            <div class= "acoes">
+                <button
+                class="btn btn-warning btn-sm me-2"
+                onclick="editarAlimentos(${index})">
+                Editar
+                </button>
 
                 <button
                 class="btn btn-danger btn-sm"
-                onclick="this.closest('.item-alimento').remove()">
+                onclick="removerAlimentos(${index})">               
                  Remover
                 </button>
             </div>
         </div>
 
         `;
-
-    });
-
-    const btnSalvar = 
-        document.getElementById("btnSalvar");
-
-    btnSalvar.addEventListener("click", () => {
-
-        fetch(`http://localhost:3000/preparos/${dados[0].id}`, {
-            method: "PUT",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(dados[0])
-        })
-        .then(() => {
-            alert("Preparo salvo com sucesso!");
         });
+    }
+
+    renderizarAlimentos();
+
+    const botao = document.getElementById("btnAdicionar");
+    botao.addEventListener("click", () => {
+
+    const nome = document.getElementById("nomeAlimento").value;
+    const quantidade = document.getElementById("quantidadeAlimento").value;
+    
+    const novoAlimento = {
+        nome: nome,
+        quantidade: quantidade
+    };
+
+    if(nome === "" || quantidade === ""){
+    alert("Preencha todos os campos");
+    return;
+}
+    dados[0].alimentos.push(novoAlimento);
+
+    fetch(`http://localhost:3000/preparos/${dados[0].id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados[0])
+    })
+
+    .then(() => {
+
+        renderizarAlimentos();
+
+        document.getElementById("nomeAlimento").value = "";
+
+        document.getElementById("quantidadeAlimento").value = "";
+
+        areaAdicionar.style.display = "none";
+
     });
+
+});
+
+
+// Remover
+
+window.removerAlimentos = function(index){
+    dados[0].alimentos.splice(index, 1);
+
+    fetch(`http://localhost:3000/preparos/${dados[0].id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(dados[0])
+
+    })
+    .then(() => {
+        renderizarAlimentos();
+
+    });
+}
+
+//Editar
+
+let indexEditando = null;
+
+
+window.editarAlimentos = function(index){
+
+    indexEditando = index;
+
+    document.getElementById("areaEditar").style.display = "block";
+
+    document.getElementById("editarNome").value =
+    dados[0].alimentos[index].nome;
+
+    document.getElementById("editarQuantidade").value =
+    dados[0].alimentos[index].quantidade;
+
+}
+
+const btnConfirmarEdicao =
+document.getElementById("btnConfirmarEdicao");
+
+btnConfirmarEdicao.addEventListener("click", () => {
+
+    dados[0].alimentos[indexEditando].nome =
+    document.getElementById("editarNome").value;
+
+    dados[0].alimentos[indexEditando].quantidade =
+    document.getElementById("editarQuantidade").value;
+
+    fetch(`http://localhost:3000/preparos/${dados[0].id}`, {
+
+        method: "PUT",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(dados[0])
+
+    })
+
+    .then(() => {
+
+        renderizarAlimentos();
+
+        document.getElementById("areaEditar").style.display = "none";
+
+        });
+
+    });
+
 });

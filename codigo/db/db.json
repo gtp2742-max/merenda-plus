@@ -61,15 +61,19 @@
       "alimentos": [
         {
           "nome": "Batata",
-          "quantidade": 2
+          "quantidade": "3 kg"
         },
         {
           "nome": "Carne",
-          "quantidade": 3
+          "quantidade": "4 kg"
         },
         {
           "nome": "Feijão",
-          "quantidade": 5
+          "quantidade": "5 kg"
+        },
+        {
+          "nome": "Arroz",
+          "quantidade": "5 kg"
         }
       ],
       "observacao": "Substituído óleo por azeite"
