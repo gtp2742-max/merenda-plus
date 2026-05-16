@@ -61,8 +61,9 @@ document.getElementById("btnSalvar")
 
                 id: "",
 
+                refeicaoDoDia: document.getElementById("refeicao_dia").value,
                 data: document.getElementById("data").value,
-                refeicao: document.querySelector('input[name="tipo"]:checked').value,
+                refeicaoTipo: document.querySelector('input[name="tipo"]:checked').value,
                 quantidadeServida: Number(document.getElementById("qtdservida").value),
                 quantidadeSobra: Number(document.getElementById("sobras").value)
             };
