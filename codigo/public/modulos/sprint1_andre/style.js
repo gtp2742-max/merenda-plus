@@ -42,17 +42,23 @@ function salvarNoLocal(){
 }
 
 function renderizar(lista, limpar = false) {
+
   if (limpar) tabela.innerHTML = "";
-  
+
   lista.forEach(item => {
+
     const tr = document.createElement('tr');
+
     tr.innerHTML = `
       <td>${item.nome}</td>
       <td>${item.quantidade}</td>
       <td>${item.unidade}</td>
+      <td>${item.validade || "Sem validade"}</td>
     `;
+
     tabela.appendChild(tr);
   });
+
 }
 
 function renderizarIniciando(lista) {

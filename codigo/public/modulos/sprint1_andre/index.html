@@ -9,15 +9,15 @@ cd<!doctype html>
 </head>
 
 
-  <body class="bg-light">
+  <body class="bg-black style d-flex justify-content-center">
 
 
   <div class="container mt-4">
 
-    <div class="card shadow p-5">
+    <div class="card shadow p-5 ">
 
     
-      <h4 class="text-center mb-5">
+      <h4 class="text-center mb-6 ">
         Sistema Merenda Escolar
       </h4>
       
@@ -30,11 +30,11 @@ cd<!doctype html>
      <input      
        id="pesquisa"
        type="text" 
-       class="form-control"
+       class="form-control m-10px "
        placeholder="Pesquisar produto">
     </div>
     
-    <div class="col-md-3">
+    <div class="col-md-3 bg-green">
           <button id = "buscar" class="btn btn-primary w-100">
             Buscar
               </button>
@@ -42,35 +42,54 @@ cd<!doctype html>
        
     </div>    
 
+    
+    <h2 class="mt-4 mb-3">Estoque</h2>
 
-     <h5 class="mb-3">Estoque</h5>
+<div class="table-responsive">
 
-    <table class="table table-bordered">
+  <table class="table table-warning table-hover table-bordered">
+
+    <thead class="table-primary">
+      <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Validade</th>
+      </tr>
+    </thead>
+
+    <tbody id="tabela-validade">
+
+    </tbody>
+
+  </table>
+
+</div>
+    
+     <table class="table table-responsive  table-hover">
     
      <tbody id="tabela-estoque"></tbody>
      
     </table>
-    clear
     
-     <h5 class="mt-4 mb-3">Validade próxima</h5>
     
-     <table class="table table-bordered">
-  
+     <div class=" table-responsive table-hover">
+    
+      <table class="table table-warning table-hover table-bordered">
+
      <tbody id="tabela-validade"></tbody>
    
 
-     </table> 
+     </div> 
      
      <button id="mostrar" class=" btn btn-primary w-100">
         Mostrar 
         </button>
     
      
-    <h5 class="mt-4 mb-3">Estoque</h5>
   
     
 
-<div class="mt-4 d-flex justify-content-between">
+<div class="mt-4 d-flex justify-content-between m-10px t-4px">
 
   <button class="btn btn-primary">
     Voltar
