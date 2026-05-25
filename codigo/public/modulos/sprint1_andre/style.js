@@ -10,101 +10,148 @@ const pesquisa = document.getElementById('pesquisa');
 const tabela = document.getElementById('tabela-estoque');
 const tabelaValidade = document.getElementById('tabela-validade');
 
-// carregar estoque
+const dadosSalvos = localStorage.getItem('meuEstoque');
+
+// --- 1. CHAMADA DA API / BACKEND ---
 fetch("http://localhost:3000/estoque")
   .then(res => res.json())
   .then(dados => {
-    console.log("Dados:",JSON.stringify(dados,null,2));
+    console.log("Conectado ao Banco de Dados com sucesso!");
     estoque = dados;
-   renderizar(estoque);
-   carregarValidade();
+    salvarNoLocal();
+    renderizarIniciando(estoque);
+    carregarValidade(); 
   })
-  .catch(err => console.log("Erro fetch:", err));
+  .catch(err => {
+    console.log("Banco de dados offline. Tentando carregar do LocalStorage...", err);
+
+    if (dadosSalvos) {
+      estoque = JSON.parse(dadosSalvos);
+      renderizarIniciando(estoque);
+      carregarValidade(); 
+    } else {
+      alert("Erro: Banco offline e nenhum dado guardado localmente.");
+    }
+  });
 
 
-function renderizar(lista) {
-    tabela.innerHTML = "",
-    lista.forEach(item => {
+// --- 2. FUNÇÕES DE APOIO GLOBAIS ---
+
+function salvarNoLocal(){
+   localStorage.setItem('meuEstoque', JSON.stringify(estoque));
+}
+
+function renderizar(lista, limpar = false) {
+  if (limpar) tabela.innerHTML = "";
+  
+  lista.forEach(item => {
     const tr = document.createElement('tr');
-
     tr.innerHTML = `
       <td>${item.nome}</td>
       <td>${item.quantidade}</td>
       <td>${item.unidade}</td>
     `;
-
     tabela.appendChild(tr);
   });
 }
 
+function renderizarIniciando(lista) {
+  indexAtual = 0;
+  renderizar(lista.slice(0, limite), true);
+  indexAtual = limite;
+}
+
 function renderizarValidade(lista) {
   tabelaValidade.innerHTML = "";
-
   lista.forEach(item => {
     const tr = document.createElement("tr");
-
     tr.innerHTML = `
       <td>${item.nome}</td>
       <td>${item.validade}</td>
     `;
-
     tabelaValidade.appendChild(tr);
   });
 }
 
-// validade próxima
 function carregarValidade() {
   const hoje = new Date();
-
   const proximos = estoque.filter(item => {
     const data = new Date(item.validade);
     const diff = (data - hoje) / (1000 * 60 * 60 * 24);
-    return diff <= 7;
+    return diff <= 7 && diff >= -1;
   });
-
   renderizarValidade(proximos);
 }
 
-// buscar
-botaoBuscar.addEventListener('click', function () {
-  tabela.innerHTML = "";
-  indexAtual = 0;
 
-  const termo = pesquisa.value.toLowerCase();
+// --- 3. EVENTOS DE CLIQUES (BOTÕES) ---
 
-  filtrados = estoque.filter(item =>
-    item.nome.toLowerCase().includes(termo)
-  );
+function mostrarMais (deveLimpar = false) {
+  const termoNaTela = pesquisa.value.toLowerCase().trim();
+  const base = termoNaTela !== "" ? filtrados : estoque;
 
-  if (filtrados.length > 0) {
-    mostrarMais();
-  } else {
-    alert("Alimento não encontrado");
+  if (indexAtual >= base.length && !deveLimpar) {
+    alert("Fim dos registros");
+    return;
   }
 
-  pesquisa.value = "";
-});
-
-
-function mostrarMais () {
-  const parte = filtrados.slice(indexAtual, indexAtual + limite);
-  renderizar(parte);
+  const parte = base.slice(indexAtual, indexAtual + limite);
+  renderizar(parte, deveLimpar);
   indexAtual += limite;
 }
 
-// botão mostrar mais
-botaoMais.addEventListener('click', mostrarMais);
+// Botão Mostrar Mais
+botaoMais.addEventListener('click', () => mostrarMais(false));
 
+// Botão Buscar Alimento
+botaoBuscar.addEventListener('click', () => {
+  const termo = pesquisa.value.toLowerCase().trim();
+  
+  if (termo === "") {
+    filtrados = [];
+    renderizarIniciando(estoque);
+    return; 
+  }
+  
+  tabela.innerHTML = "";
+  filtrados = estoque.filter(item =>
+    item.nome.toLowerCase().includes(termo)
+  );
+  
+  indexAtual = 0;
+
+  if (filtrados.length > 0) {
+    mostrarMais(true); 
+  } else {
+    alert("Alimento não encontrado");
+    renderizarIniciando(estoque); 
+  }
+});
+
+// Botão Adicionar Alimento
 botaoAdd.addEventListener('click', () => {
   const nome = prompt("Nome:");
   const quantidade = prompt("Quantidade:");
   const unidade = prompt("Unidade:");
   const validade = prompt("Validade (YYYY-MM-DD):");
 
-  estoque.push({ nome, quantidade, unidade, validade });
+  if (nome && quantidade) {
+    const novoItem = { 
+      id: Date.now(), 
+      nome, 
+      quantidade, 
+      unidade, 
+      validade
+    };
 
-  renderizar(estoque);
-  carregarValidade();
+    estoque.push(novoItem); 
+    salvarNoLocal(); 
 
-  alert("Adicionado (local)");
+    renderizarIniciando(estoque); 
+    carregarValidade(); 
+
+    alert("Adicionado com sucesso!");
+  } else {
+    alert("Preencha ao menos o nome e a quantidade.");
+  }
 });
