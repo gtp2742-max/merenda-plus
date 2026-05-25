@@ -2,7 +2,7 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** Projeto Merenda
+* **Projeto:** Merenda Plus
 * **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7620100-ti-1-grupo-4-merenda.git
 * **Membros da equipe:**
 
@@ -26,25 +26,46 @@ A documentação do projeto é estruturada da seguinte forma:
 
 # Contexto
 
-Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
+O presente projeto tem como foco o desenvolvimento de um sistema web de gestão de merenda escolar voltado para escolas públicas municipais. A proposta surgiu a partir da identificação de problemas recorrentes relacionados à ausência de registros organizados da demanda de merenda, dificultando o controle de estoque, o acompanhamento do consumo e a organização da distribuição dos alimentos dentro das instituições de ensino.
+
+Atualmente, muitas escolas ainda realizam o controle da merenda de forma manual, utilizando anotações em papel ou processos descentralizados, o que pode gerar inconsistências nas informações, desperdício de alimentos, falta de insumos e dificuldades no planejamento das refeições. Além disso, a ausência de dados confiáveis compromete a tomada de decisões por parte da direção escolar e dos responsáveis pela alimentação.
+
+Com base nas pesquisas realizadas pelo grupo, incluindo análise de stakeholders, definição de personas, levantamento de dores e necessidades dos usuários, foi identificado que tanto gestores escolares quanto merendeiras enfrentam dificuldades no acompanhamento da quantidade de alimentos disponíveis, na previsão da demanda diária e na organização dos registros de consumo e preparo das refeições.
+
+Dessa forma, o sistema proposto busca centralizar e digitalizar essas informações, oferecendo funcionalidades como controle de estoque, registro de preparo e consumo, acompanhamento de cardápio, geração de relatórios e alertas operacionais. A solução foi pensada para ser simples, acessível e prática, considerando a realidade das escolas públicas e a rotina dos profissionais envolvidos.
+
+O projeto possui caráter funcional e pretende entregar uma solução web utilizável, focada inicialmente em atender individualmente cada escola, permitindo uma gestão mais organizada, transparente e eficiente da merenda escolar.
 
 ## Problema
 
-Falta de organização das merendas em escolas públicas
+Ausência de registros estruturados e organização da demanda de merenda em escolas públicas municipais, ocasionando desperdícios, dificuldades no controle de estoque, falhas no acompanhamento do consumo e ineficiência na gestão da alimentação escolar.
 
 ## Objetivos
 
-Desenvolver um sistema de gestão de merenda escolar que permita o controle eficiente de estoque, distribuição e consumo de alimentos, contribuindo para a redução de desperdícios e melhoria na organização dos processos alimentares nas instituições de ensino.
+Desenvolver um sistema web de gestão de merenda escolar que permita o controle eficiente do estoque, do preparo, da distribuição e do consumo de alimentos, contribuindo para a redução de desperdícios e para a melhoria da organização dos processos alimentares nas instituições públicas de ensino.
+
+Objetivos especificos:
+-Digitalizar os registros relacionados à merenda escolar;
+-Facilitar o controle de estoque e validade dos alimentos;
+-Permitir o registro diário de preparo e consumo das refeições;
+-Auxiliar na organização e acompanhamento da demanda alimentar;
+-Gerar relatórios e informações para apoio à gestão escolar;
+-Reduzir desperdícios causados pela falta de controle e planejamento;
+-Melhorar a comunicação entre direção escolar e equipe responsável pela merenda.
 
 ## Justificativa
 
-A gestão da merenda escolar é um aspecto fundamental para o bom funcionamento das instituições de ensino, uma vez que está diretamente relacionada à alimentação dos estudantes e à qualidade do ambiente educacional. No entanto, muitas escolas ainda enfrentam dificuldades no controle de estoque, na organização da distribuição de alimentos e no monitoramento do consumo, o que pode resultar em desperdícios, falta de insumos e ineficiência na administração dos recursos.
-Diante desse cenário, torna-se relevante o desenvolvimento de um sistema que auxilie no gerenciamento da merenda escolar, proporcionando maior controle sobre os alimentos disponíveis, sua validade e sua distribuição. A proposta deste projeto justifica-se pela necessidade de otimizar processos internos, reduzir desperdícios e garantir maior eficiência na utilização dos recursos destinados à alimentação escolar.
-Além disso, o sistema pode beneficiar diretamente gestores, funcionários e alunos, ao contribuir para uma gestão mais organizada e transparente. Dessa forma, o projeto apresenta relevância prática e social, ao propor uma solução tecnológica capaz de melhorar a qualidade do serviço prestado e apoiar a tomada de decisões dentro das instituições de ensino.
+A gestão da merenda escolar é um aspecto fundamental para o bom funcionamento das instituições de ensino, uma vez que está diretamente relacionada à alimentação dos estudantes e à qualidade do ambiente educacional. No entanto, muitas escolas públicas ainda enfrentam dificuldades no controle de estoque, na organização da distribuição de alimentos e no monitoramento do consumo, principalmente devido à ausência de registros estruturados e ferramentas adequadas de gerenciamento.
+
+Esse cenário pode ocasionar desperdício de alimentos, falta de insumos, problemas no planejamento das refeições e dificuldades na tomada de decisões por parte da gestão escolar. Além disso, processos realizados manualmente tornam o acompanhamento das informações mais lento, sujeito a erros e pouco eficiente.
+
+Diante dessa realidade, torna-se relevante o desenvolvimento de um sistema web que auxilie no gerenciamento da merenda escolar, proporcionando maior controle sobre os alimentos disponíveis, sua validade, distribuição e consumo. A proposta deste projeto justifica-se pela necessidade de otimizar processos internos, reduzir desperdícios e garantir maior eficiência na utilização dos recursos destinados à alimentação escolar.
+
+O sistema também busca beneficiar diretamente diretores, merendeiras e demais profissionais envolvidos no processo alimentar das escolas, oferecendo uma solução simples, acessível e organizada para o registro das informações do dia a dia. Dessa forma, o projeto apresenta relevância prática, social e tecnológica, ao propor uma ferramenta capaz de melhorar a gestão da alimentação escolar e contribuir para a qualidade do serviço prestado aos alunos.
 
 ## Público-Alvo
 
-Escolas públicas.
+O público-alvo do sistema são escolas públicas municipais, especialmente diretores escolares e profissionais responsáveis pela merenda escolar, como merendeiras e equipes de alimentação, que necessitam de maior organização e controle dos processos relacionados à alimentação dos estudantes.
 
 # Product Discovery
 
