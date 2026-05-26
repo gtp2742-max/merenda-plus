@@ -79,6 +79,19 @@
       "observacao": "Substituído óleo por azeite"
     }
   ],
+
+  "relatorios": [
+    {
+      "id": 1,
+      "dataInicio": "2026-05-01",
+      "dataFim": "2026-05-31",
+      "totalRefeicoes": 1250,
+      "desperdicioPercentual": 8,
+      "cardapioCumprido": 95,
+      "observacao": "Baixo desperdício no período."
+    }
+  ],
+
   "consumos": [
     {
       "id": "1",
