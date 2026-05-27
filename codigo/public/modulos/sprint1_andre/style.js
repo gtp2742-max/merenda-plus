@@ -53,7 +53,7 @@ function renderizar(lista, limpar = false) {
       <td>${item.nome}</td>
       <td>${item.quantidade}</td>
       <td>${item.unidade}</td>
-      <td>${item.validade || "Sem validade"}</td>
+      <td>${item.validade}</td>
     `;
 
     tabela.appendChild(tr);
