@@ -79,7 +79,6 @@
       "observacao": "Substituído óleo por azeite"
     }
   ],
-
   "relatorios": [
     {
       "id": 1,
@@ -88,10 +87,28 @@
       "totalRefeicoes": 1250,
       "desperdicioPercentual": 8,
       "cardapioCumprido": 95,
-      "observacao": "Baixo desperdício no período."
+      "observacao": "Baixo desperdício no período.",
+      "desperdicioSemanal": [
+        {
+          "semana": "Semana 1",
+          "kg": 12
+        },
+        {
+          "semana": "Semana 2",
+          "kg": 18
+        },
+        {
+          "semana": "Semana 3",
+          "kg": 15
+        },
+        {
+          "semana": "Semana 4",
+          "kg": 10
+        }
+      ]
     }
   ],
-
+  
   "consumos": [
     {
       "id": "1",
