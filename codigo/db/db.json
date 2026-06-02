@@ -79,7 +79,15 @@
       "observacao": "Substituído óleo por azeite"
     }
   ],
-
+  "merendeira": [{
+    "nome": "Maria",
+    "refeicoes_previstas": 120,
+    "cardapio": {
+      "prato_principal": "Carne com batata",
+      "acompanhamento": "Salada",
+      "sobremesa": "Banana prata"
+    }
+  }],
   "relatorios": [
     {
       "id": 1,
@@ -91,6 +99,7 @@
       "observacao": "Baixo desperdício no período."
     }
   ],
+  
 
   "consumos": [
     {
