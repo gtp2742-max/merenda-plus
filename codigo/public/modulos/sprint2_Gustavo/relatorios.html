@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center mt-3">Sistema Merenda +</h1>
+
+    <div class="container mt-5 border p-4">
+        <h3 class="">Periodo de Analises</h3>
+
+        <div class="row g-3 mb-4 align-items-end">
+
+            <div class="col-md-4">
+                <label>De:</label>
+                <input type="date" id="data_inicio" class="form-control">
+            </div>
+
+            <div class="col-md-4">
+                <label>Até:</label>
+                <input type="date" id="data_final" class="form-control">
+            </div>
+
+            <div class="col-md-4">
+                <button id="filtro" class="btn btn-success w-100">Aplicar Filtro</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="row g-3">
+
+            <div class="col-md-4">
+                <div id="total_refeicoes" class="border rounded p-3 text-center">
+                    total refeições
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div id="porcentagem_desp" class="border rounded p-3 text-center">
+                    % desperdicio
+                </div>
+            </div>
+
+            <div class=" col-md-4">
+                <div id="porcentagem_cardapio" class="border rounded p-3 text-center">
+                    % cardapio concluido
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 class="text-center">Desperdicio por semana (kg)</h3>
+
+        <div id="grafico" class="border rounded p-4 me-3 text-center"></div>
+
+        <div class="d-flex justify-content-between mt-4">
+            <button id="pdf" class="btn btn-success">Exportar PDF</button>
+
+            <button id="exportar" class="btn btn-success">Exportar Dados</button>
+        </div>
+    </div>
+
+    <div class="mt-4 ms-4">
+        <button id="voltar" class="btn btn-secondary">Voltar</button>
+    </div>
+
+    <script src="relatorios.js"></script>
+</body>
+
+</html>
