@@ -23,7 +23,18 @@
     }
   ],
 
-
+  "merendeiras": [
+  {
+    "id": "1",
+    "nome": "Maria",
+    "refeicoes_previstas": 120,
+    "cardapio": {
+      "prato_principal": "Carne com batata",
+      "acompanhamento": "Salada",
+      "sobremesa": "Banana prata"
+    }
+  }
+],
   "funcionalidades": [
     {
       "id": 1,
