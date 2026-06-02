@@ -1,0 +1,159 @@
+cd<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <title>Sistema Merenda Escolar</title>
+
+</head>
+
+
+  <body class="bg-black style d-flex justify-content-center">
+
+
+  <div class="container mt-4">
+
+    <div class="card shadow p-5 ">
+
+    
+      <h4 class="text-center mb-6 ">
+        Sistema Merenda Escolar
+      </h4>
+      
+      <div class="row justify-content-center mb-4">
+    
+    <div class="col-md-6 ">
+
+   
+    
+     <input      
+       id="pesquisa"
+       type="text" 
+       class="form-control m-10px "
+       placeholder="Alertas Ativos">
+    </div>
+    
+    <div class="col-md-3 bg-green">
+          <button id = "buscar" class="btn btn-primary w-100">
+            Buscar
+              </button>
+        </div>
+       
+    </div>    
+
+   <h2 class="mt-4 mb-3">Visão Geral</h2>
+
+   <div class="container">
+<div class="row g-2">
+    <div class="col-4">
+        <div class="card shadow p-2 text-center">
+            <h6>Total de Produtos</h6>
+            <h4></h4>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card shadow p-2 text-center">
+            <h6>Produtos em Baixo Estoque</h6>
+            <h4></h4>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card shadow p-2 text-center">
+            <h6>Proximos de vencer</h6>
+            <h4></h4>
+        </div>
+    </div>
+</div>
+
+
+   
+
+   </div>
+
+
+ 
+
+
+
+
+    
+    <h2 class="mt-4 mb-3">Estoque</h2>
+
+<div class="table-responsive">
+
+  <table class="table table-warning table-hover table-bordered">
+
+    <thead class="table-primary w-50 text-start">
+      <tr>
+        <th>Produto</th>
+        <th class="text-center">Quantidade</th>
+        <th>Validade</th>
+      </tr>
+    </thead>
+
+    
+
+   
+  </table>
+
+</div>
+    
+     <table class="table table-responsive table-hover table-bordered text-center">
+    
+     <tbody id="tabela-estoque"></tbody>
+     
+    </table>
+    
+    
+     <h5 class="mt-5 mb-3">Validade próxima</h5>
+    
+     <div class=" table-responsive table-hover">
+    
+      <table class="table table-warning table-hover table-bordered">
+
+     <tbody id="tabela-validade"></tbody>
+   
+      </table>
+     </div> 
+     
+     <button id="mostrar" class=" btn btn-primary w-100">
+        Mostrar 
+        </button>  
+    
+<div class="mt-4 d-flex justify-content-between m-10px t-4px">
+
+  <button class="btn btn-primary">
+    Voltar
+  </button>
+
+  <button id="adicionar" class="btn btn-primary">
+   Remover Alimento
+  </button>
+
+</div>
+      
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <script src="style.js"defer></script>
+    
+  </body>
+
+</html>
