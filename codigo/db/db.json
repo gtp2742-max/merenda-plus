@@ -20,21 +20,16 @@
       "nome": "Rommel",
       "email": "rommel@gmail.com",
       "id": "3"
+    },
+    {
+      "login": "mereideira",
+      "senha": "123",
+      "nome": "Ana Paula Ferreira",
+      "email": "rommel@gmail.com",
+      "id": "4"
     }
   ],
 
-  "merendeiras": [
-  {
-    "id": "1",
-    "nome": "Maria",
-    "refeicoes_previstas": 120,
-    "cardapio": {
-      "prato_principal": "Carne com batata",
-      "acompanhamento": "Salada",
-      "sobremesa": "Banana prata"
-    }
-  }
-],
   "funcionalidades": [
     {
       "id": 1,
