@@ -22,6 +22,22 @@
       "id": "3"
     }
   ],
+<<<<<<< HEAD
+=======
+
+  "merendeiras": [
+  {
+    "id": "1",
+    "nome": "Maria",
+    "refeicoes_previstas": 120,
+    "cardapio": {
+      "prato_principal": "Carne com batata",
+      "acompanhamento": "Salada",
+      "sobremesa": "Banana prata"
+    }
+  }
+],
+>>>>>>> 32dfdc6650b059f927315a592cc232a22071f213
   "funcionalidades": [
     {
       "id": "1",
@@ -164,6 +180,7 @@
       "observacao": "Substituído óleo por azeite"
     }
   ],
+
   "relatorios": [
     {
       "id": "1",
@@ -193,6 +210,10 @@
       ]
     }
   ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 32dfdc6650b059f927315a592cc232a22071f213
   "consumos": [
     {
       "id": "1",
