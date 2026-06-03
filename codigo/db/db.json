@@ -22,11 +22,9 @@
       "id": "3"
     }
   ],
-
-
   "funcionalidades": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Total de Itens",
       "descricao": "Mostra a quantidade total de produtos cadastrados no estoque.",
       "funcao": [
@@ -36,7 +34,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Produtos em Baixo Estoque",
       "descricao": "Mostra produtos com quantidade abaixo do mínimo.",
       "funcao": [
@@ -46,7 +44,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "Produtos Próximos de Vencer",
       "descricao": "Mostra alimentos próximos da data de validade.",
       "funcao": [
@@ -56,7 +54,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Campo de Busca",
       "descricao": "Permite pesquisar produtos no estoque.",
       "funcao": [
@@ -66,7 +64,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "nome": "Botão Buscar",
       "descricao": "Executa a pesquisa digitada no campo de busca.",
       "funcao": [
@@ -76,7 +74,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "nome": "Validade Próxima",
       "descricao": "Lista alimentos que estão próximos do vencimento.",
       "funcao": [
@@ -86,7 +84,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "nome": "Baixo Estoque",
       "descricao": "Lista produtos com quantidade baixa.",
       "funcao": [
@@ -96,7 +94,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "nome": "Dentro do Estoque",
       "descricao": "Lista produtos com estoque adequado.",
       "funcao": [
@@ -106,8 +104,6 @@
       ]
     }
   ],
-
-
   "estoque": [
     {
       "id": "1",
@@ -136,6 +132,13 @@
       "quantidade": 12,
       "unidade": "kg",
       "validade": "2026-07-01"
+    },
+    {
+      "nome": "Carne",
+      "quantidade": 20,
+      "unidade": "KG",
+      "validade": "2026-06-03",
+      "id": "mhHh2AdC4gk"
     }
   ],
   "preparos": [
@@ -145,10 +148,6 @@
       "refeicao": "Almoço",
       "prato": "Carne com batata",
       "alimentos": [
-        {
-          "nome": "Batata",
-          "quantidade": "3 kg"
-        },
         {
           "nome": "Carne",
           "quantidade": "4 kg"
@@ -167,7 +166,7 @@
   ],
   "relatorios": [
     {
-      "id": 1,
+      "id": "1",
       "dataInicio": "2026-05-01",
       "dataFim": "2026-05-31",
       "totalRefeicoes": 1250,
@@ -194,7 +193,6 @@
       ]
     }
   ],
-  
   "consumos": [
     {
       "id": "1",
