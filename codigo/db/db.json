@@ -20,9 +20,15 @@
       "nome": "Rommel",
       "email": "rommel@gmail.com",
       "id": "3"
+    },
+    {
+      "login": "merendeira",
+      "senha": "123",
+      "nome": "Ana Paula Ferreira",
+      "email": "anapaula@gmail.com",
+      "id": "4"
     }
   ],
-
   "funcionalidades": [
     {
       "id": "1",
