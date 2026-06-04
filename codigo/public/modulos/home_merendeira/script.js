@@ -1,76 +1,39 @@
-const apiUrl = "http://localhost:3000/consumos";
+const apiUsuarios = "http://localhost:3000/usuarios";
+const apiCardapio = "http://localhost:3000/cardapio";
+const apiPorcoes = "http://localhost:3000/refeicoes_previstas";
 
+let id = 4
 
+async function MostrarInformacoes() {
+    const resposta_usuarios = await fetch(apiUsuarios)
+    const usuarios = await resposta_usuarios.json()
 
+    const resposta_cardapio = await fetch(apiCardapio)
+    const cardapios = await resposta_cardapio.json()
 
-function createConsumo(consumo) {
+    const resposta_porcoes = await fetch(apiPorcoes)
+    const porcoes = await resposta_porcoes.json()
 
-    fetch(apiUrl, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(consumo)
-    })
-        .then(() => {
-            alert("Consumo inserido com sucesso");
-        });
+    let usuario = usuarios.find(function (elem) { return elem.id == id })
+    let oi = document.getElementById('ola')
+    let registro_porcoes = document.getElementById('porcoes')
+    let cardapio = document.getElementById('cardapio')
+
+    if (usuario) {
+        oi.innerHTML = `<p>Olá, ${usuario.nome}</p>
+                        <button class="btn btn-outline-dark rounded-pill">Voltar</button>
+                        `
+        registro_porcoes.innerHTML = `<p>Refeições previstas: ${porcoes.porcoes}</p>
+                        `
+
+        cardapio.innerHTML = `<li>Prato principal: ${cardapios.pratoPrincipal}</li>
+                              <li>Acompanhamento: ${cardapios.acompanhamento}</li>
+                              <li>Fruta: ${cardapios.fruta}</li>
+                             `
+
+    } else {
+        oi.innerHTML = "Usuario não encontrado"
+    }
 }
 
-
-function desperdicio(){
-    let porcoes = Number(document.getElementById("porcoes").value)
-    let sobras = Number(document.getElementById("sobras").value)
-
-    const valor = ( sobras / porcoes) * 100
-    return valor
-}
-
-let qtdservida = document.getElementById("qtdservida")
-let porcoes = document.getElementById("porcoes")
-let sobras = document.getElementById("sobras");
-
-porcoes.addEventListener("input", function () {
-    
-    sobras.value = Number(porcoes.value) - Number(qtdservida.value);
-    document.getElementById("desperdicio").value = desperdicio().toFixed(0);
-});
-sobras.addEventListener("input", function () {
-
-    document.getElementById("desperdicio").value = desperdicio().toFixed(0);
-});
-
-qtdservida.addEventListener("input", function () {
-
-    sobras.value = Number(porcoes.value) - Number(qtdservida.value);
-    document.getElementById("desperdicio").value = desperdicio().toFixed(0);
-});
-
-document.getElementById("btnSalvar")
-.addEventListener("click", function () {
-            let form1 = document.getElementById("form1");
-            let form2 = document.getElementById("form2");
-
-            if (!form1.checkValidity() && !form2.checkValidity()) {
-
-                alert("Preencha os formulários");
-                return;
-            }
-
-            let consumos = {
-
-                id: "",
-
-                refeicaoDoDia: document.getElementById("refeicao_dia").value,
-                data: document.getElementById("data").value,
-                refeicaoTipo: document.querySelector('input[name="tipo"]:checked').value,
-                quantidadeServida: Number(document.getElementById("qtdservida").value),
-                quantidadeSobra: Number(document.getElementById("sobras").value)
-            };
-
-            createConsumo(consumos);
-
-            form1.reset();
-            form2.reset();
-
-        });
+MostrarInformacoes()

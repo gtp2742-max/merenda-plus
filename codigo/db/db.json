@@ -112,9 +112,9 @@
     }
   ],
   "cardapio": {
-      "prato_principal": "Carne com batata",
+      "pratoPrincipal": "Carne com batata",
       "acompanhamento": "Salada",
-      "fruta": "Banana prata"
+      "fruta": "Banana"
     },
 
     "refeicoes_previstas":{
