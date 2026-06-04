@@ -1,4 +1,3 @@
-
 fetch("http://localhost:3000/preparos")
     .then(resposta => resposta.json())
     .then(dados => {

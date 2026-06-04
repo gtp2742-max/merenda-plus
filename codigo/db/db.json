@@ -22,22 +22,6 @@
       "id": "3"
     }
   ],
-<<<<<<< HEAD
-=======
-
-  "merendeiras": [
-  {
-    "id": "1",
-    "nome": "Maria",
-    "refeicoes_previstas": 120,
-    "cardapio": {
-      "prato_principal": "Carne com batata",
-      "acompanhamento": "Salada",
-      "sobremesa": "Banana prata"
-    }
-  }
-],
->>>>>>> 32dfdc6650b059f927315a592cc232a22071f213
   "funcionalidades": [
     {
       "id": "1",
@@ -175,17 +159,123 @@
         {
           "nome": "Arroz",
           "quantidade": "5 kg"
+        },
+        {
+          "nome": "Batata",
+          "quantidade": "4 kg"
         }
       ],
       "observacao": "Substituído óleo por azeite"
     }
   ],
-
   "relatorios": [
     {
       "id": "1",
-      "dataInicio": "2026-05-01",
-      "dataFim": "2026-05-31",
+      "mes": "1",
+      "totalRefeicoes": 980,
+      "desperdicioPercentual": 12,
+      "cardapioCumprido": 88,
+      "observacao": "Início do ano com alto desperdício.",
+      "desperdicioSemanal": [
+        {
+          "semana": "Semana 1",
+          "kg": 20
+        },
+        {
+          "semana": "Semana 2",
+          "kg": 25
+        },
+        {
+          "semana": "Semana 3",
+          "kg": 18
+        },
+        {
+          "semana": "Semana 4",
+          "kg": 22
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "mes": "2",
+      "totalRefeicoes": 1050,
+      "desperdicioPercentual": 10,
+      "cardapioCumprido": 90,
+      "observacao": "Leve melhora em relação a janeiro.",
+      "desperdicioSemanal": [
+        {
+          "semana": "Semana 1",
+          "kg": 15
+        },
+        {
+          "semana": "Semana 2",
+          "kg": 18
+        },
+        {
+          "semana": "Semana 3",
+          "kg": 14
+        },
+        {
+          "semana": "Semana 4",
+          "kg": 16
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "mes": "3",
+      "totalRefeicoes": 1100,
+      "desperdicioPercentual": 9,
+      "cardapioCumprido": 92,
+      "observacao": "Mês estável, bom controle de estoque.",
+      "desperdicioSemanal": [
+        {
+          "semana": "Semana 1",
+          "kg": 13
+        },
+        {
+          "semana": "Semana 2",
+          "kg": 16
+        },
+        {
+          "semana": "Semana 3",
+          "kg": 12
+        },
+        {
+          "semana": "Semana 4",
+          "kg": 14
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "mes": "4",
+      "totalRefeicoes": 1200,
+      "desperdicioPercentual": 7,
+      "cardapioCumprido": 94,
+      "observacao": "Boa evolução no mês de abril.",
+      "desperdicioSemanal": [
+        {
+          "semana": "Semana 1",
+          "kg": 10
+        },
+        {
+          "semana": "Semana 2",
+          "kg": 12
+        },
+        {
+          "semana": "Semana 3",
+          "kg": 9
+        },
+        {
+          "semana": "Semana 4",
+          "kg": 11
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "mes": "5",
       "totalRefeicoes": 1250,
       "desperdicioPercentual": 8,
       "cardapioCumprido": 95,
