@@ -20,6 +20,13 @@
       "nome": "Rommel",
       "email": "rommel@gmail.com",
       "id": "3"
+    },
+    {
+      "login": "merendeira",
+      "senha": "123",
+      "nome": "Ana Paula Ferreira",
+      "email": "anapaula@gmail.com",
+      "id": "4"
     }
   ],
   "funcionalidades": [
@@ -104,28 +111,16 @@
       ]
     }
   ],
+  "cardapio": {
+      "prato_principal": "Carne com batata",
+      "acompanhamento": "Salada",
+      "fruta": "Banana prata"
+    },
+
+    "refeicoes_previstas":{
+      "porcoes": 120
+    },
   "estoque": [
-    {
-      "id": "1",
-      "nome": "Arroz",
-      "quantidade": 2,
-      "unidade": "kg",
-      "validade": "2026-05-10"
-    },
-    {
-      "id": "2",
-      "nome": "Feijão",
-      "quantidade": 1,
-      "unidade": "kg",
-      "validade": "2026-05-08"
-    },
-    {
-      "id": "3",
-      "nome": "Óleo de soja",
-      "quantidade": 1,
-      "unidade": "L",
-      "validade": "2026-06-01"
-    },
     {
       "id": "4",
       "nome": "Macarrão",
@@ -135,10 +130,17 @@
     },
     {
       "nome": "Carne",
-      "quantidade": 20,
-      "unidade": "KG",
-      "validade": "2026-06-03",
-      "id": "mhHh2AdC4gk"
+      "quantidade": 30,
+      "unidade": "kg",
+      "validade": "2026-06-19",
+      "id": "UBstmS6EixY"
+    },
+    {
+      "nome": "oleo de soja",
+      "quantidade": 5,
+      "unidade": "kg",
+      "validade": "2026-06-10",
+      "id": "IkDCSVTXPVw"
     }
   ],
   "preparos": [

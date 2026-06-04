@@ -1,186 +1,180 @@
-cd<!doctype html>
-<html lang="en">
-  <head>
+<!doctype html>
+<html lang="pt-BR">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-   <title>Sistema Merenda Escolar</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Sistema Merenda Escolar</title>
 </head>
 
+<body class="bg-dark d-flex justify-content-center">
 
-  <body class="bg-black style d-flex justify-content-center">
+    <div class="container mt-4 mb-4">
 
+        <div class="card shadow p-4">
 
-  <div class="container mt-4">
+            <h2 class="text-center mb-4">
+                Sistema Merenda Escolar
+            </h2>
 
-    <div class="card shadow p-5 ">
+            <!-- Pesquisa -->
+            <div class="row justify-content-center mb-4">
 
-    
-      <h4 class="text-center mb-6 ">
-        Sistema Merenda Escolar
-      </h4>
-      
-      <div class="row justify-content-center mb-4">
-    
-    <div class="col-md-6 ">
+                <div class="col-md-6">
+                    <input
+                        id="pesquisa"
+                        type="text"
+                        class="form-control"
+                        placeholder="Pesquisar alimento">
+                </div>
 
-   
-    
-     <input      
-       id="pesquisa"
-       type="text" 
-       class="form-control m-10px "
-       placeholder="Alertas Ativos">
-    </div>
-    
-    <div class="col-md-3 bg-green">
-          <button id = "buscar" class="btn btn-primary w-100">
-            Buscar
-              </button>
-        </div>
-       
-    </div>    
+                <div class="col-md-3">
+                    <button id="buscar" class="btn btn-primary w-100">
+                        Buscar
+                    </button>
+                </div>
 
-   <h2 class="mt-4 mb-3">Visão Geral</h2>
+            </div>
 
-   <div class="container">
-<div class="row g-2">
-    <div class="col-4">
-        <div class="card shadow p-2 text-center">
-            <h6>Total de Produtos</h6>
-            <h4></h4>
-        </div>
-    </div>
+            <!-- Visão Geral -->
+            <h3 class="mb-3">Visão Geral</h3>
 
-    <div class="col-4">
-        <div class="card shadow p-2 text-center">
-            <h6>Produtos em Baixo Estoque</h6>
-            <h4></h4>
-        </div>
-    </div>
+            <div class="row g-3">
 
-    <div class="col-4">
-        <div class="card shadow p-2 text-center">
-            <h6>Proximos de vencer</h6>
-            <h4></h4>
-        </div>
-    </div>
-</div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 text-center">
+                        <h6>Total de Produtos</h6>
 
+                        <h4 id="total-produtos">0</h4>
 
-   
+                        <button id="mostrar_total" class="btn btn-success mt-2">
+                            Mostrar
+                        </button>
+                    </div>
+                </div>
 
-   </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 text-center">
+                        <h6>Produtos em Baixo Estoque</h6>
 
-  <h2 class="mt-4 mb-3">Estoque</h2>
+                        <h4 id="baixo-estoque">0</h4>
+
+                        <button id="mostrar_baixo_estoque" class="btn btn-success mt-2">
+                            Mostrar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow p-3 text-center">
+                        <h6>Próximos de Vencer</h6>
+
+                        <h4 id="proximos-vencer">0</h4>
+
+                        <button id="mostrar_vencimento" class="btn btn-success mt-2">
+                            Mostrar
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Estoque -->
+   <!-- Estoque -->
+<h3 class="mt-4 mb-3">Estoque</h3>
 
 <div class="table-responsive">
 
-  <table class="table table-warning table-hover table-bordered">
+    <table class="table table-warning table-hover table-bordered">
 
-    <thead class="table-primary w-50 text-start">
-      <tr>
-        <th>Produto</th>
-        <th class="text-center">Quantidade</th>
-        <th>Validade</th>
-      </tr>
-    </thead>
+        <thead class="table-primary">
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Validade</th>
+                <th width="80">Ações</th>
+            </tr>
+        </thead>
 
-    
+        <tbody id="tabela-estoque">
+        </tbody>
 
-   
-  </table>
-  
-
-</div>
-    
-     <table class="table table-responsive table-hover table-bordered text-center">
-    
-     <tbody id="tabela-estoque"></tbody>
-     
     </table>
-    
-    <div class="card p-3 mb-4">
-
-    <h5>Adicionar Alimento</h5>
-
-    <input
-        type="text"
-        id="nomeAlimento"
-        class="form-control mb-2"
-        placeholder="Nome do alimento">
-
-    <input
-        type="number"
-        id="quantidadeAlimento"
-        class="form-control mb-2"
-        placeholder="Quantidade">
-
-    <input
-        type="text"
-        id="unidadeAlimento"
-        class="form-control mb-2"
-        placeholder="Unidade (kg, L, un)">
-
-    <input
-        type="date"
-        id="validadeAlimento"
-        class="form-control mb-3">
-
-    <button
-        id="btnAdicionarAlimento"
-        class="btn btn-success">
-        Adicionar
-    </button>
 
 </div>
-     <h5 class="mt-5 mb-3">Validade próxima</h5>
-    
-     <div class=" table-responsive table-hover">
-    
-      <table class="table table-warning table-hover table-bordered">
 
-     <tbody id="tabela-validade"></tbody>
-   
-      </table>
-     </div> 
-     
-     <button id="mostrar" class=" btn btn-primary w-100">
-        Mostrar 
-        </button>  
-    
-<div class="mt-4 d-flex justify-content-between m-10px t-4px">
+            <!-- Adicionar alimento -->
+            <div class="card p-3 mt-4">
 
-  <button class="btn btn-primary">
-    Voltar
-  </button>
+                <h5 class="mb-3">Adicionar Alimento</h5>
 
-  <button id="adicionar" class="btn btn-primary">
-   Editar
-  </button>
+                <input
+                    type="text"
+                    id="nomeAlimento"
+                    class="form-control mb-2"
+                    placeholder="Nome do alimento">
 
-</div>
-      
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  <script src="style.js"defer></script>
-    
-  </body>
+                <input
+                    type="number"
+                    id="quantidadeAlimento"
+                    class="form-control mb-2"
+                    placeholder="Quantidade">
 
+                <input
+                    type="text"
+                    id="unidadeAlimento"
+                    class="form-control mb-2"
+                    placeholder="Unidade (kg, L, un)">
+
+                <input
+                    type="date"
+                    id="validadeAlimento"
+                    class="form-control mb-3">
+
+                <button
+                    id="btnAdicionarAlimento"
+                    class="btn btn-success">
+                    Adicionar
+                </button>
+
+            </div>
+
+            <!-- Produtos próximos da validade -->
+            <h4 class="mt-5 mb-3">Validade Próxima</h4>
+
+            <div class="table-responsive">
+
+                <table class="table table-warning table-hover table-bordered">
+
+                    <tbody id="tabela-validade">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <button id="mostrar" class="btn btn-primary w-100 mt-3">
+                Mostrar
+            </button>
+
+            <!-- Rodapé -->
+            <div class="mt-4 d-flex justify-content-between">
+
+                <button class="btn btn-primary">
+                    Voltar
+                </button>
+
+              
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="estoque.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
