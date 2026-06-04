@@ -22,22 +22,18 @@
       "id": "3"
     }
   ],
-<<<<<<< HEAD
-=======
-
   "merendeiras": [
-  {
-    "id": "1",
-    "nome": "Maria",
-    "refeicoes_previstas": 120,
-    "cardapio": {
-      "prato_principal": "Carne com batata",
-      "acompanhamento": "Salada",
-      "sobremesa": "Banana prata"
+    {
+      "id": "1",
+      "nome": "Maria",
+      "refeicoes_previstas": 120,
+      "cardapio": {
+        "prato_principal": "Carne com batata",
+        "acompanhamento": "Salada",
+        "sobremesa": "Banana prata"
+      }
     }
-  }
-],
->>>>>>> 32dfdc6650b059f927315a592cc232a22071f213
+  ],
   "funcionalidades": [
     {
       "id": "1",
@@ -122,27 +118,6 @@
   ],
   "estoque": [
     {
-      "id": "1",
-      "nome": "Arroz",
-      "quantidade": 2,
-      "unidade": "kg",
-      "validade": "2026-05-10"
-    },
-    {
-      "id": "2",
-      "nome": "Feijão",
-      "quantidade": 1,
-      "unidade": "kg",
-      "validade": "2026-05-08"
-    },
-    {
-      "id": "3",
-      "nome": "Óleo de soja",
-      "quantidade": 1,
-      "unidade": "L",
-      "validade": "2026-06-01"
-    },
-    {
       "id": "4",
       "nome": "Macarrão",
       "quantidade": 12,
@@ -151,10 +126,17 @@
     },
     {
       "nome": "Carne",
-      "quantidade": 20,
-      "unidade": "KG",
-      "validade": "2026-06-03",
-      "id": "mhHh2AdC4gk"
+      "quantidade": 30,
+      "unidade": "kg",
+      "validade": "2026-06-19",
+      "id": "UBstmS6EixY"
+    },
+    {
+      "nome": "oleo de soja",
+      "quantidade": 5,
+      "unidade": "kg",
+      "validade": "2026-06-10",
+      "id": "IkDCSVTXPVw"
     }
   ],
   "preparos": [
@@ -180,7 +162,6 @@
       "observacao": "Substituído óleo por azeite"
     }
   ],
-
   "relatorios": [
     {
       "id": "1",
