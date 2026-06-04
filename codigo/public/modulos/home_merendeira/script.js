@@ -1,6 +1,6 @@
 const apiUsuarios = "http://localhost:3000/usuarios";
 const apiCardapio = "http://localhost:3000/cardapio";
-const apiPorcoes = "http://localhost:3000/refeicoes_previstas";
+const apiPorcoes = "http://localhost:3000/refeicoesPrevistas";
 
 let id = 4
 
@@ -35,5 +35,84 @@ async function MostrarInformacoes() {
         oi.innerHTML = "Usuario não encontrado"
     }
 }
+
+function updateCardapio(cardapio) {
+
+    fetch(apiCardapio, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(cardapio)
+    })
+    .then(() => {
+        alert("Cardápio alterado com sucesso");
+    });
+}
+
+function updateCardapio(cardapio) {
+
+    fetch(apiCardapio, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(cardapio)
+    })
+    .then(() => {
+        alert("Cardápio alterado com sucesso");
+    });
+}
+
+function updatePorcoes(porcoes) {
+
+    fetch(apiPorcoes, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(porcoes)
+    })
+    .then(() => {
+        alert("Porções alterado com sucesso");
+    });
+}
+
+document.getElementById("editarPorcoes")
+    .addEventListener("click", async function () {
+
+        document.getElementById("formPorcoes")
+            .classList.remove("d-none");
+
+        document.getElementById("principal")
+            .classList.toggle("d-none");
+            
+        const resposta = await fetch(
+            apiPorcoes
+        );
+
+        const refeicoes = await resposta.json();
+
+        document.getElementById("inputPorcoes").value =
+            refeicoes.porcoes;
+    });
+
+document.getElementById("salvarPorcoes")
+        .addEventListener("click", function () {
+
+
+            let porcao = {
+
+                porcoes: document.getElementById("inputPorcoes").value
+            };
+
+            updatePorcoes(porcao);
+
+            document.getElementById("formPorcoes")
+            .classList.toggle("d-none");
+
+            document.getElementById("principal")
+            .classList.remove("d-none");
+        });
 
 MostrarInformacoes()

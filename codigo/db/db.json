@@ -112,14 +112,13 @@
     }
   ],
   "cardapio": {
-      "pratoPrincipal": "Carne com batata",
-      "acompanhamento": "Salada",
-      "fruta": "Banana"
-    },
-
-    "refeicoes_previstas":{
-      "porcoes": 120
-    },
+    "pratoPrincipal": "Carne com batata",
+    "acompanhamento": "Salada",
+    "fruta": "Banana"
+  },
+  "refeicoesPrevistas": {
+    "porcoes": "120"
+  },
   "estoque": [
     {
       "id": "4",

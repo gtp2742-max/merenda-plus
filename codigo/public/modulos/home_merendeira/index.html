@@ -13,7 +13,7 @@
 
 <body class="p-5">
     <h1>Home Merendeira</h1>
-    <main class="border border-black p-2">
+    <main class="border border-black p-2" id="principal">
         <section>
             <h5 class="text-center">Sistema Merenda Escolar</h5>
             <div class="d-flex justify-content-between mb-2" id="ola">
@@ -34,11 +34,11 @@
         <article class="row g-3">
 
             <div class="col-6">
-                <a href="" class="btn btn-outline-dark w-100 py-1">Editar Porções</a>
+                <button class="btn btn-outline-dark w-100 py-1" id="editarPorcoes">Editar Porções</button>
             </div>
 
             <div class="col-6">
-                <a href="" class="btn btn-outline-dark w-100 py-1">Editar Cardapio</a>
+                <button class="btn btn-outline-dark w-100 py-1">Editar Cardapio</button>
             </div>
 
             <div class="col-6">
@@ -60,6 +60,13 @@
             
         </article>
     </main>
+
+    <form action="" id="formPorcoes" class=" d-none border border-black p-2">
+        <H1>Editar porções:</H1>
+        <p>Número de porções:</p>
+        <input type="number" id="inputPorcoes"><br>
+        <button id="salvarPorcoes" class="btn btn-outline-dark rounded-pill">Salvar Alteraçoes</button>
+    </form>
 </body>
 
 </html>
