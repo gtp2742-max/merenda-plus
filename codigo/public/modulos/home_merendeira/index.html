@@ -23,7 +23,7 @@
                 
             </div>
             <div class="border border-black mb-2">
-                <p>Cardapio de Hoje:</p>
+                <p>Cardápio de Hoje:</p>
                 <ul id="cardapio">
                     
                 </ul>
@@ -38,7 +38,7 @@
             </div>
 
             <div class="col-6">
-                <button class="btn btn-outline-dark w-100 py-1">Editar Cardapio</button>
+                <button class="btn btn-outline-dark w-100 py-1" id="editarCardapio">Editar Cardapio</button>
             </div>
 
             <div class="col-6">
@@ -65,7 +65,18 @@
         <H1>Editar porções:</H1>
         <p>Número de porções:</p>
         <input type="number" id="inputPorcoes"><br>
-        <button id="salvarPorcoes" class="btn btn-outline-dark rounded-pill">Salvar Alteraçoes</button>
+        <button id="salvarPorcoes" class="btn btn-outline-dark rounded-pill mt-4">Salvar Alteraçoes</button>
+    </form>
+
+    <form action="" id="formCardapio" class=" d-none border border-black p-2">
+        <H1>Editar cardápio:</H1>
+        <p>Prato principal:</p>
+        <input type="text" id="inputPrincipal">
+        <p>Acompanhamento:</p>
+        <input type="text" id="inputAcompanhamento">
+        <p>Fruta:</p>
+        <input type="text" id="inputFruta"><br>
+        <button id="salvarCardapio" class="btn btn-outline-dark rounded-pill mt-4">Salvar Alteraçoes</button>
     </form>
 </body>
 
