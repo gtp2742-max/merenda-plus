@@ -15,9 +15,12 @@
             <h1 class="text-center mb-2">Sistema Merenda Escolar</h1>
             <h4 class="text-center mb-4">Reportar Problema</h4>
 
-            <form id="formProblema" >
-            <!-- Tipo de problema -->
+            <form id="formProblema">
+
                 <label class="form-label">Tipo de Problema *</label>
+                <p class="text-muted mb-3">
+                    Selecione uma ou mais opções que representam o problema encontrado.
+                </p>
 
                 <div class="form-check card-opcao">
                     <input class="form-check-input" type="checkbox" name="opcoes[]" value="Falta de alimento">
@@ -25,8 +28,8 @@
                 </div>
 
                 <div class="form-check card-opcao">
-                    <input class="form-check-input" type="checkbox" name="opcoes[]" value="Produto vencido">
-                    <label class="form-check-label">Produto vencido</label>
+                    <input class="form-check-input" type="checkbox" name="opcoes[]" value="Alimento impróprio para consumo">
+                    <label class="form-check-label">Alimento impróprio para consumo</label>
                 </div>
 
                 <div class="form-check card-opcao">
@@ -35,8 +38,13 @@
                 </div>
 
                 <div class="form-check card-opcao">
-                    <input class="form-check-input" type="checkbox" name="opcoes[]" value="Qualidade do alimento">
-                    <label class="form-check-label">Qualidade do alimento</label>
+                    <input class="form-check-input" type="checkbox" name="opcoes[]" value="Problema na entrega">
+                    <label class="form-check-label">Problema na entrega</label>
+                </div>
+
+                <div class="form-check card-opcao">
+                    <input class="form-check-input" type="checkbox" name="opcoes[]" value="Cardápio não atendido">
+                    <label class="form-check-label">Cardápio não atendido</label>
                 </div>
 
                 <div class="form-check card-opcao">
@@ -45,18 +53,25 @@
                 </div>
 
                 <div id="campoOutro" class="mb-3 d-none">
-                    <label class="form-label">Informe o outro problem *</label>
-                    <input type="text" class="form-control" id="outroProblema" placeholder="Ex: Falta de gás">
+                    <label class="form-label">Informe o outro problema *</label>
+                    <input type="text" class="form-control" id="outroProblema" placeholder="Ex: Falta de utensílios">
                 </div>
 
-                <label class="form-label">Descrição do Problema</label>
-                <textarea rows="4" id="descricao" class="form-control mb-3" placeholder="Descreva o problema com detalhes..."></textarea>
+                <label class="form-label">Descrição do Problema *</label>
+                <textarea
+                    rows="4"
+                    id="descricao"
+                    class="form-control mb-3"
+                    placeholder="Descreva o problema com detalhes. Ex: faltou arroz para preparar o almoço de hoje..."
+                ></textarea>
 
                 <div class="d-flex justify-content-between gap-2">
                     <button type="button" class="btn btn-secondary" onclick="voltar()">Voltar</button>
                     <button type="submit" id="btnSubmit" class="btn btn-success">Enviar Reporte</button>
                 </div>
+
                 <div id="mensagem" class="mt-3"></div>
+
             </form>
         </section>
 

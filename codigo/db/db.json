@@ -22,19 +22,18 @@
       "id": "3"
     }
   ],
-
   "merendeiras": [
-  {
-    "id": "1",
-    "nome": "Maria",
-    "refeicoes_previstas": 120,
-    "cardapio": {
-      "prato_principal": "Carne com batata",
-      "acompanhamento": "Salada",
-      "sobremesa": "Banana prata"
+    {
+      "id": "1",
+      "nome": "Maria",
+      "refeicoes_previstas": 120,
+      "cardapio": {
+        "prato_principal": "Carne com batata",
+        "acompanhamento": "Salada",
+        "sobremesa": "Banana prata"
+      }
     }
-  }
- ],
+  ],
   "funcionalidades": [
     {
       "id": "1",
@@ -117,8 +116,45 @@
       ]
     }
   ],
-
-
+  "reportes_Problemas": [
+    {
+      "tipos": [
+        "Falta de alimento"
+      ],
+      "descricao": "Falta de batata a duas semanas!",
+      "data": "05/06/2026",
+      "status": "Resolvido",
+      "id": 1
+    },
+    {
+      "tipos": [
+        "Problema com equipamento"
+      ],
+      "descricao": "Fogão quebrado",
+      "data": "05/06/2026",
+      "status": "Resolvido",
+      "id": 2
+    },
+    {
+      "tipos": [
+        "Problema com equipamento"
+      ],
+      "descricao": "Geladeira não esta gelando!",
+      "data": "05/06/2026",
+      "status": "Resolvido",
+      "id": 3
+    },
+    {
+      "tipos": [
+        "Falta de alimento",
+        "Alimento impróprio para consumo"
+      ],
+      "descricao": "Arroz faltou para preparo de almoço hoje",
+      "data": "05/06/2026",
+      "status": "Pendente",
+      "id": 4
+    }
+  ],
   "estoque": [
     {
       "id": "4",
@@ -309,6 +345,32 @@
       "refeicaoTipo": "Almoço",
       "quantidadeServida": 120,
       "quantidadeSobra": 10
+    }
+  ],
+  "historico_alertas": [
+    {
+      "origem": "Reporte da Merendeira",
+      "referenciaId": 2,
+      "tipos": [
+        "Problema com equipamento"
+      ],
+      "descricao": "Fogão quebrado",
+      "dataReporte": "05/06/2026",
+      "dataResolucao": "05/06/2026",
+      "status": "Resolvido",
+      "id": 1
+    },
+    {
+      "origem": "Reporte da Merendeira",
+      "referenciaId": 3,
+      "tipos": [
+        "Problema com equipamento"
+      ],
+      "descricao": "Geladeira não esta gelando!",
+      "dataReporte": "05/06/2026",
+      "dataResolucao": "05/06/2026",
+      "status": "Resolvido",
+      "id": 2
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
