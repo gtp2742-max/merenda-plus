@@ -10,56 +10,60 @@
 </head>
 
 <body>
-    <header></header>
-    <main class="card-form">
-        <h1 class="text-center mt-3 mb-4">Sistema Merenda Escolar</h1>
-        <h4 class="mb-4">Reportar Problema</h4>
+    <main class="container py-4">
+        <section class="card-form mx-auto">
+            <h1 class="text-center mb-2">Sistema Merenda Escolar</h1>
+            <h4 class="text-center mb-4">Reportar Problema</h4>
 
-        <form id="formProblema" >
+            <form id="formProblema" >
+            <!-- Tipo de problema -->
+                <label class="form-label">Tipo de Problema *</label>
 
-        <!-- Tipo de problema -->
-        <label class="form-label mb-2 px-2">Tipo de Problema *</label>
+                <div class="form-check card-opcao">
+                    <input class="form-check-input" type="checkbox" name="opcoes[]" value="Falta de alimento">
+                    <label class="form-check-label">Falta de alimento</label>
+                </div>
 
-        <div class="form-check card container px-5">
-            <input class="form-check-input me-1" type="checkbox" name="opcoes[]" value="Falta de alimento">
-            <label class="form-check-label ">Falta de alimento</label>
-        </div>
+                <div class="form-check card-opcao">
+                    <input class="form-check-input" type="checkbox" name="opcoes[]" value="Produto vencido">
+                    <label class="form-check-label">Produto vencido</label>
+                </div>
 
-        <div class="form-check card container px-5">
-            <input class="form-check-input" type="checkbox" name="opcoes[]" value="Produto vencido">
-            <label class="form-check-label">Produto vencido</label>
-        </div>
+                <div class="form-check card-opcao">
+                    <input class="form-check-input" type="checkbox" name="opcoes[]" value="Problema com equipamento">
+                    <label class="form-check-label">Problema com equipamento</label>
+                </div>
 
-        <div class="form-check card container px-5">
-            <input class="form-check-input" type="checkbox" name="opcoes[]" value="Problema com equipamento">
-            <label class="form-check-label">Problema com equipamento</label>
-        </div>
+                <div class="form-check card-opcao">
+                    <input class="form-check-input" type="checkbox" name="opcoes[]" value="Qualidade do alimento">
+                    <label class="form-check-label">Qualidade do alimento</label>
+                </div>
 
-        <div class="form-check card container px-5">
-            <input class="form-check-input" type="checkbox" name="opcoes[]" value="Qualidade do alimento">
-            <label class="form-check-label">Qualidade do alimento</label>
-        </div>
+                <div class="form-check card-opcao">
+                    <input id="checkOutro" class="form-check-input" type="checkbox" name="opcoes[]" value="Outro">
+                    <label class="form-check-label">Outro</label>
+                </div>
 
-        <div class="form-check mb-3 card container px-5">
-            <input class="form-check-input" type="checkbox" name="opcoes[]" value="Outro">
-            <label class="form-check-label">Outro</label>
-        </div>
+                <div id="campoOutro" class="mb-3 d-none">
+                    <label class="form-label">Informe o outro problem *</label>
+                    <input type="text" class="form-control" id="outroProblema" placeholder="Ex: Falta de gás">
+                </div>
 
-        <!-- Descrição -->
-        <label class="form-label px-2">Descrição do Problema *</label>
-        <textarea id="descricao" class="form-control mb-3 container px-3" rows="4" placeholder="Descreva o problema..."></textarea>
+                <label class="form-label">Descrição do Problema</label>
+                <textarea rows="4" id="descricao" class="form-control mb-3" placeholder="Descreva o problema com detalhes..."></textarea>
 
-        <!-- Botões -->
-        <div class="d-flex justify-content-between">
-            <button type="button" class="btn btn-secondary" onclick="voltar()">Voltar</button>
-            <button type="submit" class="btn btn-success">Enviar Reporte</button>
-        </div>
+                <div class="d-flex justify-content-between gap-2">
+                    <button type="button" class="btn btn-secondary" onclick="voltar()">Voltar</button>
+                    <button type="submit" id="btnSubmit" class="btn btn-success">Enviar Reporte</button>
+                </div>
+                <div id="mensagem" class="mt-3"></div>
+            </form>
+        </section>
 
-        </form>
-
-        <!-- Mensagem -->
-        <div id="mensagem" class="mt-3"></div>
-
+        <section class="card-form mx-auto mt-4">
+            <h4 class="mb-3">Problemas Reportados</h4>
+            <div id="listaReportes"></div>
+        </section>
     </main>
     <script src="reportar_problema_script.js"></script>
 </body>

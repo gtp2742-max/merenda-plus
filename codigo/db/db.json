@@ -20,15 +20,21 @@
       "nome": "Rommel",
       "email": "rommel@gmail.com",
       "id": "3"
-    },
-    {
-      "login": "merendeira",
-      "senha": "123",
-      "nome": "Ana Paula Ferreira",
-      "email": "anapaula@gmail.com",
-      "id": "4"
     }
   ],
+
+  "merendeiras": [
+  {
+    "id": "1",
+    "nome": "Maria",
+    "refeicoes_previstas": 120,
+    "cardapio": {
+      "prato_principal": "Carne com batata",
+      "acompanhamento": "Salada",
+      "sobremesa": "Banana prata"
+    }
+  }
+ ],
   "funcionalidades": [
     {
       "id": "1",
@@ -111,14 +117,8 @@
       ]
     }
   ],
-  "cardapio": {
-    "pratoPrincipal": "Carne com batata",
-    "acompanhamento": "Salada",
-    "fruta": "Banana"
-  },
-  "refeicoesPrevistas": {
-    "porcoes": "120"
-  },
+
+
   "estoque": [
     {
       "id": "4",
