@@ -1,76 +1,118 @@
-const apiUrl = "http://localhost:3000/consumos";
+const apiUsuarios = "http://localhost:3000/usuarios";
+const apiCardapio = "http://localhost:3000/cardapio";
+const apiPorcoes = "http://localhost:3000/refeicoesPrevistas";
 
+let id = 4
 
+async function MostrarInformacoes() {
+    const resposta_usuarios = await fetch(apiUsuarios)
+    const usuarios = await resposta_usuarios.json()
 
+    const resposta_cardapio = await fetch(apiCardapio)
+    const cardapios = await resposta_cardapio.json()
 
-function createConsumo(consumo) {
+    const resposta_porcoes = await fetch(apiPorcoes)
+    const porcoes = await resposta_porcoes.json()
 
-    fetch(apiUrl, {
-        method: "POST",
+    let usuario = usuarios.find(function (elem) { return elem.id == id })
+    let oi = document.getElementById('ola')
+    let registro_porcoes = document.getElementById('porcoes')
+    let cardapio = document.getElementById('cardapio')
+
+    if (usuario) {
+        oi.innerHTML = `<p>Olá, ${usuario.nome}</p>
+                        <button class="btn btn-outline-dark rounded-pill">Voltar</button>
+                        `
+        registro_porcoes.innerHTML = `<p>Refeições previstas: ${porcoes.porcoes}</p>
+                        `
+
+        cardapio.innerHTML = `<li>Prato principal: ${cardapios.pratoPrincipal}</li>
+                              <li>Acompanhamento: ${cardapios.acompanhamento}</li>
+                              <li>Fruta: ${cardapios.fruta}</li>
+                             `
+
+    } else {
+        oi.innerHTML = "Usuario não encontrado"
+    }
+}
+
+function updateCardapio(cardapio) {
+
+    fetch(apiCardapio, {
+        method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(consumo)
+        body: JSON.stringify(cardapio)
     })
-        .then(() => {
-            alert("Consumo inserido com sucesso");
-        });
+    .then(() => {
+        alert("Cardápio alterado com sucesso");
+    });
 }
 
+function updateCardapio(cardapio) {
 
-function desperdicio(){
-    let porcoes = Number(document.getElementById("porcoes").value)
-    let sobras = Number(document.getElementById("sobras").value)
-
-    const valor = ( sobras / porcoes) * 100
-    return valor
+    fetch(apiCardapio, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(cardapio)
+    })
+    .then(() => {
+        alert("Cardápio alterado com sucesso");
+    });
 }
 
-let qtdservida = document.getElementById("qtdservida")
-let porcoes = document.getElementById("porcoes")
-let sobras = document.getElementById("sobras");
+function updatePorcoes(porcoes) {
 
-porcoes.addEventListener("input", function () {
-    
-    sobras.value = Number(porcoes.value) - Number(qtdservida.value);
-    document.getElementById("desperdicio").value = desperdicio().toFixed(0);
-});
-sobras.addEventListener("input", function () {
+    fetch(apiPorcoes, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(porcoes)
+    })
+    .then(() => {
+        alert("Porções alterado com sucesso");
+    });
+}
 
-    document.getElementById("desperdicio").value = desperdicio().toFixed(0);
-});
+document.getElementById("editarPorcoes")
+    .addEventListener("click", async function () {
 
-qtdservida.addEventListener("input", function () {
+        document.getElementById("formPorcoes")
+            .classList.remove("d-none");
 
-    sobras.value = Number(porcoes.value) - Number(qtdservida.value);
-    document.getElementById("desperdicio").value = desperdicio().toFixed(0);
-});
+        document.getElementById("principal")
+            .classList.toggle("d-none");
+            
+        const resposta = await fetch(
+            apiPorcoes
+        );
 
-document.getElementById("btnSalvar")
-.addEventListener("click", function () {
-            let form1 = document.getElementById("form1");
-            let form2 = document.getElementById("form2");
+        const refeicoes = await resposta.json();
 
-            if (!form1.checkValidity() && !form2.checkValidity()) {
+        document.getElementById("inputPorcoes").value =
+            refeicoes.porcoes;
+    });
 
-                alert("Preencha os formulários");
-                return;
-            }
+document.getElementById("salvarPorcoes")
+        .addEventListener("click", function () {
 
-            let consumos = {
 
-                id: "",
+            let porcao = {
 
-                refeicaoDoDia: document.getElementById("refeicao_dia").value,
-                data: document.getElementById("data").value,
-                refeicaoTipo: document.querySelector('input[name="tipo"]:checked').value,
-                quantidadeServida: Number(document.getElementById("qtdservida").value),
-                quantidadeSobra: Number(document.getElementById("sobras").value)
+                porcoes: document.getElementById("inputPorcoes").value
             };
 
-            createConsumo(consumos);
+            updatePorcoes(porcao);
 
-            form1.reset();
-            form2.reset();
+            document.getElementById("formPorcoes")
+            .classList.toggle("d-none");
 
+            document.getElementById("principal")
+            .classList.remove("d-none");
         });
+
+MostrarInformacoes()

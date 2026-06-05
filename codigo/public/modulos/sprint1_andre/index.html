@@ -1,4 +1,4 @@
-cd<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -35,7 +35,7 @@ cd<!doctype html>
     </div>
     
     <div class="col-md-3 bg-green">
-          <button id = "buscar" class="btn btn-primary w-100">
+          <button id = "buscar" class="btn btn-success w-100">
             Buscar
               </button>
         </div>
@@ -69,7 +69,40 @@ cd<!doctype html>
      <tbody id="tabela-estoque"></tbody>
      
     </table>
-    
+    <div class="card p-3 mb-4">
+
+    <h5>Adicionar Alimento</h5>
+
+    <input
+        type="text"
+        id="nomeAlimento"
+        class="form-control mb-2"
+        placeholder="Nome do alimento">
+
+    <input
+        type="number"
+        id="quantidadeAlimento"
+        class="form-control mb-2"
+        placeholder="Quantidade">
+
+    <input
+        type="text"
+        id="unidadeAlimento"
+        class="form-control mb-2"
+        placeholder="Unidade (kg, L, un)">
+
+    <input
+        type="date"
+        id="validadeAlimento"
+        class="form-control mb-3">
+
+    <button
+        id="btnAdicionarAlimento"
+        class="btn btn-success">
+        Adicionar
+    </button>
+
+</div>
     
      <h5 class="mt-5 mb-3">Validade próxima</h5>
     
@@ -92,9 +125,6 @@ cd<!doctype html>
     Voltar
   </button>
 
-  <button id="adicionar" class="btn btn-primary">
-    Adicionar alimento
-  </button>
 
 </div>
       

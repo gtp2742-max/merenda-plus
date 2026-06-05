@@ -22,21 +22,22 @@
       "id": "3"
     }
   ],
+
   "merendeiras": [
-    {
-      "id": "1",
-      "nome": "Maria",
-      "refeicoes_previstas": 120,
-      "cardapio": {
-        "prato_principal": "Carne com batata",
-        "acompanhamento": "Salada",
-        "sobremesa": "Banana prata"
-      }
+  {
+    "id": "1",
+    "nome": "Maria",
+    "refeicoes_previstas": 120,
+    "cardapio": {
+      "prato_principal": "Carne com batata",
+      "acompanhamento": "Salada",
+      "sobremesa": "Banana prata"
     }
-  ],
+  }
+ ],
   "funcionalidades": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Total de Itens",
       "descricao": "Mostra a quantidade total de produtos cadastrados no estoque.",
       "funcao": [
@@ -46,7 +47,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Produtos em Baixo Estoque",
       "descricao": "Mostra produtos com quantidade abaixo do mínimo.",
       "funcao": [
@@ -56,7 +57,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "Produtos Próximos de Vencer",
       "descricao": "Mostra alimentos próximos da data de validade.",
       "funcao": [
@@ -66,7 +67,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Campo de Busca",
       "descricao": "Permite pesquisar produtos no estoque.",
       "funcao": [
@@ -76,7 +77,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "nome": "Botão Buscar",
       "descricao": "Executa a pesquisa digitada no campo de busca.",
       "funcao": [
@@ -86,7 +87,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "nome": "Validade Próxima",
       "descricao": "Lista alimentos que estão próximos do vencimento.",
       "funcao": [
@@ -96,7 +97,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "nome": "Baixo Estoque",
       "descricao": "Lista produtos com quantidade baixa.",
       "funcao": [
@@ -106,7 +107,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "nome": "Dentro do Estoque",
       "descricao": "Lista produtos com estoque adequado.",
       "funcao": [
@@ -116,56 +117,29 @@
       ]
     }
   ],
-  "reportes_Problemas": [
-    {
-      "tipos": [
-        "Falta de alimento",
-        "Produto vencido"
-      ],
-      "descricao": "falta de batata para almoço",
-      "data": "04/06/2026, 00:16:03",
-      "status": "Resolvido",
-      "id": 1
-    },
-    {
-      "tipos": [
-        "Problema com equipamento",
-        "Qualidade do alimento"
-      ],
-      "descricao": "muito bom o produto",
-      "data": "04/06/2026, 00:27:03",
-      "status": "Pendente",
-      "id": 2
-    }
-  ],
+
+
   "estoque": [
-    {
-      "id": "1",
-      "nome": "Arroz",
-      "quantidade": 2,
-      "unidade": "kg",
-      "validade": "2026-05-10"
-    },
-    {
-      "id": "2",
-      "nome": "Feijão",
-      "quantidade": 1,
-      "unidade": "kg",
-      "validade": "2026-05-08"
-    },
-    {
-      "id": "3",
-      "nome": "Óleo de soja",
-      "quantidade": 1,
-      "unidade": "L",
-      "validade": "2026-06-01"
-    },
     {
       "id": "4",
       "nome": "Macarrão",
       "quantidade": 12,
       "unidade": "kg",
       "validade": "2026-07-01"
+    },
+    {
+      "nome": "Carne",
+      "quantidade": 30,
+      "unidade": "kg",
+      "validade": "2026-06-19",
+      "id": "UBstmS6EixY"
+    },
+    {
+      "nome": "oleo de soja",
+      "quantidade": 5,
+      "unidade": "kg",
+      "validade": "2026-06-10",
+      "id": "IkDCSVTXPVw"
     }
   ],
   "preparos": [
@@ -175,10 +149,6 @@
       "refeicao": "Almoço",
       "prato": "Carne com batata",
       "alimentos": [
-        {
-          "nome": "Batata",
-          "quantidade": "3 kg"
-        },
         {
           "nome": "Carne",
           "quantidade": "4 kg"
@@ -190,6 +160,10 @@
         {
           "nome": "Arroz",
           "quantidade": "5 kg"
+        },
+        {
+          "nome": "Batata",
+          "quantidade": "4 kg"
         }
       ],
       "observacao": "Substituído óleo por azeite"
@@ -197,9 +171,112 @@
   ],
   "relatorios": [
     {
-      "id": 1,
-      "dataInicio": "2026-05-01",
-      "dataFim": "2026-05-31",
+      "id": "1",
+      "mes": "1",
+      "totalRefeicoes": 980,
+      "desperdicioPercentual": 12,
+      "cardapioCumprido": 88,
+      "observacao": "Início do ano com alto desperdício.",
+      "desperdicioSemanal": [
+        {
+          "semana": "Semana 1",
+          "kg": 20
+        },
+        {
+          "semana": "Semana 2",
+          "kg": 25
+        },
+        {
+          "semana": "Semana 3",
+          "kg": 18
+        },
+        {
+          "semana": "Semana 4",
+          "kg": 22
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "mes": "2",
+      "totalRefeicoes": 1050,
+      "desperdicioPercentual": 10,
+      "cardapioCumprido": 90,
+      "observacao": "Leve melhora em relação a janeiro.",
+      "desperdicioSemanal": [
+        {
+          "semana": "Semana 1",
+          "kg": 15
+        },
+        {
+          "semana": "Semana 2",
+          "kg": 18
+        },
+        {
+          "semana": "Semana 3",
+          "kg": 14
+        },
+        {
+          "semana": "Semana 4",
+          "kg": 16
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "mes": "3",
+      "totalRefeicoes": 1100,
+      "desperdicioPercentual": 9,
+      "cardapioCumprido": 92,
+      "observacao": "Mês estável, bom controle de estoque.",
+      "desperdicioSemanal": [
+        {
+          "semana": "Semana 1",
+          "kg": 13
+        },
+        {
+          "semana": "Semana 2",
+          "kg": 16
+        },
+        {
+          "semana": "Semana 3",
+          "kg": 12
+        },
+        {
+          "semana": "Semana 4",
+          "kg": 14
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "mes": "4",
+      "totalRefeicoes": 1200,
+      "desperdicioPercentual": 7,
+      "cardapioCumprido": 94,
+      "observacao": "Boa evolução no mês de abril.",
+      "desperdicioSemanal": [
+        {
+          "semana": "Semana 1",
+          "kg": 10
+        },
+        {
+          "semana": "Semana 2",
+          "kg": 12
+        },
+        {
+          "semana": "Semana 3",
+          "kg": 9
+        },
+        {
+          "semana": "Semana 4",
+          "kg": 11
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "mes": "5",
       "totalRefeicoes": 1250,
       "desperdicioPercentual": 8,
       "cardapioCumprido": 95,

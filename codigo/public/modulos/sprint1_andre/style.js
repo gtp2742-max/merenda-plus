@@ -3,7 +3,7 @@ let filtrados = [];
 let indexAtual = 0;
 const limite = 2;
 
-const botaoAdd = document.getElementById('adicionar');
+const botaoAdd = document.getElementById('btnAdicionarAlimento');
 const botaoBuscar = document.getElementById('buscar');
 const botaoMais = document.getElementById('mostrar');
 const pesquisa = document.getElementById('pesquisa');
@@ -135,29 +135,59 @@ botaoBuscar.addEventListener('click', () => {
 });
 
 // Botão Adicionar Alimento
+// Botão Adicionar Alimento
+// Botão Adicionar Alimento
 botaoAdd.addEventListener('click', () => {
-  const nome = prompt("Nome:");
-  const quantidade = prompt("Quantidade:");
-  const unidade = prompt("Unidade:");
-  const validade = prompt("Validade (YYYY-MM-DD):");
 
-  if (nome && quantidade) {
-    const novoItem = { 
-      id: Date.now(), 
-      nome, 
-      quantidade, 
-      unidade, 
-      validade
-    };
+  const nome = document.getElementById("nomeAlimento").value;
+  const quantidade = document.getElementById("quantidadeAlimento").value;
+  const unidade = document.getElementById("unidadeAlimento").value;
+  const validade = document.getElementById("validadeAlimento").value;
 
-    estoque.push(novoItem); 
-    salvarNoLocal(); 
-
-    renderizarIniciando(estoque); 
-    carregarValidade(); 
-
-    alert("Adicionado com sucesso!");
-  } else {
-    alert("Preencha ao menos o nome e a quantidade.");
+  if (!nome || !quantidade || !unidade || !validade) {
+    alert("Preencha todos os campos.");
+    return;
   }
+
+  const novoItem = {
+    nome,
+    quantidade: Number(quantidade),
+    unidade,
+    validade
+  };
+
+  fetch("http://localhost:3000/estoque", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(novoItem)
+  })
+  .then(res => res.json())
+  .then(itemCriado => {
+
+    estoque.push(itemCriado);
+
+    salvarNoLocal();
+
+    renderizarIniciando(estoque);
+
+    carregarValidade();
+
+    document.getElementById("nomeAlimento").value = "";
+    document.getElementById("quantidadeAlimento").value = "";
+    document.getElementById("unidadeAlimento").value = "";
+    document.getElementById("validadeAlimento").value = "";
+
+    alert("Alimento adicionado com sucesso!");
+
+  })
+  .catch(error => {
+
+    console.error(error);
+
+    alert("Erro ao salvar no banco de dados.");
+
+  });
+
 });

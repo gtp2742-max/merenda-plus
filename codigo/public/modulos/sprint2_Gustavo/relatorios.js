@@ -1,25 +1,68 @@
-fetch("http://localhost:3000/relatorios")
-    .then(res => res.json())
-    .then(dados => {
+const botao = document.getElementById("filtro")
 
-        const relatorio = dados[0]
+let grafico = null
 
-        document.getElementById("total_refeicoes").textContent = relatorio.totalRefeicoes
+function mostrarDados(mes) {
 
-        document.getElementById("porcentagem_desp").textContent = relatorio.desperdicioPercentual + "%"
+    fetch("http://localhost:3000/relatorios")
+        .then(res => res.json())
+        .then(dados => {
+            const mesEscolhido = dados.filter((item) => {
+                return item.mes == mes
+            })
 
-        document.getElementById("porcentagem_cardapio").textContent = relatorio.cardapioCumprido + "%"
+            const refeicoes = document.getElementById("total_refeicoes")
+            refeicoes.textContent = mesEscolhido[0].totalRefeicoes + " Refeições"
 
-        const desperdicio = relatorio.desperdicioSemanal
+            const porcentagemDesperdicio = document.getElementById("porcentagem_desp")
+            porcentagemDesperdicio.textContent = mesEscolhido[0].desperdicioPercentual + "% de Desperdício"
 
-        const grafico = document.getElementById("grafico")
+            const porcentagemCardapio = document.getElementById("porcentagem_cardapio")
+            porcentagemCardapio.textContent = mesEscolhido[0].cardapioCumprido + "% Concluído"
 
-        // desperdicio.forEach((item) => {
+            const semanas = []
+            const kilo = []
+            mesEscolhido[0].desperdicioSemanal.forEach(element => {
+                semanas.push(element.semana)
+                kilo.push(element.kg)
 
-        //     grafico.innerHTML += `
-        //         <p>${item.semana}</p>
-                
-        //     `;
-            
-        // })
-    })
+            });
+
+            console.log(grafico)
+
+            if (grafico != null) {
+                grafico.destroy()
+            }
+
+            let ctx = document.getElementById("grafico").getContext("2d")
+            grafico = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: semanas,
+                    datasets: [{
+                        label: "Desperdício (kg)",
+                        data: kilo
+                    }]
+                }
+            })
+
+            document.getElementById("pdf").addEventListener("click", () => {
+                window.print()
+            })
+
+            const observacao = document.getElementById("observacao")
+            observacao.innerHTML =
+                `
+                    <strong>Observação:</strong><br>
+                    ${mesEscolhido[0].observacao}
+                `;
+
+        })
+}
+botao.addEventListener("click", () => {
+    const mesSele = document.getElementById("mes_filtro").value
+    mostrarDados(mesSele)
+    
+})
+
+mostrarDados("1")        

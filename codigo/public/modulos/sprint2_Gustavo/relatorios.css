@@ -1,0 +1,62 @@
+body{
+    background-color: #dff3e3;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 30px;
+}
+
+header h1{
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+.card-relatorio{
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.indicador{
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.grafico-card{
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 800;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#grafico{
+    max-height: 300px;
+}
+
+#observacao{
+    margin-top: 20px;
+    background-color: #f1f8f2;
+    border-left: 5px solid #2e7d32;
+    padding: 15px;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.btn-success{
+    background-color: #2e7d32 !important;
+    border: none !important;
+}
+
+.btn-success:hover{
+    background-color: #1b5e20 !important;
+}
+
+@media print {
+    canvas {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
