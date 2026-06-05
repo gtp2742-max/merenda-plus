@@ -115,4 +115,48 @@ document.getElementById("salvarPorcoes")
             .classList.remove("d-none");
         });
 
+document.getElementById("editarCardapio")
+    .addEventListener("click", async function () {
+
+        document.getElementById("formCardapio")
+            .classList.remove("d-none");
+
+        document.getElementById("principal")
+            .classList.toggle("d-none");
+            
+        const resposta = await fetch(
+            apiCardapio
+        );
+
+        const refeicoes = await resposta.json();
+
+        document.getElementById("inputPrincipal").value = refeicoes.pratoPrincipal;
+
+        document.getElementById("inputAcompanhamento").value =
+            refeicoes.acompanhamento;
+
+        document.getElementById("inputFruta").value =
+            refeicoes.fruta;
+    });
+
+document.getElementById("salvarCardapio")
+        .addEventListener("click", function () {
+
+
+            let cardapio = {
+
+                pratoPrincipal: document.getElementById("inputPrincipal").value,
+                acompanhamento: document.getElementById("inputAcompanhamento").value,
+                fruta: document.getElementById("inputFruta").value
+            };
+
+            updateCardapio(cardapio);
+
+            document.getElementById("formCardapio")
+            .classList.toggle("d-none");
+
+            document.getElementById("principal")
+            .classList.remove("d-none");
+        });
+
 MostrarInformacoes()
