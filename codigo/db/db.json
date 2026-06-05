@@ -22,19 +22,18 @@
       "id": "3"
     }
   ],
-
   "merendeiras": [
-  {
-    "id": "1",
-    "nome": "Maria",
-    "refeicoes_previstas": 120,
-    "cardapio": {
-      "prato_principal": "Carne com batata",
-      "acompanhamento": "Salada",
-      "sobremesa": "Banana prata"
+    {
+      "id": "1",
+      "nome": "Maria",
+      "refeicoes_previstas": 120,
+      "cardapio": {
+        "prato_principal": "Carne com batata",
+        "acompanhamento": "Salada",
+        "sobremesa": "Banana prata"
+      }
     }
-  }
-],
+  ],
   "funcionalidades": [
     {
       "id": 1,
@@ -117,8 +116,28 @@
       ]
     }
   ],
-
-
+  "reportes_Problemas": [
+    {
+      "tipos": [
+        "Falta de alimento",
+        "Produto vencido"
+      ],
+      "descricao": "falta de batata para almoço",
+      "data": "04/06/2026, 00:16:03",
+      "status": "Resolvido",
+      "id": 1
+    },
+    {
+      "tipos": [
+        "Problema com equipamento",
+        "Qualidade do alimento"
+      ],
+      "descricao": "muito bom o produto",
+      "data": "04/06/2026, 00:27:03",
+      "status": "Pendente",
+      "id": 2
+    }
+  ],
   "estoque": [
     {
       "id": "1",
@@ -176,7 +195,6 @@
       "observacao": "Substituído óleo por azeite"
     }
   ],
-
   "relatorios": [
     {
       "id": 1,
@@ -206,7 +224,6 @@
       ]
     }
   ],
-
   "consumos": [
     {
       "id": "1",
