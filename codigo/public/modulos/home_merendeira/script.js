@@ -26,9 +26,9 @@ async function MostrarInformacoes() {
         registro_porcoes.innerHTML = `<p>Refeições previstas: ${porcoes.porcoes}</p>
                         `
 
-        cardapio.innerHTML = `<li>Prato principal: ${cardapios.pratoPrincipal}</li>
-                              <li>Acompanhamento: ${cardapios.acompanhamento}</li>
-                              <li>Fruta: ${cardapios.fruta}</li>
+        cardapio.innerHTML = `<li><strong>Prato principal:</strong> ${cardapios.pratoPrincipal}</li>
+                              <li><strong>Acompanhamento:</strong> ${cardapios.acompanhamento}</li>
+                              <li><strong>Fruta:</strong> ${cardapios.fruta}</li>
                              `
 
     } else {

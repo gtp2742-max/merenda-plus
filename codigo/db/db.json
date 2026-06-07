@@ -20,18 +20,13 @@
       "nome": "Rommel",
       "email": "rommel@gmail.com",
       "id": "3"
-    }
-  ],
-  "merendeiras": [
+    },
     {
-      "id": "1",
-      "nome": "Maria",
-      "refeicoes_previstas": 120,
-      "cardapio": {
-        "prato_principal": "Carne com batata",
-        "acompanhamento": "Salada",
-        "sobremesa": "Banana prata"
-      }
+      "login": "merendeira",
+      "senha": "123",
+      "nome": "Ana Paula Ferreira",
+      "email": "anapaula@gmail.com",
+      "id": "4"
     }
   ],
   "funcionalidades": [
@@ -124,7 +119,7 @@
       "descricao": "Falta de batata a duas semanas!",
       "data": "05/06/2026",
       "status": "Resolvido",
-      "id": 1
+      "id": "1"
     },
     {
       "tipos": [
@@ -133,7 +128,7 @@
       "descricao": "Fogão quebrado",
       "data": "05/06/2026",
       "status": "Resolvido",
-      "id": 2
+      "id": "2"
     },
     {
       "tipos": [
@@ -142,7 +137,7 @@
       "descricao": "Geladeira não esta gelando!",
       "data": "05/06/2026",
       "status": "Resolvido",
-      "id": 3
+      "id": "3"
     },
     {
       "tipos": [
@@ -152,9 +147,17 @@
       "descricao": "Arroz faltou para preparo de almoço hoje",
       "data": "05/06/2026",
       "status": "Pendente",
-      "id": 4
+      "id": "4"
     }
   ],
+  "refeicoesPrevistas": {
+    "porcoes": "120"
+  },
+  "cardapio": {
+    "pratoPrincipal": "Carne com batata",
+    "acompanhamento": "Salada",
+    "fruta": "Banana prata"
+  },
   "estoque": [
     {
       "id": "4",
@@ -358,7 +361,7 @@
       "dataReporte": "05/06/2026",
       "dataResolucao": "05/06/2026",
       "status": "Resolvido",
-      "id": 1
+      "id": "1"
     },
     {
       "origem": "Reporte da Merendeira",
@@ -370,7 +373,7 @@
       "dataReporte": "05/06/2026",
       "dataResolucao": "05/06/2026",
       "status": "Resolvido",
-      "id": 2
+      "id": "2"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
