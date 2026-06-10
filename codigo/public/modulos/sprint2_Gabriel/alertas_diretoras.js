@@ -1,6 +1,6 @@
-const apiEstoque = "http://localhost:3000/estoque";
-const apiReportes = "http://localhost:3000/reportes_Problemas";
-const apiHistorico = "http://localhost:3000/historico_alertas";
+const apiEstoque = "/estoque";
+const apiReportes = "/reportes_Problemas";
+const apiHistorico = "/historico_alertas";
 
 const listaAlertas = document.getElementById("listaAlertas");
 const mensagem = document.getElementById("mensagem");
