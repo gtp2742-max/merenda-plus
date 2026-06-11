@@ -189,7 +189,7 @@ async function marcarComoResolvido(id){
 
 function mostrarMensagem(texto,tipo){
     mensagem.innerHTML = `
-    <div classs="alert alert-${tipo}">
+    <div class="alert alert-${tipo}">
         ${texto}
     </div>
     `;
