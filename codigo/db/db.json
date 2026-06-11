@@ -146,8 +146,54 @@
       ],
       "descricao": "Arroz faltou para preparo de almoço hoje",
       "data": "05/06/2026",
-      "status": "Pendente",
+      "status": "Resolvido",
       "id": "4"
+    },
+    {
+      "tipos": [
+        "Falta de alimento",
+        "Problema com equipamento"
+      ],
+      "descricao": "Problema com a geladeira",
+      "data": "11/06/2026",
+      "status": "Resolvido",
+      "id": "kCC6bpI"
+    },
+    {
+      "tipos": [
+        "Problema na entrega"
+      ],
+      "descricao": "Alimento veio estragado na entrega",
+      "data": "11/06/2026",
+      "status": "Pendente",
+      "id": "UksRZ_f"
+    },
+    {
+      "tipos": [
+        "Alimento impróprio para consumo"
+      ],
+      "descricao": "Alimento estragou antes da valida por descuido no armazenamento!",
+      "data": "11/06/2026",
+      "status": "Pendente",
+      "id": "qVGVgij"
+    },
+    {
+      "tipos": [
+        "Problema com equipamento"
+      ],
+      "descricao": "Problema no freezer!",
+      "data": "11/06/2026",
+      "status": "Pendente",
+      "id": "UoFTsHo"
+    },
+    {
+      "tipos": [
+        "Cardápio não atendido"
+      ],
+      "descricao": "Por falta de alimentos fizemos um cardápio alternativo!",
+      "data": "11/06/2026",
+      "status": "Pendente",
+      "id": "VVI1AfX"
     }
   ],
   "refeicoesPrevistas": {
@@ -374,6 +420,33 @@
       "dataResolucao": "05/06/2026",
       "status": "Resolvido",
       "id": "2"
+    },
+    {
+      "origem": "Reporte de Merendeira",
+      "referenciaId": "4",
+      "merendeira": "Ana Paula Ferreira",
+      "tipos": [
+        "Falta de alimento",
+        "Alimento impróprio para consumo"
+      ],
+      "descricao": "Arroz faltou para preparo de almoço hoje",
+      "dataReporte": "05/06/2026",
+      "dataResolucao": "11/06/2026",
+      "status": "Resolvido",
+      "id": "87qkKYw"
+    },
+    {
+      "origem": "Reporte da Merendeira",
+      "referenciaId": "kCC6bpI",
+      "tipos": [
+        "Falta de alimento",
+        "Problema com equipamento"
+      ],
+      "descricao": "Problema com a geladeira",
+      "dataReporte": "11/06/2026",
+      "dataResolucao": "11/06/2026",
+      "status": "Resolvido",
+      "id": "D17zl5C"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
