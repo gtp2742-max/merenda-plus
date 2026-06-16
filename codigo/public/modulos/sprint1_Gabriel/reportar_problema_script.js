@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000/reportes_Problemas";
+const apiUrl = "/reportes_Problemas";
 
 const form = document.getElementById("formProblema");
 const mensagem = document.getElementById("mensagem");
