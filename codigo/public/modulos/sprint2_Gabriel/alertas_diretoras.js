@@ -123,7 +123,7 @@ function renderizarItens() {
 
     let cardClasse = "alerta-card";
 
-    if (item.tipo === "Crítico") {
+    if (item.tipo === "Crítico" || item.tipo === "Ocorrência") {
       cardClasse += " critico";
     }
 

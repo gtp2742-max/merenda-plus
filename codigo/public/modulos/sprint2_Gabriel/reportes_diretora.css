@@ -1,0 +1,96 @@
+body{
+    background-color: rgb(220,238,220);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-principal{
+    background-color: white;
+    max-width: 900px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+h1{
+    color: rgb(8,90,8);
+    font-size: 2.5rem;
+    font-weight: bold;   
+}
+
+h4{
+    color: rgb(11,90,11);
+}
+
+.reporte-card{
+    border-left: 6px solid #198754;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.reporte-card.pendente{
+    background: #fffafa;
+    border: 1px solid #d9d9d9;
+    border-left: 6px solid #dc3545;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    
+}
+
+
+.reporte-card.resolvido{
+    background: #eef8f0;
+    border: 1px solid #d9d9d9;
+    border-left: 6px solid #198754;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.reporte-card.selecionado{
+    box-shadow: 0 0 12px rgba(0,0,0,.08);
+    transform: translateY(-2px);
+}
+
+.badge-selecionado{
+    display: inline-block;
+    background-color: #198754;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.status{
+    font-weight: bold;
+}
+
+.status-pendente{
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.acoes{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+@media (max-width: 576px){
+    .card-principal{
+        padding:22px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .acoes button {
+        width: 100%;
+    }
+}
+

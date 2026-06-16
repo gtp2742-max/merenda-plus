@@ -3,9 +3,7 @@ const API = "http://localhost:3000/estoque";
 const tabelaEstoque = document.getElementById("tabela-estoque");
 const tabelaValidade = document.getElementById("tabela-validade");
 
-// ===========================
-// FORMATAR DATA
-// ===========================
+
 
 function formatarData(data) {
 
@@ -14,9 +12,7 @@ function formatarData(data) {
     return dataObj.toLocaleDateString("pt-BR");
 }
 
-// ===========================
-// CALCULAR DIAS RESTANTES
-// ===========================
+
 
 function diasParaVencer(data) {
 
@@ -33,10 +29,6 @@ function diasParaVencer(data) {
         (1000 * 60 * 60 * 24)
     );
 }
-
-// ===========================
-// CARREGAR ESTOQUE
-// ===========================
 
 async function carregarEstoque() {
 
@@ -90,9 +82,6 @@ async function carregarEstoque() {
     }
 }
 
-// ===========================
-// REMOVER ALIMENTO
-// ===========================
 
 async function removerAlimento(id) {
 
@@ -120,9 +109,6 @@ async function removerAlimento(id) {
     }
 }
 
-// ===========================
-// TOTAL DE PRODUTOS
-// ===========================
 
 document
 .getElementById("mostrar_total")
@@ -135,9 +121,7 @@ document
 
 });
 
-// ===========================
-// BAIXO ESTOQUE
-// ===========================
+
 
 document
 .getElementById("mostrar_baixo_estoque")
@@ -153,10 +137,6 @@ document
         .textContent = baixoEstoque.length;
 
 });
-
-// ===========================
-// PRODUTOS PRÓXIMOS DE VENCER
-// ===========================
 
 document
 .getElementById("mostrar_vencimento")
@@ -206,10 +186,6 @@ document
 
 });
 
-// ===========================
-// BUSCAR PRODUTO
-// ===========================
-
 document
 .getElementById("buscar")
 .addEventListener("click", async () => {
@@ -252,9 +228,6 @@ document
 
 });
 
-// ===========================
-// ADICIONAR ALIMENTO
-// ===========================
 
 document
 .getElementById("btnAdicionarAlimento")
@@ -331,9 +304,6 @@ document
 
 });
 
-// ===========================
-// ATUALIZAR ESTOQUE
-// ===========================
 
 document
 .getElementById("mostrar")
@@ -342,8 +312,5 @@ document
     carregarEstoque
 );
 
-// ===========================
-// INICIALIZAÇÃO
-// ===========================
 
 carregarEstoque();
