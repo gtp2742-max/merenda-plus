@@ -1,10 +1,12 @@
 const botao = document.getElementById("filtro")
 
+const apiRelatorio = "/relatorios";
+
 let grafico = null
 
 function mostrarDados(mes) {
 
-    fetch("http://localhost:3000/relatorios")
+    fetch(apiRelatorio)
         .then(res => res.json())
         .then(dados => {
             const mesEscolhido = dados.filter((item) => {
@@ -46,10 +48,6 @@ function mostrarDados(mes) {
                 }
             })
 
-            document.getElementById("pdf").addEventListener("click", () => {
-                window.print()
-            })
-
             const observacao = document.getElementById("observacao")
             observacao.innerHTML =
                 `
@@ -62,7 +60,12 @@ function mostrarDados(mes) {
 botao.addEventListener("click", () => {
     const mesSele = document.getElementById("mes_filtro").value
     mostrarDados(mesSele)
-    
+
+})
+
+
+document.getElementById("pdf").addEventListener("click", () => {
+    window.print()
 })
 
 mostrarDados("1")        

@@ -1,4 +1,6 @@
-fetch("http://localhost:3000/preparos")
+const apiPreparo = "/preparos";
+
+fetch(apiPreparo)
     .then(resposta => resposta.json())
     .then(dados => {
         document.getElementById("dataPreparo").textContent = dados[0].data
