@@ -393,7 +393,8 @@
       "data": "2026-05-18",
       "refeicaoTipo": "Almoço",
       "quantidadeServida": 120,
-      "quantidadeSobra": 10
+      "quantidadeSobra": 10,
+      "desperdicio": 7.7
     }
   ],
   "historico_alertas": [

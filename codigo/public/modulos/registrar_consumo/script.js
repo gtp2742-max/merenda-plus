@@ -14,6 +14,7 @@ async function MostrarInformacoes() {
                 <th>Tipo</th>
                 <th>Quantidade Servida</th>
                 <th>Quantidade Sobra</th>
+                <th>Desperdicio</th>
                 </tr>
             `
         for (let index = 0; index < data.length; index++) {
@@ -26,6 +27,7 @@ async function MostrarInformacoes() {
                         <td>${dat.refeicaoTipo}</td>
                         <td>${dat.quantidadeServida}</td>
                         <td>${dat.quantidadeSobra}</td>
+                        <td>${dat.desperdicio}</td>
                         </tr>
                         
         `
@@ -90,17 +92,17 @@ let sobras = document.getElementById("sobras");
 porcoes.addEventListener("input", function () {
     
     sobras.value = Number(porcoes.value) - Number(qtdservida.value);
-    document.getElementById("desperdicio").value = desperdicio().toFixed(0);
+    document.getElementById("desperdicio").value = desperdicio().toFixed(1);
 });
 sobras.addEventListener("input", function () {
 
-    document.getElementById("desperdicio").value = desperdicio().toFixed(0);
+    document.getElementById("desperdicio").value = desperdicio().toFixed(1);
 });
 
 qtdservida.addEventListener("input", function () {
 
     sobras.value = Number(porcoes.value) - Number(qtdservida.value);
-    document.getElementById("desperdicio").value = desperdicio().toFixed(0);
+    document.getElementById("desperdicio").value = desperdicio().toFixed(1);
 });
 let idConsumo
 
@@ -117,6 +119,7 @@ document.getElementById("tabela")
                 let refeicao = linha[3].innerText;
                 document.getElementById("qtdservida").value = Number(linha[4].innerText);
                 document.getElementById("sobras").value = Number(linha[5].innerText);
+                document.getElementById("desperdicio").value = Number(linha[6].innerText);
 
                  document.querySelector(
                 `input[name="tipo"][value="${refeicao}"]`
@@ -147,7 +150,8 @@ document.getElementById("btnSalvar")
                 data: document.getElementById("data").value,
                 refeicaoTipo: document.querySelector('input[name="tipo"]:checked').value,
                 quantidadeServida: Number(document.getElementById("qtdservida").value),
-                quantidadeSobra: Number(document.getElementById("sobras").value)
+                quantidadeSobra: Number(document.getElementById("sobras").value),
+                desperdicio: Number(document.getElementById("desperdicio").value)
             };
 
             createConsumo(consumos);
@@ -176,7 +180,8 @@ document.getElementById("btnAlterar")
                 data: document.getElementById("data").value,
                 refeicaoTipo: document.querySelector('input[name="tipo"]:checked').value,
                 quantidadeServida: Number(document.getElementById("qtdservida").value),
-                quantidadeSobra: Number(document.getElementById("sobras").value)
+                quantidadeSobra: Number(document.getElementById("sobras").value),
+                desperdicio: Number(document.getElementById("desperdicio").value)
             };
 
             updateConsumo(idConsumo,consumos);
