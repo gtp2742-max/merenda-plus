@@ -5,28 +5,36 @@
       "login": "admin",
       "senha": "123",
       "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "email": "admin@abc.com",
+      "role": ["merendeira","diretora"]
+      
     },
     {
       "id": "2",
-      "login": "user",
+      "login": "diretora",
       "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "nome": "Diretora",
+      "email": "diretora@abc.com",
+      "role": ["diretora"]
+      
+
     },
-    {
+   {
+     "id": "3",
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com",
-      "id": "3"
+      "role": ["merendeira","diretora"]
     },
     {
+      "id": "4",
       "login": "merendeira",
       "senha": "123",
-      "nome": "Ana Paula Ferreira",
+      "nome": "Ana Paula Ferreiraaaa",
       "email": "anapaula@gmail.com",
-      "id": "4"
+      "role": ["merendeira"] 
+
     }
   ],
   "funcionalidades": [

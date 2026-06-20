@@ -1,19 +1,9 @@
-// Trabalho Interdisciplinar 1 - Aplicações Web
-//
-// Esse módulo realiza o registro de novos usuários e login para aplicações com 
-// backend baseado em API REST provida pelo JSONServer
-// Os dados de usuário estão localizados no arquivo db.json que acompanha este projeto.
-//
-// Autor: Rommel Vieira Carneiro (rommelcarneiro@gmail.com)
-// Data: 09/09/2024
-//
-// Código LoginApp  
 
-
-// Página inicial de Login
 const LOGIN_URL = "/modulos/login/login.html";
 let RETURN_URL = "/modulos/login/index.html";
 const API_URL = '/usuarios';
+const mererendeira_URL ="/modulos/home_merendeira.index.html"
+const merendeira_URL = "/modulos/"
 
 // Objeto para o banco de dados de usuários baseado em JSON
 var db_usuarios = {};
@@ -69,19 +59,29 @@ function carregarUsuarios(callback) {
 }
 
 // Verifica se o login do usuário está ok e, se positivo, direciona para a página inicial
-function loginUser (login, senha) {
+function loginUser (login, senha, role) {
+     console.log("verificando") 
+     console.log(role)
+     console.log(senha)
+     console.log(login)
 
     // Verifica todos os itens do banco de dados de usuarios 
     // para localizar o usuário informado no formulario de login
     for (var i = 0; i < db_usuarios.length; i++) {
-        var usuario = db_usuarios[i];
+         var usuario = db_usuarios[i];
 
         // Se encontrou login, carrega usuário corrente e salva no Session Storage
-        if (login == usuario.login && senha == usuario.senha) {
+        console.log("usuario")
+        console.log(usuario.role)
+
+        if (login == usuario.login && senha == usuario.senha && usuario.role.includes(role) ) {
             usuarioCorrente.id = usuario.id;
             usuarioCorrente.login = usuario.login;
             usuarioCorrente.email = usuario.email;
             usuarioCorrente.nome = usuario.nome;
+            usuarioCorrente.role = usuario.role;
+            
+        
 
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
             sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
@@ -101,10 +101,10 @@ function logoutUser () {
     window.location = LOGIN_URL;
 }
 
-function addUser (nome, login, senha, email) {
+function addUser (nome, login, senha, email,role) {
 
     // Cria um objeto de usuario para o novo usuario 
-    let usuario = { "login": login, "senha": senha, "nome": nome, "email": email };
+    let usuario = { "login": login, "senha": senha, "nome": nome, "email": email,"role":role };
 
     // Envia dados do novo usuário para ser inserido no JSON Server
     fetch(API_URL, {
