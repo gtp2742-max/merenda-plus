@@ -76,7 +76,7 @@ const areaAdicionar =
 }
     dados[0].alimentos.push(novoAlimento);
 
-    fetch(`http://localhost:3000/preparos/${dados[0].id}`, {
+    fetch(`/preparos/${dados[0].id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -104,7 +104,7 @@ const areaAdicionar =
 window.removerAlimentos = function(index){
     dados[0].alimentos.splice(index, 1);
 
-    fetch(`http://localhost:3000/preparos/${dados[0].id}`, {
+    fetch(`/preparos/${dados[0].id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -149,7 +149,7 @@ btnConfirmarEdicao.addEventListener("click", () => {
     dados[0].alimentos[indexEditando].quantidade =
     document.getElementById("editarQuantidade").value;
 
-    fetch(`http://localhost:3000/preparos/${dados[0].id}`, {
+    fetch(`/preparos/${dados[0].id}`, {
 
         method: "PUT",
 

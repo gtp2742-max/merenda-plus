@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/estoque";
+const API = "/estoque";
 
 const tabelaEstoque = document.getElementById("tabela-estoque");
 const tabelaValidade = document.getElementById("tabela-validade");

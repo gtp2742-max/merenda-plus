@@ -13,7 +13,7 @@ const tabelaValidade = document.getElementById('tabela-validade');
 const dadosSalvos = localStorage.getItem('meuEstoque');
 
 // --- 1. CHAMADA DA API / BACKEND ---
-fetch("http://localhost:3000/estoque")
+fetch("/estoque")
   .then(res => res.json())
   .then(dados => {
     console.log("Conectado ao Banco de Dados com sucesso!");
@@ -156,7 +156,7 @@ botaoAdd.addEventListener('click', () => {
     validade
   };
 
-  fetch("http://localhost:3000/estoque", {
+  fetch("/estoque", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

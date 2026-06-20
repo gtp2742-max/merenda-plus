@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000/consumos";
+const apiUrl = "/consumos";
 
 
 async function MostrarInformacoes() {

@@ -1,6 +1,6 @@
-const apiUsuarios = "http://localhost:3000/usuarios";
-const apiCardapio = "http://localhost:3000/cardapio";
-const apiPorcoes = "http://localhost:3000/refeicoesPrevistas";
+const apiUsuarios = "/usuarios";
+const apiCardapio = "/cardapio";
+const apiPorcoes = "/refeicoesPrevistas";
 
 let id = 4
 
