@@ -24,7 +24,7 @@ async function MostrarInformacoes() {
     let problema = problemas.filter(function (elem) { return elem.status == "Pendente" })
     let normal = estoques.filter(function (elem) { return elem.quantidade >= 5 })
     let baixo = estoques.filter(function (elem) { return elem.quantidade < 5 })
-    let porcentagem = Porcetagem_estoque(normal.length,baixo.length).toFixed(1)
+    let porcentagem = Porcetagem_estoque(normal.length,baixo.length).toFixed(2)
     let oi = document.getElementById('ola')
     let refeicao = document.getElementById('refeicoes')
     let estoque = document.getElementById('estoque')

@@ -92,17 +92,17 @@ let sobras = document.getElementById("sobras");
 porcoes.addEventListener("input", function () {
     
     sobras.value = Number(porcoes.value) - Number(qtdservida.value);
-    document.getElementById("desperdicio").value = desperdicio().toFixed(1);
+    document.getElementById("desperdicio").value = desperdicio().toFixed(2);
 });
 sobras.addEventListener("input", function () {
 
-    document.getElementById("desperdicio").value = desperdicio().toFixed(1);
+    document.getElementById("desperdicio").value = desperdicio().toFixed(2);
 });
 
 qtdservida.addEventListener("input", function () {
 
     sobras.value = Number(porcoes.value) - Number(qtdservida.value);
-    document.getElementById("desperdicio").value = desperdicio().toFixed(1);
+    document.getElementById("desperdicio").value = desperdicio().toFixed(2);
 });
 let idConsumo
 
