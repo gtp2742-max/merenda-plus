@@ -457,6 +457,5 @@
       "status": "Resolvido",
       "id": "D17zl5C"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
