@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio da Semana</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/cardapio.css">
+</head>
+
+<body>
+
+    <header class="cardapio-header">
+        <h1>Sistema Merenda +</h1>
+        <h3>Visualização do Cardápio</h3>
+    </header>
+
+    <div class="container mt-4 cardapio-formulario">
+
+        <h4 class="text-center mb-4">
+            Cardápios Disponíveis
+        </h4>
+
+        <table class="table cardapio-tabela">
+
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Refeição</th>
+                    <th>Prato Principal</th>
+                    <th>Acompanhamento</th>
+                    <th>Sobremesa</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="listaCardapios">
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="container mt-4 cardapio-area-alteracao">
+
+        <h4 class="mb-3">
+            Registrar Alteração no Cardápio
+        </h4>
+
+        <input type="hidden" id="idCardapio">
+
+        <div class="mb-3">
+            <label class="form-label">
+                Descreva a alteração realizada
+            </label>
+
+            <textarea
+                id="observacaoMerendeira"
+                class="form-control"
+                rows="4"></textarea>
+        </div>
+
+        <button id="registrarAlteracao"
+            class="btn btn-warning text-white">
+            Registrar Alteração
+        </button>
+
+    </div>
+
+    <div class="container mt-4">
+        <button id="voltar" class="btn btn-secondary">
+            Voltar
+        </button>
+    </div>
+
+    <script src="../../assets/js/cardapio_M.js"></script>
+
+</body>
+
+</html>
