@@ -27,7 +27,7 @@ function initLoginApp () {
             window.location.href = LOGIN_URL;
         }
 
-        // REGISTRA LISTENER PARA O EVENTO DE CARREGAMENTO DA PÁGINA PARA ATUALIZAR INFORMAÇÕES DO USUÁRIO
+       
         document.addEventListener('DOMContentLoaded', function () {
             showUserInfo ('userInfo');
         });
@@ -59,11 +59,12 @@ function carregarUsuarios(callback) {
 }
 
 // Verifica se o login do usuário está ok e, se positivo, direciona para a página inicial
-function loginUser (login, senha, role) {
+function loginUser (login, senha, role,status) {
      console.log("verificando") 
      console.log(role)
      console.log(senha)
      console.log(login)
+     console.log(status)
 
     // Verifica todos os itens do banco de dados de usuarios 
     // para localizar o usuário informado no formulario de login
@@ -74,13 +75,13 @@ function loginUser (login, senha, role) {
         console.log("usuario")
         console.log(usuario.role)
 
-        if (login == usuario.login && senha == usuario.senha && usuario.role.includes(role) ) {
+        if (login == usuario.login && senha == usuario.senha && usuario.role.includes(role) && usuario.status == "ativo" ) {
             usuarioCorrente.id = usuario.id;
             usuarioCorrente.login = usuario.login;
             usuarioCorrente.email = usuario.email;
             usuarioCorrente.nome = usuario.nome;
             usuarioCorrente.role = usuario.role;
-            
+            usuarioCorrente.status = usuario.status;
         
 
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
@@ -91,40 +92,41 @@ function loginUser (login, senha, role) {
         }
     }
 
-    // Se chegou até aqui é por que não encontrou o usuário e retorna falso
     return false;
 }
 
-// Apaga os dados do usuário corrente no sessionStorage
 function logoutUser () {
     sessionStorage.removeItem ('usuarioCorrente');
     window.location = LOGIN_URL;
 }
 
-function addUser (nome, login, senha, email,role) {
 
-    // Cria um objeto de usuario para o novo usuario 
-    let usuario = { "login": login, "senha": senha, "nome": nome, "email": email,"role":role };
 
-    // Envia dados do novo usuário para ser inserido no JSON Server
-    fetch(API_URL, {
+function addUser (nome, login, senha, email,role,status) {
+
+    let usuario = { "login": login, "senha": senha, "nome": nome, "email": email,"role":role, "status":status };
+     
+   
+     fetch(API_URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(usuario),
-    })
+     })
         .then(response => response.json())
         .then(data => {
-            // Adiciona o novo usuário na variável db_usuarios em memória
-            db_usuarios.push (usuario);
-            displayMessage("Usuário inserido com sucesso");
-        })
+         
+    db_usuarios.push(data); // <- CORRETO
+
+    displayMessage("Usuário inserido com sucesso");
+    })
+       
         .catch(error => {
             console.error('Erro ao inserir usuário via API JSONServer:', error);
             displayMessage("Erro ao inserir usuário");
-        });
-}
+   });
+ }
 
 function showUserInfo (element) {
     var elemUser = document.getElementById(element);

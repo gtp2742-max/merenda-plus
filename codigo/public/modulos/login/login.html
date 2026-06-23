@@ -13,7 +13,7 @@
     crossorigin="anonymous"></script>
 </head>
 
-<<body style="
+<body style="
 background-image: 
 linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
 url('image-bg/bg.jpeg');
@@ -34,23 +34,24 @@ background-size: cover;">
                 <input type="password" name="password" id="password" class="form-control">
               </div>
               <div class="form-check">
-              <input class="form-check-input" type="radio" name="opcao" value="diretora"  id="btndiretora">
-            <label class="form-check-label" for="opcao1" style="color: white;">
-                Diretora
-            </label>
-           </div>
+                <input class="form-check-input" type="radio" name="opcao" value="diretora" id="btndiretora">
+                <label class="form-check-label" for="opcao1" style="color: white;">
+                  Diretora
+                </label>
+              </div>
 
               <div class="form-check">
                 <input value="merendeira" class="form-check-input" type="radio" name="opcao" id="btnmerendeira">
-               <label class="form-check-label" for="opcao2"  style="color: white">
+                <label class="form-check-label" for="opcao2" style="color: white">
                   Merendeira
-               </label>
+                </label>
               </div>
               <div class="form-group text-center mt-3">
-                <button type="button" class="btn btn-primary text-light" data-toggle="modal" data-target="#loginModal">Registrar</button>
-                <input type="submit" name="submit" class="btn btn-primary text-light" value="Login"> 
+                <button type="button" class="btn btn-primary text-light" data-toggle="modal"
+                  data-target="#loginModal">Registrar</button>
+                <input type="submit" name="submit" class="btn btn-primary text-light" value="Login">
               </div>
-           
+
 
             </form>
           </div>
@@ -94,6 +95,19 @@ background-size: cover;">
                 <label for="senha2" class="text-info">Confirmação de Senha</label><br>
                 <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
               </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="opcao" value="diretora" id="btndiretora">
+                <label class="form-check-label" for="opcao1" style="color: turquoise;">
+                  Diretora
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input value="merendeira" class="form-check-input" type="radio" name="opcao" id="btnmerendeira">
+                <label class="form-check-label" for="opcao2" style="color: turquoise">
+                  Merendeira
+                </label>
+              </div>
             </form>
           </div>
         </div>
@@ -117,9 +131,10 @@ background-size: cover;">
       var username = document.getElementById('username').value;
       var password = document.getElementById('password').value;
       var role = document.querySelector('input[name="opcao"]:checked').value;
-        console.log("pronto")
+      let status = "pendente";
+      console.log("pronto")
       // Valida login e se estiver ok, redireciona para tela inicial da aplicação
-      resultadoLogin = loginUser(username, password ,role);
+      resultadoLogin = loginUser(username, password, role);
       if (resultadoLogin) {
         window.location.href = RETURN_URL;
       }
@@ -138,13 +153,15 @@ background-size: cover;">
       let email = document.getElementById('txt_email').value;
       let senha = document.getElementById('txt_senha').value;
       let senha2 = document.getElementById('txt_senha2').value;
+      let role = document.querySelector('input[name="opcao"]:checked').value;
+      let status = "pendente";
       if (senha != senha2) {
         alert('As senhas informadas não conferem.');
         return
       }
 
       // Adiciona o usuário no banco de dados
-      addUser(nome, login, senha, email);
+      addUser(nome, login, senha, email,role,status);
       alert('Usuário salvo com sucesso. Proceda com o login para ');
 
       // Oculta a div modal do login
@@ -169,6 +186,6 @@ background-size: cover;">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-</body>
+  </body>
 
 </html>
