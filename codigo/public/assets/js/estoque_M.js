@@ -190,4 +190,9 @@ botaoAdd.addEventListener('click', () => {
 
   });
 
+  
 });
+
+function voltar(){
+  window.location.href = "home_M.html";
+}

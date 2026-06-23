@@ -199,7 +199,7 @@ function mostrarMensagem(texto,tipo){
 }
 
 function voltar(){
-    window.location.href = "alertas_diretora.html";
+    window.location.href = "alertas_D.html";
 }
 
 

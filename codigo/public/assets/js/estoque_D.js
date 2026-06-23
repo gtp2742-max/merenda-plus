@@ -312,5 +312,8 @@ document
     carregarEstoque
 );
 
+function voltar() {
+  window.location.href = "home_D.html";
+}
 
 carregarEstoque();

@@ -246,3 +246,7 @@ document.getElementById("btnDeletar")
         });
 
 MostrarInformacoes();
+
+function voltar(){
+  window.location.href = "home_M.html";
+}
