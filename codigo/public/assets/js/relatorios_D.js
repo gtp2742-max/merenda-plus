@@ -69,7 +69,11 @@ document.getElementById("pdf").addEventListener("click", () => {
 })
 
 function voltar() {
-  window.location.href = "home_D.html";
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "home_D.html";
+    }
 }
 
 mostrarDados("1")        

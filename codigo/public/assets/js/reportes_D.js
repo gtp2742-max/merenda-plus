@@ -198,8 +198,12 @@ function mostrarMensagem(texto,tipo){
     }, 3000);
 }
 
-function voltar(){
-    window.location.href = "alertas_D.html";
+function voltar() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "home_D.html";
+    }
 }
 
 

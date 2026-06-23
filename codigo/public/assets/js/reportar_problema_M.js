@@ -280,7 +280,11 @@ function mostrarMensagem(texto, tipo) {
 }
 
 function voltar() {
-  window.location.href = "home_M.html";
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "home_M.html";
+    }
 }
 
 

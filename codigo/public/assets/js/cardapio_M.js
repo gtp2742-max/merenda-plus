@@ -85,3 +85,11 @@ document.getElementById("registrarAlteracao")
     });
 
 listarCardapios();
+
+function voltar() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "home_M.html";
+    }
+}
