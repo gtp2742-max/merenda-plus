@@ -1,0 +1,63 @@
+body{
+    background-color: #dff3e3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardapio-header{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.cardapio-header h1{
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+.cardapio-formulario{
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.cardapio-tabela{
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cardapio-tabela th{
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+}
+
+.cardapio-tabela td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cardapio-observacao{
+    background-color: #f1f8f2;
+    border-left: 5px solid #2e7d32;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.cardapio-area-alteracao{
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.cardapio-btn-salvar{
+    background-color: #2e7d32;
+    border: none;
+}
+
+.cardapio-btn-salvar:hover{
+    background-color: #1b5e20;
+}
