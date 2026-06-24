@@ -1,54 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Diretora</title>
+    <link rel="stylesheet" href="../../assets/css/home_D.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script defer src="../../assets/js/home_D.js"></script>
 </head>
-<body class="p-5">
-    <h1>Home Diretora</h1>
-    <main class="border border-black p-2" >
-        <h5 class="text-center">Sistema Merenda Escolar</h5>
-        <div id="ola">
-            
+
+<body>
+
+    <div class="container-principal">
+
+        <h1 class="titulo-sistema">Sistema Merenda +</h1>
+
+        <div class="card-principal">
+
+            <h2 class="titulo-pagina">Painel da Diretora</h2>
+            <p class="saudacao" id="saudacao">Carregando...</p>
+
+            <div class="grid-metricas" id="grid-metricas">
+                <div class="estado-loading">Carregando dados...</div>
+            </div>
+
+            <p class="secao-titulo">Acessos Rápidos</p>
+
+            <div class="grid-acessos">
+
+                <a href="../diretora/relatorios_D.html" class="btn-acesso">
+                    <span class="icone">📊</span>
+                    <span>Relatórios</span>
+                </a>
+
+                <a href="../diretora/estoque_D.html" class="btn-acesso">
+                    <span class="icone">📦</span>
+                    <span>Estoque</span>
+                </a>
+
+                <a href="../diretora/reportes_D.html" class="btn-acesso">
+                    <span class="icone">📋</span>
+                    <span>Reportes</span>
+                </a>
+
+                <a href="../diretora/alertas_D.html" class="btn-acesso">
+                    <span class="icone">🔔</span>
+                    <span>Alertas</span>
+                </a>
+
+            </div>
+
+            <p class="secao-titulo">Alertas Pendentes</p>
+
+            <div id="lista-alertas" class="lista-alertas">
+                <div class="estado-loading">Carregando alertas...</div>
+            </div>
+
         </div>
-        <section class="d-flex justify-content-around">
-            <div id="refeicoes">
 
-            </div>
-            <div id="estoque">
+    </div>
 
-            </div>
-            <div id="alertas">
-
-            </div>
-            <div id="desperdicio">
-
-            </div>
-        </section>
-        <h5>Acessos rápidos:</h5>
-        <article class="row g-3">
-
-            <div class="col-6">
-                <a href="../diretora/relatorios_D.html" class="btn btn-outline-dark w-100 py-1">Relatorios</a>
-            </div>
-
-            <div class="col-6">
-                <a href="../diretora/estoque_D.html" class="btn btn-outline-dark w-100 py-1">Estoque</a>
-            </div>
-
-            <div class="col-6">
-                <a href="../diretora/reportes_D.html" class="btn btn-outline-dark w-100 py-1">Reportes</a>
-            </div>
-
-            <div class="col-6">
-                <a href="../diretora/alertas_D.html" class="btn btn-outline-dark w-100 py-1">Alertas</a>
-            </div>
-
-        </article>
-    </main>
+    <script src="../../assets/js/home_D.js"></script>
 </body>
-</html
+
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -8,89 +8,67 @@
     <link rel="stylesheet" href="../../assets/css/home_M.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script defer src="../../assets/js/home_M.js"></script>
-
 </head>
 
-<body class="p-5">
-    <h1 class="titulo-home">Sistema Merenda +</h1>
-    <main class="card-home" id="principal">
-        <section>
-            <h2 class="titulo-pagina text-center">Home Merendeira</h2>
-            <div class="d-flex justify-content-between mb-2" id="ola">
+<body>
+
+    <div class="container-principal">
+
+        <h1 class="titulo-sistema">Sistema Merenda +</h1>
+
+        <div class="card-principal">
+
+            <h2 class="titulo-pagina">Painel da Merendeira</h2>
+            <p class="saudacao" id="saudacao">Carregando...</p>
+
+            <div class="grid-metricas" id="grid-metricas">
+                <div class="estado-loading" style="grid-column: 1/-1;">Carregando dados...</div>
+            </div>
+
+            <p class="secao-titulo">Cardápio de Hoje</p>
+
+            <div id="cardapio-container">
+                <div class="estado-loading">Carregando cardápio...</div>
+            </div>
+
+            <p class="secao-titulo">Acesso Rápido</p>
+
+            <div class="grid-acessos">
+
+                <a href="cardapio_M.html" class="btn-acesso">
+                    <span class="icone">📅</span>
+                    <span>Ver Cardápio Completo</span>
+                </a>
+
+                <a href="../merendeira/preparo_M.html" class="btn-acesso">
+                    <span class="icone">🍳</span>
+                    <span>Registrar Preparo</span>
+                </a>
+
+                <a href="../merendeira/registrar_consumo_M.html" class="btn-acesso">
+                    <span class="icone">🍽️</span>
+                    <span>Registrar Consumo</span>
+                </a>
+
+                <a href="../merendeira/estoque_M.html" class="btn-acesso">
+                    <span class="icone">📦</span>
+                    <span>Consultar Estoque</span>
+                </a>
 
             </div>
-            <div class="info-card" id="porcoes">
 
-            </div>
-            <div class="cardapio-box">
-                <h4>Cardápio de Hoje:</h4>
-                <ul id="cardapio">
-
-                </ul>
-
-            </div>
-        </section>
-
-        <h4 class="menu-title">Acesso Rápido</h4>
-
-        <article class="row g-3 mt-2">
-
-            <div class="col-md-6">
-                <a href="cardapio_M.html" class="btn btn-menu w-100">
-                    Ver Cardápio Completo
+            <div class="grid-acessos-full">
+                <a href="../merendeira/reportar_problema_M.html" class="btn-acesso destaque">
+                    <span class="icone">⚠️</span>
+                    <span>Reportar Problema</span>
                 </a>
             </div>
 
-            <div class="col-md-6">
-                <a href="../merendeira/preparo_M.html" class="btn btn-menu w-100">
-                    Registrar Preparo
-                </a>
-            </div>
+        </div>
 
-            <div class="col-md-6">
-                <a href="../merendeira/registrar_consumo_M.html" class="btn btn-menu w-100">
-                    Registrar Consumo
-                </a>
-            </div>
-
-            <div class="col-md-6">
-                <a href="../merendeira/estoque_M.html" class="btn btn-menu w-100">
-                    Consultar Estoque
-                </a>
-            </div>
-
-            <div class="col-md-12">
-                <a href="../merendeira/reportar_problema_M.html" class="btn btn-menu w-100">
-                    Reportar Problema
-                </a>
-            </div>
-
-        </article>
-    </main>
-
-    <form action="" id="formPorcoes" class="form-card d-none">
-        <H1>Editar porções:</H1>
-        <p>Número de porções:</p>
-        <input type="number" id="inputPorcoes"><br>
-        <button id="salvarPorcoes" class="btn btn-salvar rounded-pill mt-4">Salvar Alteraçoes</button>
-    </form>
-
-    <form action="" id="formCardapio" class="form-card d-none">
-        <h1>Editar cardápio:</h1>
-        <p>Prato principal:</p>
-        <input type="text" id="inputPrincipal">
-        <p>Acompanhamento:</p>
-        <input type="text" id="inputAcompanhamento">
-        <p>Fruta:</p>
-        <input type="text" id="inputFruta"><br>
-        <button id="salvarCardapio" class="btn btn-salvar rounded-pill mt-4">Salvar Alteraçoes</button>
-    </form>
-    <div class="text-center mt-4">
-        <button class="btn btn-secondary px-5">
-            Voltar
-        </button>
     </div>
+
+    <script src="../../assets/js/home_M.js"></script>
 </body>
 
 </html>

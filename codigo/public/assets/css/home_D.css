@@ -17,6 +17,7 @@ body {
     margin-bottom: 25px;
 }
 
+/* Card principal que envolve tudo */
 .card-principal {
     background-color: white;
     width: 85%;
@@ -40,9 +41,10 @@ body {
     font-size: 15px;
 }
 
+/* ── Cards de métricas ── */
 .grid-metricas {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     margin-bottom: 35px;
 }
@@ -66,10 +68,6 @@ body {
     color: #c62828;
 }
 
-.card-metrica.alerta .metrica-label {
-    color: #c62828;
-}
-
 .card-metrica.atencao {
     border-top-color: #f59e0b;
     background-color: #fffbf0;
@@ -80,10 +78,6 @@ body {
     color: #b45309;
 }
 
-.card-metrica.atencao .metrica-label {
-    color: #b45309;
-}
-
 .metrica-label {
     font-size: 13px;
     font-weight: bold;
@@ -91,6 +85,14 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 10px;
+}
+
+.card-metrica.alerta .metrica-label {
+    color: #c62828;
+}
+
+.card-metrica.atencao .metrica-label {
+    color: #b45309;
 }
 
 .metrica-valor {
@@ -106,6 +108,7 @@ body {
     color: #777;
 }
 
+/* ── Divisor de seções ── */
 .secao-titulo {
     font-size: 15px;
     font-weight: bold;
@@ -115,70 +118,12 @@ body {
     border-bottom: 2px solid #c8e6c9;
 }
 
-.cardapio-box {
-    background-color: #f1f8f2;
-    border: 1px solid #c8e6c9;
-    border-left: 5px solid #2e7d32;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 30px;
-}
-
-.cardapio-box .cardapio-linha {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid #c8e6c9;
-    font-size: 14px;
-}
-
-.cardapio-box .cardapio-linha:last-child {
-    border-bottom: none;
-}
-
-.cardapio-box .cardapio-chave {
-    font-weight: bold;
-    color: #2e7d32;
-    min-width: 150px;
-}
-
-.cardapio-box .cardapio-valor {
-    color: #333;
-}
-
-.badge-status {
-    display: inline-block;
-    padding: 3px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.badge-planejado {
-    background-color: #e3f2fd;
-    color: #1565c0;
-}
-
-.badge-alterado {
-    background-color: #fff3e0;
-    color: #e65100;
-}
-
-.badge-concluido {
-    background-color: #e8f5e9;
-    color: #2e7d32;
-}
-
+/* ── Acessos rápidos ── */
 .grid-acessos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    margin-bottom: 10px;
-}
-
-.grid-acessos-full {
-    margin-top: 12px;
+    margin-bottom: 30px;
 }
 
 .btn-acesso {
@@ -202,35 +147,57 @@ body {
     color: white;
 }
 
-.btn-acesso.destaque {
-    border-top: 3px solid #e53935;
-    background-color: #fff5f5;
-    border-color: #ffcdd2;
-    color: #c62828;
-}
-
-.btn-acesso.destaque:hover {
-    background-color: #e53935;
-    border-color: #e53935;
-    color: white;
-}
-
 .btn-acesso .icone {
     font-size: 22px;
     line-height: 1;
 }
 
-.aviso-cardapio {
-    background-color: #fffbf0;
-    border: 1px solid #fde68a;
-    border-left: 5px solid #f59e0b;
-    border-radius: 10px;
-    padding: 14px 18px;
-    color: #b45309;
-    font-size: 14px;
-    margin-bottom: 30px;
+/* ── Alertas pendentes ── */
+.lista-alertas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
+.item-alerta {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #fff5f5;
+    border: 1px solid #ffcdd2;
+    border-left: 5px solid #e53935;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.item-alerta .alerta-tipo {
+    font-weight: bold;
+    color: #c62828;
+    margin-bottom: 2px;
+}
+
+.item-alerta .alerta-desc {
+    color: #555;
+}
+
+.item-alerta .alerta-data {
+    font-size: 12px;
+    color: #999;
+    margin-top: 2px;
+}
+
+.sem-alertas {
+    background-color: #f1f8f2;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+/* ── Loading e erro ── */
 .estado-loading {
     text-align: center;
     color: #999;

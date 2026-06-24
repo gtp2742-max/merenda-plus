@@ -1,65 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Consumo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script defer src="../../assets/js/registrar_consumo_M.js"></script>
-
+    <link rel="stylesheet" href="../../assets/css/registrar_consumo_M.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body class="p-5">
-    <h1>Registrar consumo</h1>
-    <main class="border border-black">
-        
-        <h5 class="text-center">Sistema Merenda Escolar</h5>
-        <form action="" class="d-flex justify-content-around " id="form1">
-            <div class="border border-black p-5">
-                <p>Refeição do dia:</p>
-                <input type="text" style="width:300px" id="refeicao_dia" required>
-                <p>Porções previstas:</p>
-                <input type="number" id="porcoes" required>
+
+<body>
+
+    <div class="container-principal">
+
+        <h1 class="titulo-sistema">Sistema Merenda +</h1>
+
+        <div class="card-principal">
+
+            <h2 class="titulo-pagina">Registrar Consumo</h2>
+
+            <div class="row g-3 mb-4">
+
+                <div class="col-md-8">
+                    <label class="label-titulo">Cardápio do Dia</label>
+                    <div class="campo-info" id="card-cardapio">
+                        <p id="refeicao_dia">Carregando...</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="label-titulo">Porções Previstas</label>
+                    <div class="campo-info">
+                        <p id="porcoes">—</p>
+                    </div>
+                </div>
+
             </div>
-            <div>
-                <p>Data:</p>
-                <input type="date" id="data" required>
-                <p>Tipo da Refeição:</p>
-                <input type="radio" name="tipo" checked value="Almoço">
-                <label for="almoco">Almoço</label>
+            <div id="avisoSemCardapio" class="alert alert-warning d-none" role="alert">
+                ⚠️ Nenhum cardápio encontrado para hoje. Os dados exibidos são do último cardápio cadastrado.
+            </div>
 
-                <input type="radio" name="tipo" value="Jantar">
-                <label for="jantar">Jantar</label>
+            <div class="row g-3 mb-3">
+
+                <div class="col-md-6">
+                    <label class="label-titulo" for="data">Data</label>
+                    <input type="date" id="data" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="label-titulo" for="tipo">Tipo da Refeição</label>
+                    <select id="tipo" class="form-control">
+                        <option>Almoço</option>
+                        <option>Lanche</option>
+                        <option>Café da Manhã</option>
+                    </select>
+                </div>
 
             </div>
-        </form>
 
-        <h5 class="text-center">Lançamento de Consumo</h5>
-        <form action="" class="text-center" id="form2">
-            <p>Quantidade servida(porções):</p>
-            <input type="number" class="text-center" id="qtdservida" required>
-            <p>Sobras (porções):</p>
-            <input type="number" class="text-center" id="sobras" required>
-            <p>Desperdicio:</p>
-            <input style="color: black; " type="number" id="desperdicio" class="text-center"  disabled> %  
-            
-        </form>
+            <div class="row g-3 mb-3">
 
-        <div class="d-flex justify-content-around">
-            <button class="btn btn-primary" onclick="voltar()">Voltar</button>
-            <button class="btn btn-outline-dark" id="btnEditar">Editar</button>
-            <button class="d-none btn btn-outline-dark" id="btnAlterar">Alterar</button>
-            <button class="d-none btn btn-outline-dark" id="btnDeletar">Deletar</button>
-            <button class="btn btn-outline-dark" id="btnSalvar">Salvar Registros</button>
+                <div class="col-md-6">
+                    <label class="label-titulo" for="qtdservida">Quantidade Servida</label>
+                    <input type="number" id="qtdservida" class="form-control" min="0" placeholder="Ex: 115">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="label-titulo" for="sobras">
+                        Sobras (porções que sobraram fisicamente)
+                    </label>
+                    <input type="number" id="sobras" class="form-control" min="0" placeholder="Ex: 10">
+                </div>
+
+            </div>
+
+            <div class="mb-4">
+                <label class="label-titulo" for="desperdicio">Desperdício (%)</label>
+                <input type="text" id="desperdicio" class="form-control campo-desperdicio" readonly
+                    placeholder="Calculado automaticamente">
+            </div>
+
+            <button id="btnSalvar" class="btn btn-success btn-salvar">
+                Salvar Registro
+            </button>
+
         </div>
 
-    </main>
+        <div class="tabela-consumos">
 
-    <article id="consumos" class="d-none text-center container mt-4 p-3 bg-white border rounded shadow-sm">
-        <table id="tabela" class="table">
-            
-        </table>
-        
-    </article>
+            <h4>Histórico de Consumos</h4>
 
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Cardápio do Dia</th>
+                            <th>Tipo</th>
+                            <th>Qtd. Servida</th>
+                            <th>Sobras</th>
+                            <th>Desperdício (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela">
+                        <tr id="linhaVazia">
+                            <td colspan="6" class="text-center text-muted py-4">
+                                Nenhum consumo registrado ainda.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-4 mb-5">
+            <button class="btn btn-secondary btn-voltar" onclick="voltar()">
+                ← Voltar
+            </button>
+        </div>
+
+    </div>
+
+    <script src="../../assets/js/registrar_consumo_M.js"></script>
 </body>
+
 </html>
