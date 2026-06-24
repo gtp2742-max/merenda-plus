@@ -1,0 +1,78 @@
+body{
+    background-color:#dff3e3;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.titulo-home{
+    text-align:center;
+    color:#1b5e20;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.card-home{
+    background:white;
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.info-card{
+    background:#f1f8f2;
+    border-left:5px solid #2e7d32;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.cardapio-box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    margin-bottom:25px;
+}
+
+.cardapio-box h4{
+    color:#1b5e20;
+    margin-bottom:15px;
+}
+
+.cardapio-box ul{
+    padding-left:20px;
+}
+
+.cardapio-box li{
+    margin-bottom:8px;
+}
+
+.menu-title{
+    color:#1b5e20;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.btn-menu{
+    background:#2e7d32 !important;
+    color:white !important;
+    border:none !important;
+    padding:12px !important;
+    font-weight:bold !important;
+}
+
+.btn-menu:hover{
+    background:#1b5e20 !important;
+}
+
+a.btn-menu{
+    text-decoration:none;
+}
+.titulo-pagina{
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
