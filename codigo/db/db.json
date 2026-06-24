@@ -6,11 +6,9 @@
       "senha": "123",
       "nome": "Administrador do Sistema",
       "email": "admin@abc.com",
-      "role": [
-        "merendeira",
-        "diretora"
-      ],
-      "status": "ativo"
+      "status": "ativo",
+      "role": ["merendeira","diretora"]
+      
     },
     {
       "id": "2",
@@ -18,10 +16,9 @@
       "senha": "123",
       "nome": "Diretora",
       "email": "diretora@abc.com",
-      "role": [
-        "diretora"
-      ],
-      "status": "ativo"
+      "status": "ativo",
+      "role": ["diretora"]
+      
     },
     {
       "id": "3",
@@ -29,11 +26,7 @@
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com",
-      "role": [
-        "merendeira",
-        "diretora"
-      ],
-      "status": "ativo"
+      "role": ["merendeira","diretora"]
     },
     {
       "id": "4",
@@ -41,28 +34,29 @@
       "senha": "123",
       "nome": "Ana Paula Ferreiraaaa",
       "email": "anapaula@gmail.com",
-      "role": [
-        "merendeira"
-      ],
-      "status": "ativo"
+      "status": "ativo",
+      "role": ["merendeira"]
     },
     {
+      "id": "0SoG0teuWf4",
       "login": "teste9",
       "senha": "12345",
       "nome": "teste9",
       "email": "teste",
-      "role": "diretora",
       "status": "ativo",
-      "id": "0SoG0teuWf4"
+      "role": "diretora"
+      
     },
     {
+       "id": "bIPr-Tmj108",
       "login": "teste9",
       "senha": "123",
       "nome": "teste9",
       "email": "teste@gmail.com",
-      "role": "diretora",
       "status": "ativo",
-      "id": "bIPr-Tmj108"
+      "role": "diretora"
+     
+      
     }
   ],
   "funcionalidades": [
@@ -235,11 +229,30 @@
   "refeicoesPrevistas": {
     "porcoes": "120"
   },
-  "cardapio": {
-    "pratoPrincipal": "Carne com batata",
-    "acompanhamento": "Salada",
-    "fruta": "Banana prata"
-  },
+  "cardapios": [
+    {
+      "id": "1",
+      "data": "2026-06-22",
+      "refeicao": "Almoço",
+      "pratoPrincipal": "Carne com Batata",
+      "acompanhamento": "Arroz e Feijão",
+      "sobremesa": "Banana",
+      "quantidadePrevista": 130,
+      "observacao": "",
+      "status": "Planejado"
+    },
+    {
+      "id": "2",
+      "data": "2026-06-23",
+      "refeicao": "Almoço",
+      "pratoPrincipal": "Frango Assado",
+      "acompanhamento": "Arroz e Salada",
+      "sobremesa": "Maçã",
+      "quantidadePrevista": 120,
+      "observacao": "",
+      "status": "Planejado"
+    }
+  ],
   "estoque": [
     {
       "id": "4",

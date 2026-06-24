@@ -68,4 +68,12 @@ document.getElementById("pdf").addEventListener("click", () => {
     window.print()
 })
 
+function voltar() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "home_D.html";
+    }
+}
+
 mostrarDados("1")        

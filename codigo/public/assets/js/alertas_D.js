@@ -196,12 +196,12 @@ function renderizarItens() {
 
 listaAlertas.addEventListener("click", function (event) {
   if (event.target.classList.contains("btn-ver-estoque")) {
-    window.location.href = "../sprint2_andre/estoque.html";
+    window.location.href = "estoque_D.html";
   }
 
   if (event.target.classList.contains("btn-ver-reporte")) {
     const id = event.target.dataset.id;
-    window.location.href = `reportes_diretora.html?id=${id}`;
+    window.location.href = `reportes_D.html?id=${id}`;
   }
 
   if (event.target.classList.contains("btn-resolver")) {
@@ -280,5 +280,9 @@ function mostrarMensagem(texto, tipo) {
 }
 
 function voltar() {
-  window.location.href = "../../index.html";
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "home_D.html";
+    }
 }
