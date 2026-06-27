@@ -1,90 +1,135 @@
 const apiCardapio = "/cardapios";
 
 const lista = document.getElementById("listaCardapios");
+const btnRegistrar = document.getElementById("registrarAlteracao");
+const avisoSelecao = document.getElementById("avisoSelecao");
 
 let cardapioSelecionado = null;
 
-function listarCardapios() {
-
-    fetch(apiCardapio)
-        .then(res => res.json())
-        .then(cardapios => {
-
-            lista.innerHTML = "";
-
-            cardapios.forEach(cardapio => {
-
-                lista.innerHTML += `
-                    <tr>
-                        <td>${cardapio.data}</td>
-                        <td>${cardapio.refeicao}</td>
-                        <td>${cardapio.pratoPrincipal}</td>
-                        <td>${cardapio.acompanhamento}</td>
-                        <td>${cardapio.sobremesa}</td>
-                        <td>${cardapio.status}</td>
-                        <td>
-                            <button class="btn btn-warning btn-sm"
-                                onclick="selecionarCardapio('${cardapio.id}')">
-                                Alterar
-                            </button>
-                        </td>
-                    </tr>
-                `;
-            });
-
-        });
+function formatarData(dataISO) {
+    if (!dataISO) return "—";
+    const [ano, mes, dia] = dataISO.split("-");
+    return `${dia}/${mes}/${ano}`;
 }
 
-function selecionarCardapio(id) {
-
-    fetch(`${apiCardapio}/${id}`)
-        .then(res => res.json())
-        .then(cardapio => {
-
-            cardapioSelecionado = cardapio;
-
-            document.getElementById("idCardapio").value = cardapio.id;
-
-            document.getElementById("observacaoMerendeira").value =
-                cardapio.observacao || "";
-        });
+function badgeStatus(status) {
+    const mapa = {
+        "Planejado":  "badge-planejado",
+        "Alterado":   "badge-alterado",
+        "Concluído":  "badge-concluido",
+        "Concluido":  "badge-concluido"
+    };
+    const classe = mapa[status] || "badge-planejado";
+    return `<span class="badge-status ${classe}">${status}</span>`;
 }
 
-document.getElementById("registrarAlteracao")
-    .addEventListener("click", () => {
+async function listarCardapios() {
+    try {
+        const res = await fetch(apiCardapio);
+        const cardapios = await res.json();
 
-        const observacao =
-            document.getElementById("observacaoMerendeira").value;
-
-        if (!cardapioSelecionado) {
-            alert("Selecione um cardápio.");
+        if (!cardapios || cardapios.length === 0) {
+            lista.innerHTML = `
+                <tr>
+                    <td colspan="7" class="text-center text-muted py-4">
+                        Nenhum cardápio cadastrado.
+                    </td>
+                </tr>`;
             return;
         }
 
-        const atualizado = {
-            ...cardapioSelecionado,
-            observacao: observacao,
-            status: "Alterado"
-        };
+        lista.innerHTML = cardapios.map(c => `
+            <tr>
+                <td>${formatarData(c.data)}</td>
+                <td>${c.refeicao}</td>
+                <td>${c.pratoPrincipal}</td>
+                <td>${c.acompanhamento}</td>
+                <td>${c.sobremesa}</td>
+                <td>${badgeStatus(c.status)}</td>
+                <td>
+                    <button class="btn-alterar" onclick="selecionarCardapio('${c.id}')">
+                        Alterar
+                    </button>
+                </td>
+            </tr>
+        `).join("");
 
-        fetch(`${apiCardapio}/${cardapioSelecionado.id}`, {
+    } catch (erro) {
+        console.error("Erro ao listar cardápios:", erro);
+        lista.innerHTML = `
+            <tr>
+                <td colspan="7" class="text-center text-danger py-4">
+                    Erro ao carregar cardápios.
+                </td>
+            </tr>`;
+    }
+}
+
+async function selecionarCardapio(id) {
+    try {
+        const res = await fetch(`${apiCardapio}/${id}`);
+        cardapioSelecionado = await res.json();
+
+        document.getElementById("idCardapio").value = cardapioSelecionado.id;
+        document.getElementById("observacaoMerendeira").value =
+            cardapioSelecionado.observacao || "";
+
+        // Habilita o botão e esconde o aviso
+        btnRegistrar.disabled = false;
+        avisoSelecao.style.display = "none";
+
+        document.getElementById("observacaoMerendeira").scrollIntoView({
+            behavior: "smooth", block: "center"
+        });
+
+    } catch (erro) {
+        console.error("Erro ao selecionar cardápio:", erro);
+        alert("Erro ao carregar o cardápio. Tente novamente.");
+    }
+}
+
+btnRegistrar.addEventListener("click", async () => {
+    if (!cardapioSelecionado) {
+        alert("Selecione um cardápio na tabela.");
+        return;
+    }
+
+    const observacao = document.getElementById("observacaoMerendeira").value.trim();
+
+    if (!observacao) {
+        alert("Descreva a alteração antes de registrar.");
+        return;
+    }
+
+    const atualizado = {
+        ...cardapioSelecionado,
+        observacao,
+        status: "Alterado"
+    };
+
+    try {
+        const res = await fetch(`${apiCardapio}/${cardapioSelecionado.id}`, {
             method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(atualizado)
-        })
-            .then(() => {
+        });
 
-                document.getElementById("observacaoMerendeira").value = "";
+        if (!res.ok) throw new Error("Erro ao salvar.");
 
-                listarCardapios();
+        document.getElementById("observacaoMerendeira").value = "";
+        document.getElementById("idCardapio").value = "";
+        cardapioSelecionado = null;
+        btnRegistrar.disabled = true;
+        avisoSelecao.style.display = "block";
 
-                alert("Alteração registrada.");
-            });
-    });
+        alert("Alteração registrada com sucesso!");
+        listarCardapios();
 
-listarCardapios();
+    } catch (erro) {
+        console.error("Erro ao registrar alteração:", erro);
+        alert("Erro ao registrar a alteração. Tente novamente.");
+    }
+});
 
 function voltar() {
     if (window.history.length > 1) {
@@ -93,3 +138,5 @@ function voltar() {
         window.location.href = "home_M.html";
     }
 }
+
+listarCardapios();

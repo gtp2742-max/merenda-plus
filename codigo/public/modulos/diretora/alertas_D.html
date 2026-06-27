@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +12,26 @@
 <body>
     <main class="container py-4">
         <section class="card-principal mx-auto">
-            <h1 class="text-center">Sistemas Merenda Escolar</h1>
-            <h4 class="mb-4">Alertas e Ocorrências</h4>
+            <div class="container-principal">
+                <h1 class="titulo-sistema">Sistema Merenda +</h1>
+                <h4 class="mb-4">Alertas e Ocorrências</h4>
 
-            <div class="filtros mb-4">
-                <button class="btn btn-outline-success filtro ativo" data-filtro="Todos">Todos</button>
-                <button class="btn btn-outline-danger filtro" data-filtro="Crítico">Críticos</button>
-                <button class="btn btn-outline-warning filtro" data-filtro="Pendente">Pendentes</button>
-                <button class="btn btn-outline-secondary filtro" data-filtro="Resolvido">Resolvidos</button>
-            </div>
+                <div class="filtros mb-4">
+                    <button class="btn btn-outline-success filtro ativo" data-filtro="Todos">Todos</button>
+                    <button class="btn btn-outline-danger filtro" data-filtro="Crítico">Críticos</button>
+                    <button class="btn btn-outline-warning filtro" data-filtro="Pendente">Pendentes</button>
+                    <button class="btn btn-outline-secondary filtro" data-filtro="Resolvido">Resolvidos</button>
+                </div>
 
-            <div id="mensagem"></div>
-            <div id="listaAlertas"></div>
+                <div id="mensagem"></div>
+                <div id="listaAlertas"></div>
 
-            <div class="mt-4">
-                <button class="btn btn-secondary" onclick="voltar()">Voltar</button>
-            </div>
+                <div class="mt-4">
+                    <button class="btn btn-secondary" onclick="voltar()">Voltar</button>
+                </div>
         </section>
     </main>
     <script src="../../assets/js/alertas_D.js"></script>
 </body>
+
 </html>

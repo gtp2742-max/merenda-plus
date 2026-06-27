@@ -11,96 +11,97 @@
 </head>
 
 <body>
-
-    <header class="cardapio-header">
-        <h1>Sistema Merenda +</h1>
-        <h3>Cadastro de Cardápio Semanal</h3>
-    </header>
-
-    <div class="container mt-4 cardapio-formulario">
-
-        <h4 class="text-center mb-4">Novo Cardápio</h4>
-
-        <div class="row g-3">
-
-            <div class="col-md-4">
-                <label class="form-label">Data</label>
-                <input type="date" id="data" class="form-control">
+   <div class="container-principal">
+ 
+        <h1 class="titulo-sistema">Sistema Merenda +</h1>
+        
+        <div class="card-principal">
+ 
+            <h2 class="titulo-pagina">Cadastro de Cardápio Semanal</h2>
+ 
+            <p class="secao-titulo">Novo Cardápio</p>
+ 
+            <div class="row g-3">
+ 
+                <div class="col-md-4 col-sm-6">
+                    <label class="label-titulo" for="data">Data</label>
+                    <input type="date" id="data" class="form-control">
+                </div>
+ 
+                <div class="col-md-4 col-sm-6">
+                    <label class="label-titulo" for="refeicao">Refeição</label>
+                    <select id="refeicao" class="form-control">
+                        <option>Café da Manhã</option>
+                        <option>Almoço</option>
+                        <option>Lanche</option>
+                    </select>
+                </div>
+ 
+                <div class="col-md-4 col-sm-12">
+                    <label class="label-titulo" for="quantidade">Quantidade Prevista</label>
+                    <input type="number" id="quantidade" class="form-control" min="0" placeholder="Ex: 120">
+                </div>
+ 
+                <div class="col-md-6">
+                    <label class="label-titulo" for="pratoPrincipal">Prato Principal</label>
+                    <input type="text" id="pratoPrincipal" class="form-control" placeholder="Ex: Frango Assado">
+                </div>
+ 
+                <div class="col-md-6">
+                    <label class="label-titulo" for="acompanhamento">Acompanhamento</label>
+                    <input type="text" id="acompanhamento" class="form-control" placeholder="Ex: Arroz e Feijão">
+                </div>
+ 
+                <div class="col-md-6">
+                    <label class="label-titulo" for="sobremesa">Sobremesa</label>
+                    <input type="text" id="sobremesa" class="form-control" placeholder="Ex: Banana">
+                </div>
+ 
+                <div class="col-md-6">
+                    <label class="label-titulo" for="observacao">Observação</label>
+                    <input type="text" id="observacao" class="form-control" placeholder="Opcional">
+                </div>
+ 
+                <div class="col-12 text-center mt-2">
+                    <button id="salvar" class="btn-salvar">
+                        Salvar Cardápio
+                    </button>
+                </div>
+ 
             </div>
-
-            <div class="col-md-4">
-                <label class="form-label">Refeição</label>
-                <select id="refeicao" class="form-control">
-                    <option>Café da Manhã</option>
-                    <option>Almoço</option>
-                    <option>Lanche</option>
-                </select>
-            </div>
-
-            <div class="col-md-4">
-                <label class="form-label">Quantidade Prevista</label>
-                <input type="number" id="quantidade" class="form-control">
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label">Prato Principal</label>
-                <input type="text" id="pratoPrincipal" class="form-control">
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label">Acompanhamento</label>
-                <input type="text" id="acompanhamento" class="form-control">
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label">Sobremesa</label>
-                <input type="text" id="sobremesa" class="form-control">
-            </div>
-
-            <div class="col-md-12">
-                <label class="form-label">Observação</label>
-                <textarea id="observacao" class="form-control" rows="3"></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-                <button id="salvar" class="btn cardapio-btn-salvar text-white px-5">
-                    Salvar Cardápio
-                </button>
-            </div>
-
+ 
         </div>
 
-    </div>
+        <div class="card-principal">
+ 
+            <h2 class="titulo-pagina">Cardápios Planejados</h2>
+ 
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Refeição</th>
+                            <th>Prato Principal</th>
+                            <th>Sobremesa</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaCardapios">
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">Carregando...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+ 
+        </div>
 
-    <div class="container mt-5">
-
-        <h3 class="text-center mb-4">
-            Cardápios Planejados
-        </h3>
-
-        <table class="table cardapio-tabela">
-
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Refeição</th>
-                    <th>Prato Principal</th>
-                    <th>Sobremesa</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-
-            <tbody id="listaCardapios">
-            </tbody>
-
-        </table>
-
-    </div>
-
-    <div class="container mt-4">
-        <button id="voltar" class="btn btn-secondary" onclick="voltar()">
-            Voltar
-        </button>
+        <div class="rodape-voltar">
+            <button class="btn-voltar-padrao" onclick="voltar()">← Voltar</button>
+        </div>
+ 
     </div>
 
     <script src="../../assets/js/cardapio_D.js"></script>

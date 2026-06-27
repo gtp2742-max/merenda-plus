@@ -11,66 +11,62 @@
 </head>
 
 <body>
+ 
+    <div class="container-principal">
+ 
+        <h1 class="titulo-sistema">Sistema Merenda +</h1>
 
-    <header class="cardapio-header">
-        <h1>Sistema Merenda +</h1>
-        <h3>Visualização do Cardápio</h3>
-    </header>
-
-    <div class="container mt-4 cardapio-formulario">
-
-        <h4 class="text-center mb-4">
-            Cardápios Disponíveis
-        </h4>
-
-        <table class="table cardapio-tabela">
-
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Refeição</th>
-                    <th>Prato Principal</th>
-                    <th>Acompanhamento</th>
-                    <th>Sobremesa</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-
-            <tbody id="listaCardapios">
-            </tbody>
-
-        </table>
-
-    </div>
-
-    <div class="container mt-4 cardapio-area-alteracao">
-
-        <h4 class="mb-3">
-            Registrar Alteração no Cardápio
-        </h4>
-
-        <input type="hidden" id="idCardapio">
-
-        <div class="mb-3">
-            <label class="form-label">
-                Descreva a alteração realizada
-            </label>
-
-            <textarea
-                id="observacaoMerendeira"
-                class="form-control"
-                rows="4"></textarea>
+        <div class="card-principal">
+ 
+            <h2 class="titulo-pagina">Cardápios Disponíveis</h2>
+ 
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Refeição</th>
+                            <th>Prato Principal</th>
+                            <th>Acompanhamento</th>
+                            <th>Sobremesa</th>
+                            <th>Status</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaCardapios">
+                        <tr>
+                            <td colspan="7" class="text-center text-muted py-4">Carregando...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+ 
         </div>
-
-        <button id="registrarAlteracao"
-            class="btn btn-warning text-white">
-            Registrar Alteração
-        </button>
-
-    </div>
-
-    <div class="container mt-4">
-        <button id="voltar" class="btn btn-secondary" onclick="voltar()">
+        <div class="card-principal">
+ 
+            <p class="secao-titulo">Registrar Alteração no Cardápio</p>
+ 
+            <div id="avisoSelecao" class="aviso">
+                ⚠️ Selecione um cardápio na tabela acima clicando em <strong>Alterar</strong>.
+            </div>
+ 
+            <input type="hidden" id="idCardapio">
+ 
+            <div class="mb-3">
+                <label class="label-titulo" for="observacaoMerendeira">
+                    Descreva a alteração realizada
+                </label>
+                <textarea id="observacaoMerendeira" class="form-control" rows="4"
+                    placeholder="Ex: Substituído o frango por carne moída devido à falta no estoque."></textarea>
+            </div>
+ 
+            <button id="registrarAlteracao" class="btn-salvar" disabled>
+                Registrar Alteração
+            </button>
+ 
+        </div>
+    <div class="rodape-voltar">
+        <button class="btn-voltar-padrao" onclick="voltar()">
             Voltar
         </button>
     </div>
