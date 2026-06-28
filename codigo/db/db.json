@@ -4,7 +4,7 @@
       "id": "1",
       "login": "admin",
       "senha": "123",
-      "nome": "Administrador do Sistema",
+      "nome": "Joana Maria",
       "email": "admin@abc.com",
       "status": "ativo",
       "role": [
@@ -29,6 +29,7 @@
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com",
+      "status": "ativo",
       "role": [
         "merendeira",
         "diretora"
@@ -38,7 +39,7 @@
       "id": "4",
       "login": "merendeira",
       "senha": "123",
-      "nome": "Ana Paula Ferreiraaaa",
+      "nome": "Ana Paula Ferreira",
       "email": "anapaula@gmail.com",
       "status": "ativo",
       "role": [
@@ -46,7 +47,7 @@
       ]
     },
     {
-      "id": "0SoG0teuWf4",
+      "id": "5",
       "login": "teste9",
       "senha": "12345",
       "nome": "teste9",
@@ -55,13 +56,49 @@
       "role": "diretora"
     },
     {
-      "id": "bIPr-Tmj108",
+      "id": "6",
       "login": "teste9",
       "senha": "123",
       "nome": "teste9",
       "email": "teste@gmail.com",
       "status": "ativo",
       "role": "diretora"
+    },
+    {
+      "login": "Gabriel",
+      "senha": "123",
+      "nome": "Gabriel Pandino",
+      "email": "gab",
+      "role": "diretora",
+      "status": "pendente",
+      "id": "7"
+    },
+    {
+      "login": "Gabriel",
+      "senha": "123",
+      "nome": "Gabriel Pandino",
+      "email": "gab",
+      "role": "diretora",
+      "status": "pendente",
+      "id": "8"
+    },
+    {
+      "login": "Daniel",
+      "senha": "123",
+      "nome": "Daniel tavares",
+      "email": "dani",
+      "role": "diretora",
+      "status": "pendente",
+      "id": "9"
+    },
+    {
+      "login": "Lucas",
+      "senha": "123",
+      "nome": "Lucas Crespo",
+      "email": "lucas@crespo.com",
+      "role": "diretora",
+      "status": "ativo",
+      "id": "1M8_oLT"
     }
   ],
   "funcionalidades": [
@@ -449,6 +486,15 @@
       "quantidadeServida": 120,
       "quantidadeSobra": 10,
       "desperdicio": 7.7
+    },
+    {
+      "refeicaoDoDia": "Frango Assado | Arroz e Salada | Maçã",
+      "data": "2026-06-25",
+      "refeicaoTipo": "Almoço",
+      "quantidadeServida": 200,
+      "quantidadeSobra": 10,
+      "desperdicio": 8.33,
+      "id": "jDA50-E"
     }
   ],
   "historico_alertas": [

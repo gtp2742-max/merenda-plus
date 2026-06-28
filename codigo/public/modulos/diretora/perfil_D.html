@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil | Merenda+</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/navbar_D.css">
+  <link rel="stylesheet" href="../../assets/css/perfil_D.css">
+</head>
+<body>
+    <nav class="navbar-merenda">
+        <a href="home_D.html" class="nav-brand">Merenda<span>+</span></a>
+        <div class="nav-links">
+            <a href="relatorios_D.html">Relatórios</a>
+            <a href="estoque_D.html">Estoque</a>
+            <a href="cardapio_D.html">Cardápio</a>
+            <a href="reportes_D.html">Reportes</a>
+            <a href="alertas_D.html">Alertas</a>
+        </div>
+        <div class="nav-actions">
+            <a href="perfil_D.html" class="btn-perfil ativo">
+                <i class="bi bi-person-circle"></i> Perfil
+            </a>
+            <button class="btn-sair" onclick="sair()">
+                <i class="bi bi-box-arrow-right"></i> Sair
+            </button>
+        </div>
+    </nav>
+    <div class="pagina-container">
+        <div class="row">
+            <div class="col-perfil">
+                <div class="card-perfil">
+                    <div class="perfil-header">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                            class="perfil-foto" width="110" height="110" alt="Foto de perfil">
+                        <h3 class="perfil-nome" id="nome">-</h3>
+                        <span class="perfil-role" id="role-label">Diretor(a) Escolar</span>
+                    </div>
+                    <div class="perfil-body">
+                        <div class="dado-item">
+                            <span class="dado-label"><i class="bi bi-person"></i>Nome completo</span>
+                            <span class="dado-valor" id="nome-completo">-</span>
+                        </div>
+                        <div class="dado-item">
+                            <span class="dado-label"><i class="bi bi-at"></i>Login</span>
+                            <span class="dado-valor" id="login">-</span>
+                        </div>
+                        <div class="dado-item">
+                            <span class="dado-label"><i class="bi bi-envelope"></i>Email</span>
+                            <span class="dado-valor" id="email">-</span>
+                        </div>
+                        <div class="dado-item">
+                            <span class="dado-label"><i class="bi bi-shield-check"></i>Status</span>
+                            <span class="dado-valor">
+                                <span class="status-badge ativo">Ativo</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PERMISSÕES -->
+            <div class="col-usuarios">
+                <div class="card-usuarios">
+                    <div class="usuarios-header">
+                        <h5><i class="bi bi-people me-2"></i>Gerenciamento de Usuários</h5>
+                        <p class="usuarios-subtitulo">Aprove ou recuse contas que aguardam acesso ao sistema</p>
+                    </div>
+                    <div class="usuarios-filtros">
+                        <div class="filtro-busca-wrap">
+                            <i class="bi bi-search"></i>
+                            <input type="text" id="filtro-busca" placeholder="Buscar usuário...">
+                        </div>
+                        <select id="filtro-professor" class="filtro-select">
+                            <option value="">Todos os Usuários</option>
+                        </select>
+                        <select id="filtro-status" class="filtro-select">
+                            <option value="">Todos os Status</option>
+                            <option value="ativo">Ativo</option>
+                            <option value="pendente">Pendente</option>
+                        </select>
+                        <button id="btn-limpar" class="btn-limpar">
+                            <i class="bi bi-arrow-clockwise"></i>Limpar
+                        </button>
+                    </div>
+                
+                    <div class="table-responsive">
+                        <table class="tabela-usuarios">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Usuário</th>
+                                    <th>Perfil</th>
+                                    <th>Status</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela-body"></tbody>
+                        </table>
+                    </div>
+                    <div id="sem-resultados" class="sem-resultados d-none">
+                        <i class="bi bi-people"></i>
+                        <p>Nenhum usuário encontrado com os filtros atuais.</p>
+                    </div>
+                    <div class="usuarios-footer">
+                        <small id="contagem-filtro">Carregando...</small>
+                        <small>Pendentes aguardam aprovação</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function sair() {
+            sessionStorage.removeItem('usuarioCorrente');
+            window.location.href = '/modulos/login/login.html';
+        }
+    </script>
+    <script src="../../assets/js/perfil_D.js"></script>  
+</body>
+</html>

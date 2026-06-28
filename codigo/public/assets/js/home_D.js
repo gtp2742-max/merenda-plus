@@ -118,24 +118,21 @@ function renderizarAlertas(problemas) {
 }
 async function carregarPainel() {
     try {
-        const id = getUsuarioLogadoId();
+        const usuarioLogado = JSON.parse(sessionStorage.getItem("usuarioCorrente"));
  
-        const [resUsuarios, resConsumos, resEstoque, resProblemas] = await Promise.all([
-            fetch(apiUsuarios),
+        const [resConsumos, resEstoque, resProblemas] = await Promise.all([
             fetch(apiConsumos),
             fetch(apiEstoque),
             fetch(apiProblemas)
         ]);
- 
-        const usuarios = await resUsuarios.json();
+
         const consumos = await resConsumos.json();
         const estoques = await resEstoque.json();
         const problemas = await resProblemas.json();
  
-        const usuario = usuarios.find(u => u.id == id);
         const saudacao = document.getElementById("saudacao");
-        if (usuario) {
-            saudacao.textContent = `Olá, ${usuario.nome}! Aqui está o resumo de hoje.`;
+        if (usuarioLogado) {
+            saudacao.textContent = `Olá, ${usuarioLogado.nome}! Aqui está o resumo de hoje.`;
         } else {
             saudacao.textContent = "Usuário não encontrado.";
         }

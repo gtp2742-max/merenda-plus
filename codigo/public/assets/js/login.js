@@ -2,8 +2,8 @@
 const LOGIN_URL = "/modulos/login/login.html";
 let RETURN_URL = "/modulos/login/index.html";
 const API_URL = '/usuarios';
-const mererendeira_URL ="/modulos/home_merendeira.index.html"
-const merendeira_URL = "/modulos/"
+const HOME_DIRETORA_URL ="/modulos/diretora/home_D.html";
+const HOME_MERENDEIRA_URL = "/modulos/merendeira/home_M.html";
 
 // Objeto para o banco de dados de usuários baseado em JSON
 var db_usuarios = {};
@@ -59,21 +59,13 @@ function carregarUsuarios(callback) {
 }
 
 // Verifica se o login do usuário está ok e, se positivo, direciona para a página inicial
-function loginUser (login, senha, role,status) {
-     console.log("verificando") 
-     console.log(role)
-     console.log(senha)
-     console.log(login)
-     console.log(status)
-
+function loginUser (login, senha, role) {
     // Verifica todos os itens do banco de dados de usuarios 
     // para localizar o usuário informado no formulario de login
     for (var i = 0; i < db_usuarios.length; i++) {
-         var usuario = db_usuarios[i];
+        var usuario = db_usuarios[i];
 
-        // Se encontrou login, carrega usuário corrente e salva no Session Storage
-        console.log("usuario")
-        console.log(usuario.role)
+        var roles = Array.isArray(usuario.role) ? usuario.role : [usuario.role];
 
         if (login == usuario.login && senha == usuario.senha && usuario.role.includes(role) && usuario.status == "ativo" ) {
             usuarioCorrente.id = usuario.id;
@@ -82,13 +74,13 @@ function loginUser (login, senha, role,status) {
             usuarioCorrente.nome = usuario.nome;
             usuarioCorrente.role = usuario.role;
             usuarioCorrente.status = usuario.status;
+            usuarioCorrente.roleSelecionado = role;
         
-
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
             sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
 
             // Retorna true para usuário encontrado
-            return true;
+            return role;
         }
     }
 
@@ -100,33 +92,26 @@ function logoutUser () {
     window.location = LOGIN_URL;
 }
 
-
-
 function addUser (nome, login, senha, email,role,status) {
-
     let usuario = { "login": login, "senha": senha, "nome": nome, "email": email,"role":role, "status":status };
      
-   
-     fetch(API_URL, {
+    fetch(API_URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(usuario),
-     })
-        .then(response => response.json())
-        .then(data => {
-         
-    db_usuarios.push(data); // <- CORRETO
-
-    displayMessage("Usuário inserido com sucesso");
     })
-       
-        .catch(error => {
-            console.error('Erro ao inserir usuário via API JSONServer:', error);
-            displayMessage("Erro ao inserir usuário");
+    .then(response => response.json())
+    .then(data => {
+        db_usuarios.push(data); // <- CORRETO
+        displayMessage("Usuário inserido com sucesso");
+    })
+    .catch(error => {
+        console.error('Erro ao inserir usuário via API JSONServer:', error);
+        displayMessage("Erro ao inserir usuário");
    });
- }
+}
 
 function showUserInfo (element) {
     var elemUser = document.getElementById(element);

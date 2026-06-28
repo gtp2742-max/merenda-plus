@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/navbar_D.css">
     <link rel="stylesheet" href="../../assets/css/estoque_D.css">
 </head>
 <body class="d-flex justify-content-center">
+    <nav class="navbar-merenda">
+        <a href="home_D.html" class="nav-brand">Merenda<span>+</span></a>
+        <div class="nav-links">
+            <a href="relatorios_D.html">Relatórios</a>
+            <a href="estoque_D.html">Estoque</a>
+            <a href="cardapio_D.html">Cardápio</a>
+            <a href="reportes_D.html">Reportes</a>
+            <a href="alertas_D.html">Alertas</a>
+        </div>
+        <div class="nav-actions">
+            <a href="perfil_D.html" class="btn-perfil ativo">
+                <i class="bi bi-person-circle"></i> Perfil
+            </a>
+            <button class="btn-sair" onclick="sair()">
+                <i class="bi bi-box-arrow-right"></i> Sair
+            </button>
+        </div>
+    </nav>
+
     <div class="container mt-4 mb-4">
 
         <div class="card shadow p-4">
@@ -156,21 +176,18 @@
                 Mostrar
             </button>
 
-            <!-- Rodapé -->
-            <div class="mt-4 d-flex justify-content-between">
-                
-                <button class="btn btn-primary" onclick="voltar()">
-                    Voltar
-                </button>
-
-            </div>
-
         </div>
 
     </div>
 
     <script src="../../assets/js/estoque_D.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script>
+        function sair() {
+            sessionStorage.removeItem('usuarioCorrente');
+            window.location.href = '/modulos/login/login.html';
+        }
+        function voltar() { window.history.back(); }
+    </script>
 </body>
 </html>

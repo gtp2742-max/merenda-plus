@@ -121,7 +121,7 @@ body {
 /* ── Acessos rápidos ── */
 .grid-acessos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     margin-bottom: 30px;
 }
@@ -213,4 +213,39 @@ body {
     border-radius: 10px;
     padding: 16px;
     font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .grid-metricas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-acessos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-principal {
+        width: 95%;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .grid-metricas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-acessos {
+        grid-template-columns: 1fr;
+    }
+
+    .card-principal {
+        width: 100%;
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .container-principal {
+        padding: 16px;
+    }
 }

@@ -1,0 +1,373 @@
+body {
+    background-color: #dff3e3;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem 3rem;
+}
+
+/* ── Layout duas colunas ── */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.col-perfil {
+    flex: 0 0 300px;
+    max-width: 300px;
+}
+
+.col-usuarios {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ── Card de perfil ── */
+.card-perfil {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.perfil-header {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.perfil-foto {
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.8);
+    object-fit: cover;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.perfil-nome {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+}
+
+.perfil-role {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    background: rgba(255,255,255,0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.perfil-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.dado-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: #f4f6f4;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+}
+
+.dado-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2e7d32;
+}
+
+.dado-label i {
+    margin-right: 0.3rem;
+}
+
+.dado-valor {
+    font-size: 0.92rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-badge.ativo {
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
+
+.status-badge.pendente {
+    background: #fff8e1;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+/* ── Card de usuários ── */
+.card-usuarios {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.usuarios-header {
+    padding: 1.25rem 1.5rem 1rem;
+    border-bottom: 2px solid #e8f5e9;
+}
+
+.usuarios-header h5 {
+    color: #1b5e20;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+}
+
+.usuarios-subtitulo {
+    font-size: 0.82rem;
+    color: #888;
+    margin: 0;
+}
+
+/* ── Filtros ── */
+.usuarios-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fafafa;
+    align-items: center;
+}
+
+.filtro-busca-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: white;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 0.35rem 0.75rem;
+    flex: 1;
+    min-width: 180px;
+}
+
+.filtro-busca-wrap i {
+    color: #aaa;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.filtro-busca-wrap input {
+    border: none;
+    outline: none;
+    font-size: 0.85rem;
+    width: 100%;
+    background: transparent;
+    color: #333;
+}
+
+.filtro-select {
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 0.38rem 0.65rem;
+    font-size: 0.85rem;
+    color: #333;
+    background: white;
+    outline: none;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.filtro-select:focus {
+    border-color: #2e7d32;
+}
+
+.btn-limpar {
+    background: white;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 0.38rem 0.85rem;
+    font-size: 0.85rem;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    white-space: nowrap;
+    transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-limpar:hover {
+    border-color: #2e7d32;
+    color: #1b5e20;
+}
+
+/* ── Tabela ── */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.tabela-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.tabela-usuarios thead tr {
+    background: #f4f6f4;
+    border-bottom: 2px solid #e8f5e9;
+}
+
+.tabela-usuarios thead th {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2e7d32;
+}
+
+
+.tabela-usuarios tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.1s;
+}
+
+.tabela-usuarios tbody tr:hover {
+    background: #f4f9f4;
+}
+
+.tabela-usuarios tbody td {
+    padding: 0.75rem 1rem;
+    color: #333;
+    vertical-align: middle;
+}
+
+.tabela-usuarios tbody td {
+    text-align: center;
+}
+
+.acoes-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-aceitar-js {
+    background: #2e7d32;
+    border: none;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.15s;
+}
+
+.btn-aceitar-js:hover {
+    background: #1b5e20;
+}
+
+.btn-recusar-js {
+    background: white;
+    border: 1.5px solid #e53935;
+    color: #e53935;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.15s;
+}
+
+.btn-recusar-js:hover {
+    background: #e53935;
+    color: white;
+}
+
+/* ── Sem resultados ── */
+.sem-resultados {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #aaa;
+}
+
+.sem-resultados i {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #c8e6c9;
+}
+
+.sem-resultados p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ── Footer ── */
+.usuarios-footer {
+    padding: 0.75rem 1.5rem;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    background: #fafafa;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-perfil {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .col-usuarios {
+        width: 100%;
+    }
+
+    .usuarios-filtros {
+        flex-direction: column;
+    }
+
+    .filtro-busca-wrap,
+    .filtro-select,
+    .btn-limpar {
+        width: 100%;
+    }
+
+    .pagina-container {
+        padding: 0 1rem 2rem;
+        margin: 1rem auto;
+    }
+}
