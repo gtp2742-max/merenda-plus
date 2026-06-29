@@ -19,10 +19,14 @@ const router = jsonServer.router('./db/db.json')
   
 // Para permitir que os dados sejam alterados, altere a linha abaixo
 // colocando o atributo readOnly como false.
-const middlewares = jsonServer.defaults({ noCors: true })
+const middlewares = jsonServer.defaults({
+  static: "./public",
+  noCors: true });
 server.use(middlewares)
 server.use(router)
 
-server.listen(3000, () => {
-  console.log(`JSON Server is running em http://localhost:3000`)
-})
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`JSON Server rodando na porta ${PORT}`);
+});
