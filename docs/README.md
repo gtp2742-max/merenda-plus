@@ -152,7 +152,7 @@ Estes são os protótipos de telas do sistema.
 ✅ [Protótipo Interativo (MarvelApp)](https://marvelapp.com/prototype/97ca7h6) 
 # Metodologia
 
-Detalhes sobre a organização do grupo e o ferramental empregado.
+O desenvolvimento do Merenda+ foi realizado utilizando metodologias ágeis, combinando Design Thinking para levantamento das necessidades dos usuários e Scrum para organização das atividades em três Sprints. A equipe utilizou GitHub para controle de versão do código. A comunicação entre os integrantes ocorreu por meio de reuniões no Discord e contato diário pelo WhatsApp, permitindo o acompanhamento do projeto, distribuição das atividades e integração contínua das funcionalidades desenvolvidas.
 
 ## Ferramentas
 
@@ -162,33 +162,41 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | --------------------------- | ---------- | -------------------------------------------------- |
 | Processo de Design Thinking | Miro       | https://miro.com/app/dashboard/        |
 | Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7620100-ti-1-grupo-4-merenda.git     |
-| Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
+| Hospedagem do site          | Render     | https://plf-es-2026-1-ti1-7620100-merenda-plus-1.onrender.com/modulos/login/login.html |
 | Protótipo Interativo       | MarvelApp  | https://marvelapp.com/prototype/97ca7h6 |
 |                             |            |                                                    |
 
 ## Gerenciamento do Projeto
 
-Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
+O projeto foi desenvolvido utilizando Design Thinking para identificar as necessidades dos usuários e Scrum para organizar o desenvolvimento em três Sprints. A comunicação da equipe ocorreu por meio de reuniões no Discord, conversas diárias pelo WhatsApp e versionamento do código no GitHub, permitindo a integração das funcionalidades e o acompanhamento da evolução do projeto.
 
-![Exemplo de Kanban](images/exemplo-kanban.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
->
-> **Orientações**:
->
-> - [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-> - [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-> - [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+As responsabilidades foram divididas entre os integrantes: 
+ * Gabriel Pandino atuou como líder da equipe, organizando as tarefas e desenvolvendo funcionalidades como login por perfil, alertas, histórico de ocorrências e integração entre módulos; 
+ * Gustavo Alves foi responsável pelo layout e pela lógica de diversas funcionalidades da aplicação; 
+ * Davi Lavalle desenvolveu a documentação do projeto e auxiliou na organização das entregas; 
+ * André Luiz Pinheiro participou da definição de ideias e do desenvolvimento de funcionalidades relacionadas ao controle da merenda escolar. Todas as implementações foram integradas e revisadas em conjunto pela equipe.
 
 # Solução Implementada
 
-Esta seção apresenta todos os detalhes da solução criada no projeto.
+O Merenda+ é uma aplicação Web desenvolvida para auxiliar o gerenciamento da merenda escolar em escolas públicas, proporcionando maior controle sobre o estoque, preparo e consumo dos alimentos, além de facilitar a comunicação entre merendeiras e diretoras.
+
+O sistema possui autenticação por perfil, direcionando o usuário para funcionalidades específicas de acordo com seu tipo de acesso (Merendeira ou Diretora). A solução foi implementada utilizando HTML5, CSS3, JavaScript, Bootstrap e JSON Server para simulação do banco de dados.
+
+Entre as principais funcionalidades implementadas estão:
+
+* Login com seleção de perfil (Merendeira e Diretora);
+* Controle e consulta de estoque de alimentos;
+* Visualização do cardápio escolar;
+* Registro do preparo da merenda;
+* Registro do consumo diário;
+* Reporte de problemas pelas merendeiras;
+* Geração automática de alertas de baixo estoque e produtos próximos ao vencimento;
+* Visualização e gerenciamento de ocorrências pela diretora;
+* Marcação de ocorrências como resolvidas com armazenamento em histórico;
+* Consulta ao histórico de alertas e ocorrências resolvidas;
+* Perfil do usuário e navegação padronizada por meio de barras de navegação específicas para cada perfil.
+
+A aplicação integra todas essas funcionalidades em um único ambiente, permitindo que informações registradas por um perfil sejam utilizadas por outro, como ocorre no fluxo de reportes → alertas → resolução → histórico, tornando o gerenciamento da merenda mais organizado, seguro e eficiente. Essa integração atende ao objetivo principal do projeto de oferecer uma solução digital para melhorar o controle da alimentação escolar e apoiar a tomada de decisão pelos responsáveis.
 
 ## Vídeo do Projeto
 
