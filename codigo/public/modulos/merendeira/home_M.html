@@ -8,12 +8,32 @@
     <link rel="stylesheet" href="../../assets/css/home_M.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="../../assets/css/home_M.css">
-    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/navbar_M.css">
+    <link rel="stylesheet" href="../../assets/css/home_M.css">
+</head>
 
 <body>
 
     <div class="container-principal">
+        <nav class="navbar-merenda-m">
+            <a href="home_M.html" class="nav-brand">Merenda<span>+</span></a>
+            <div class="nav-links">
+                <a href="cardapio_M.html">Cardápio</a>
+                <a href="preparo_M.html">Preparo</a>
+                <a href="registrar_consumo_M.html">Consumo</a>
+                <a href="estoque_M.html">Estoque</a>
+                <a href="reportar_problema_M.html">Reportar</a>
+            </div>
+            <div class="nav-actions">
+                <a href="perfil_M.html" class="btn-perfil">
+                    <i class="bi bi-person-circle"></i> Perfil
+                </a>
+                <button class="btn-sair" onclick="sair()">
+                    <i class="bi bi-box-arrow-right"></i> Sair
+                </button>
+            </div>
+        </nav>
 
         <h1 class="titulo-sistema">Sistema Merenda +</h1>
 
@@ -68,6 +88,12 @@
         </div>
 
     </div>
+    <script>
+        function sair() {
+            sessionStorage.removeItem('usuarioCorrente');
+            window.location.href = '/modulos/login/login.html';
+        }
+    </script>
 
     <script src="../../assets/js/home_M.js"></script>
 </body>

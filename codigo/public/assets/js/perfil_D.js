@@ -15,7 +15,7 @@ function carregarPerfil() {
 
 async function carregarUsuarios() {
     const resposta = await fetch(apiURL);
-    if(!resposta.ok) throw new ERROR("Erro ao buscar usuários");
+    if(!resposta.ok) throw new Error("Erro ao buscar usuários");
     return await resposta.json();
 }
 

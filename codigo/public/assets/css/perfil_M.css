@@ -1,0 +1,106 @@
+body {
+    background-color: #dff3e3;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-container {
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 0 1.5rem 3rem;
+}
+
+.card-perfil {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.perfil-header {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.perfil-foto {
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.8);
+    object-fit: cover;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.perfil-nome {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+}
+
+.perfil-role {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    background: rgba(255,255,255,0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.perfil-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.dado-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: #f4f6f4;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+}
+
+.dado-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2e7d32;
+}
+
+.dado-label i {
+    margin-right: 0.3rem;
+}
+
+.dado-valor {
+    font-size: 0.92rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-badge.ativo {
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
+
+@media (max-width: 576px) {
+    .pagina-container {
+        margin: 1rem auto;
+        padding: 0 1rem 2rem;
+    }
+}

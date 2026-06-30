@@ -16,7 +16,7 @@
       "id": "2",
       "login": "diretora",
       "senha": "123",
-      "nome": "Diretora",
+      "nome": "Flavia",
       "email": "diretora@abc.com",
       "status": "ativo",
       "role": [
@@ -340,6 +340,10 @@
         {
           "nome": "Batata",
           "quantidade": "4 kg"
+        },
+        {
+          "nome": "Farofa",
+          "quantidade": "2 kg"
         }
       ],
       "observacao": "Substituído óleo por azeite"

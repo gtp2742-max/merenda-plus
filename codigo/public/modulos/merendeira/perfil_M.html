@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Merenda+</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/navbar_M.css">
+    <link rel="stylesheet" href="../../assets/css/perfil_M.css">
+</head>
+<body>
+    <nav class="navbar-merenda-m">
+        <a href="home_M.html" class="nav-brand">Merenda<span>+</span></a>
+        <div class="nav-links">
+            <a href="cardapio_M.html">Cardápio</a>
+            <a href="preparo_M.html">Preparo</a>
+            <a href="registrar_consumo_M.html">Consumo</a>
+            <a href="estoque_M.html">Estoque</a>
+            <a href="reportar_problema_M.html">Reportar</a>
+        </div>
+        <div class="nav-actions">
+            <a href="perfil_D.html" class="btn-perfil ativo">
+                <i class="bi bi-person-circle"></i> Perfil
+            </a>
+            <button class="btn-sair" onclick="sair()">
+                <i class="bi bi-box-arrow-right"></i> Sair
+            </button>
+        </div>
+    </nav>
+    <div class="pagina-container">
+        <div class="card-perfil">
+            <div class="perfil-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                    class="perfil-foto" width="110" height="110" alt="Foto de perfil">
+                <h3 class="perfil-nome" id="nome">-</h3>
+                <span class="perfil-role">Merendeira</span>
+            </div>
+            <div class="perfil-body">
+                <div class="dado-item">
+                    <span class="dado-label"><i class="bi bi-person"></i>Nome completo</span>
+                    <span class="dado-valor" id="nome-completo">-</span>
+                </div>
+                <div class="dado-item">
+                    <span class="dado-label"><i class="bi bi-at"></i>Login</span>
+                    <span class="dado-valor" id="login">-</span>
+                </div>
+                <div class="dado-item">
+                    <span class="dado-label"><i class="bi bi-envelope"></i>Email</span>
+                    <span class="dado-valor" id="email">-</span>
+                </div>
+                <div class="dado-item">
+                    <span class="dado-label"><i class="bi bi-shield-check"></i>Status</span>
+                    <span class="dado-valor">
+                        <span class="status-badge ativo">Ativo</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/js/login.js"></script>
+    <script src="../../assets/js/perfil_M.js"></script>
+    <script>
+        function sair() {
+            sessionStorage.removeItem('usuarioCorrente');
+            window.location.href = '/modulos/login/login.html';
+        }
+    </script>    
+</body>
+</html>
