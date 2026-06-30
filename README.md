@@ -11,7 +11,6 @@ Além disso, o projeto pretende facilitar o trabalho da direção escolar e das 
 * Davi Lavalle Carneiro
 * Gabriel Tavares Pandino
 * Gustavo Alves Costa Sousa
-* Pedro Ferretti Martins Maia
 
 ## Professores responsáveis
 
