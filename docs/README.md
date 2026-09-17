@@ -3,7 +3,7 @@
 Informações básicas do projeto.
 
 * **Projeto:** Merenda Plus
-* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7620100-ti-1-grupo-4-merenda.git
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7620100-merenda-plus
 * **Membros da equipe:**
 
   * [André Luiz Pinheiro Lopes](https://github.com/decoprodat)
@@ -107,17 +107,9 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 | Merendeira | registrar o uso dos alimentos | manter o estoque sempre atualizado |
 | Merendeira | receber orientações sobre o preparo das refeições | garantir qualidade e padrão na alimentação |
 
-
-## Proposta de Valor
-
-
-##### Proposta de valor para Persona XPTO ⚠️ EXEMPLO ⚠️
-
+## Propostas de valor
 ![Proposta de valor Diretora](images/Proposta_de_Valor_Diretora.jpg)
 ![Proposta de valor Mereideira](images/Proposta_de_Valor_Mereideira.jpg)
-
-
-
 ## Projeto de Interface
 
 Artefatos relacionados com a interface e a interacão do usuário na proposta de solução.
@@ -125,8 +117,6 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 ### Wireframes
 
 Estes são os protótipos de telas do sistema.
-
-
 
 ![Wireframe login](images/Wireframe_login.PNG)
 ![Wireframe home merendeira](images/Wireframe_home_merendeira.PNG)
@@ -161,8 +151,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
 | Processo de Design Thinking | Miro       | https://miro.com/app/dashboard/        |
-| Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7620100-ti-1-grupo-4-merenda.git     |
-| Hospedagem do site          | Render     | https://plf-es-2026-1-ti1-7620100-merenda-plus-1.onrender.com/modulos/login/login.html |
+| Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7620100-merenda-plus    |
 | Protótipo Interativo       | MarvelApp  | https://marvelapp.com/prototype/97ca7h6 |
 |                             |            |                                                    |
 
@@ -197,11 +186,3 @@ Entre as principais funcionalidades implementadas estão:
 * Perfil do usuário e navegação padronizada por meio de barras de navegação específicas para cada perfil.
 
 A aplicação integra todas essas funcionalidades em um único ambiente, permitindo que informações registradas por um perfil sejam utilizadas por outro, como ocorre no fluxo de reportes → alertas → resolução → histórico, tornando o gerenciamento da merenda mais organizado, seguro e eficiente. Essa integração atende ao objetivo principal do projeto de oferecer uma solução digital para melhorar o controle da alimentação escolar e apoiar a tomada de decisão pelos responsáveis.
-
-## Vídeo do Projeto
-
-O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
-
-[![Vídeo do projeto](images/video.png)](https://www.youtube.com/embed/70gGoFyGeqQ)
-
-> 
