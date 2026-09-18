@@ -3,13 +3,6 @@ const apiEstoque = "/estoque";
 const apiConsumos = "/consumos";
 const apiProblemas = "/reportes_Problemas";
 
-function getUsuarioLogadoId() {
-    const sessao =
-        sessionStorage.getItem("usuarioId") ||
-        localStorage.getItem("usuarioId");
-    return sessao || "2";
-}
-
 function formatarData(dataISO) {
     if (!dataISO) return "—";
     const partes = dataISO.split("-");
