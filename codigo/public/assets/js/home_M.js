@@ -5,9 +5,11 @@ const apiConsumos = "/consumos";
 const apiEstoque = "/estoque";
 
 function getUsuarioLogadoId() {
-    return sessionStorage.getItem("usuarioId") ||
-           localStorage.getItem("usuarioId") ||
-           "4";
+    const usuarioCorrente = JSON.parse(
+        sessionStorage.getItem("usuarioCorrente")
+    );
+
+    return usuarioCorrente?.id || null;
 }
 
 function getCardapioHoje(cardapios) {

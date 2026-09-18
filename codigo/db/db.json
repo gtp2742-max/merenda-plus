@@ -2,103 +2,21 @@
   "usuarios": [
     {
       "id": "1",
-      "login": "admin",
+      "login": "diretora",
       "senha": "123",
-      "nome": "Joana Maria",
-      "email": "admin@abc.com",
+      "nome": "Mariana Souza",
+      "email": "diretora@merendaplus.demo",
       "status": "ativo",
-      "role": [
-        "merendeira",
-        "diretora"
-      ]
+      "role": ["diretora"]
     },
     {
       "id": "2",
-      "login": "diretora",
-      "senha": "123",
-      "nome": "Flavia",
-      "email": "diretora@abc.com",
-      "status": "ativo",
-      "role": [
-        "diretora"
-      ]
-    },
-    {
-      "id": "3",
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "status": "ativo",
-      "role": [
-        "merendeira",
-        "diretora"
-      ]
-    },
-    {
-      "id": "4",
       "login": "merendeira",
       "senha": "123",
       "nome": "Ana Paula Ferreira",
-      "email": "anapaula@gmail.com",
+      "email": "merendeira@merendaplus.demo",
       "status": "ativo",
-      "role": [
-        "merendeira"
-      ]
-    },
-    {
-      "id": "5",
-      "login": "teste9",
-      "senha": "12345",
-      "nome": "teste9",
-      "email": "teste",
-      "status": "ativo",
-      "role": "diretora"
-    },
-    {
-      "id": "6",
-      "login": "teste9",
-      "senha": "123",
-      "nome": "teste9",
-      "email": "teste@gmail.com",
-      "status": "ativo",
-      "role": "diretora"
-    },
-    {
-      "login": "Gabriel",
-      "senha": "123",
-      "nome": "Gabriel Pandino",
-      "email": "gab",
-      "role": "diretora",
-      "status": "pendente",
-      "id": "7"
-    },
-    {
-      "login": "Gabriel",
-      "senha": "123",
-      "nome": "Gabriel Pandino",
-      "email": "gab",
-      "role": "diretora",
-      "status": "pendente",
-      "id": "8"
-    },
-    {
-      "login": "Daniel",
-      "senha": "123",
-      "nome": "Daniel tavares",
-      "email": "dani",
-      "role": "diretora",
-      "status": "pendente",
-      "id": "9"
-    },
-    {
-      "login": "Lucas",
-      "senha": "123",
-      "nome": "Lucas Crespo",
-      "email": "lucas@crespo.com",
-      "role": "diretora",
-      "status": "ativo",
-      "id": "1M8_oLT"
+      "role": ["merendeira"]
     }
   ],
   "funcionalidades": [
