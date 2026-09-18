@@ -67,7 +67,7 @@ function loginUser (login, senha, role) {
 
         var roles = Array.isArray(usuario.role) ? usuario.role : [usuario.role];
 
-        if (login == usuario.login && senha == usuario.senha && usuario.role.includes(role) && usuario.status == "ativo" ) {
+        if (login == usuario.login && senha == usuario.senha && roles.includes(role) && usuario.status == "ativo" ) {
             usuarioCorrente.id = usuario.id;
             usuarioCorrente.login = usuario.login;
             usuarioCorrente.email = usuario.email;
