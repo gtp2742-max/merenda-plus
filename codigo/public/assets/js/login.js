@@ -1,6 +1,6 @@
 
 const LOGIN_URL = "/modulos/login/login.html";
-let RETURN_URL = "/modulos/login/index.html";
+let RETURN_URL = "/modulos/login/login.html";
 const API_URL = '/usuarios';
 const HOME_DIRETORA_URL ="/modulos/diretora/home_D.html";
 const HOME_MERENDEIRA_URL = "/modulos/merendeira/home_M.html";
