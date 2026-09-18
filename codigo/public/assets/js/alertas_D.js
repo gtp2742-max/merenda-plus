@@ -245,13 +245,17 @@ async function marcarReporteComoResolvido(id) {
   };
 
   try {
-    await fetch(`${apiReportes}/${id}`, {
+    const respostaPut = await fetch(`${apiReportes}/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(reporteAtualizado)
     });
+
+    if (!respostaPut.ok) {
+      throw new Error("Erro ao atualizar reporte: " +respostaPut.status);
+    }
 
     const historico = {
       origem: "Reporte de Merendeira",
@@ -264,13 +268,17 @@ async function marcarReporteComoResolvido(id) {
       status: "Resolvido"
     };
 
-    await fetch(apiHistorico, {
+    const respostaHistorico = await fetch(apiHistorico, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(historico)
     });
+
+    if (!respostaHistorico.ok) {
+      throw new Error("Erro ao salvar histórico: " + respostaHistorico.status);
+    }
 
     mostrarMensagem("Reporte marcado como resolvido e salvo no histórico.", "success");
 

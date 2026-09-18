@@ -69,9 +69,7 @@ function renderizarReportes(){
         if(selecionado){
             cardClasse += " selecionado";
         }
-        if (resolvido){
-            cardClasse += " resolvido";
-        }
+
         const statusClasse = resolvido ? "status-resolvido" : "status-pendente";
         let badgeSelecionado ="";
         if (selecionado){
@@ -129,10 +127,11 @@ async function marcarComoResolvido(id){
 
     if(!reporte){
         mostrarMensagem("Reporte não encontrado.", "danger");
+        return;
     }
 
     if(reporte.status === "Resolvido"){
-        mostrarMensagem("Este reporte já esta resolvido.", "warning");
+        mostrarMensagem("Este reporte já está resolvido.", "warning");
         return;
     }
 
