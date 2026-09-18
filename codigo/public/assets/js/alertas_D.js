@@ -1,6 +1,7 @@
 const apiEstoque = "/estoque";
 const apiReportes = "/reportes_Problemas";
 const apiHistorico = "/historico_alertas";
+const apiUsuarios = "/usuarios";
 
 const listaAlertas = document.getElementById("listaAlertas");
 const mensagem = document.getElementById("mensagem");
@@ -10,6 +11,7 @@ let filtroAtual = "Todos";
 let estoque = [];
 let reportes = [];
 let itensTela = [];
+let nomeMerendeira = "Merendeira";
 
 carregarDados();
 
@@ -28,18 +30,30 @@ botoesFiltro.forEach(function (botao) {
 function carregarDados() {
   Promise.all([
     fetch(apiEstoque).then(res => res.json()),
-    fetch(apiReportes).then(res => res.json())
+    fetch(apiReportes).then(res => res.json()),
+    fetch(apiUsuarios).then(res => res.json())
   ])
     .then(function (dados) {
       estoque = dados[0];
       reportes = dados[1];
 
-      montarItensDaTela();
-      renderizarItens();
-    })
-    .catch(function () {
-      mostrarMensagem("Erro ao carregar dados. Verifique se o JSON Server está rodando.", "danger");
+      const usuarios = dados[2];
+      const merendeira = usuarios.find(function (usuario) {
+        return usuario.login === "merendeira";
     });
+
+    if (merendeira) {
+      nomeMerendeira = merendeira.nome;
+    }
+    montarItensDaTela();
+    renderizarItens();
+  })
+  .catch(function (){
+    mostrarMensagem(
+      "Erro ao carregar dados. Verifique se o JSON Server está rodando.",
+      "danger"
+    )
+  })
 }
 
 function montarItensDaTela() {
@@ -240,8 +254,9 @@ async function marcarReporteComoResolvido(id) {
     });
 
     const historico = {
-      origem: "Reporte da Merendeira",
+      origem: "Reporte de Merendeira",
       referenciaId: reporte.id,
+      merendeira: nomeMerendeira,
       tipos: reporte.tipos,
       descricao: reporte.descricao,
       dataReporte: reporte.data,
