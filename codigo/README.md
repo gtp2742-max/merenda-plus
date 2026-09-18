@@ -15,7 +15,6 @@ codigo/
 ├── public/
 │   ├── assets/
 │   │   ├── css/
-│   │   ├── images/
 │   │   └── js/
 │   ├── modulos/
 │   │   ├── diretora/
@@ -51,7 +50,6 @@ Os arquivos são organizados em:
 
 - `assets/css/` — estilos das páginas;
 - `assets/js/` — lógica e integração com a API;
-- `assets/images/` — recursos visuais;
 - `modulos/diretora/` — telas destinadas ao perfil de diretora;
 - `modulos/merendeira/` — telas destinadas ao perfil de merendeira;
 - `modulos/login/` — autenticação e identificação do perfil do usuário.
