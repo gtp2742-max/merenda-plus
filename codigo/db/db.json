@@ -104,18 +104,9 @@
   "reportes_Problemas": [
     {
       "tipos": [
-        "Falta de alimento"
-      ],
-      "descricao": "Falta de batata a duas semanas!",
-      "data": "05/06/2026",
-      "status": "Resolvido",
-      "id": "1"
-    },
-    {
-      "tipos": [
         "Problema com equipamento"
       ],
-      "descricao": "Fogão quebrado",
+      "descricao": "Fogão apresentou falha durante o preparo.",
       "data": "05/06/2026",
       "status": "Resolvido",
       "id": "2"
@@ -124,7 +115,7 @@
       "tipos": [
         "Problema com equipamento"
       ],
-      "descricao": "Geladeira não esta gelando!",
+      "descricao": "Geladeira não está refrigerando adequadamente.",
       "data": "05/06/2026",
       "status": "Resolvido",
       "id": "3"
@@ -134,7 +125,7 @@
         "Falta de alimento",
         "Alimento impróprio para consumo"
       ],
-      "descricao": "Arroz faltou para preparo de almoço hoje",
+      "descricao": "Estoque de arroz insuficiente para o preparo do almoço.",
       "data": "05/06/2026",
       "status": "Resolvido",
       "id": "4"
@@ -144,7 +135,7 @@
         "Falta de alimento",
         "Problema com equipamento"
       ],
-      "descricao": "Problema com a geladeira",
+      "descricao": "Geladeira apresentou falha durante o funcionamento.",
       "data": "11/06/2026",
       "status": "Resolvido",
       "id": "kCC6bpI"
@@ -153,25 +144,16 @@
       "tipos": [
         "Problema na entrega"
       ],
-      "descricao": "Alimento veio estragado na entrega",
+      "descricao": "Foram identificados alimentos impróprios durante o recebimento da entrega.",
       "data": "11/06/2026",
       "status": "Pendente",
       "id": "UksRZ_f"
     },
     {
       "tipos": [
-        "Alimento impróprio para consumo"
-      ],
-      "descricao": "Alimento estragou antes da valida por descuido no armazenamento!",
-      "data": "11/06/2026",
-      "status": "Pendente",
-      "id": "qVGVgij"
-    },
-    {
-      "tipos": [
         "Problema com equipamento"
       ],
-      "descricao": "Problema no freezer!",
+      "descricao": "Freezer apresentou falha de refrigeração.",
       "data": "11/06/2026",
       "status": "Pendente",
       "id": "UoFTsHo"
@@ -180,7 +162,7 @@
       "tipos": [
         "Cardápio não atendido"
       ],
-      "descricao": "Por falta de alimentos fizemos um cardápio alternativo!",
+      "descricao": "Foi necessário preparar um cardápio alternativo devido à falta de ingredientes.",
       "data": "11/06/2026",
       "status": "Pendente",
       "id": "VVI1AfX"
@@ -421,24 +403,26 @@
   ],
   "historico_alertas": [
     {
-      "origem": "Reporte da Merendeira",
-      "referenciaId": 2,
+      "origem": "Reporte de Merendeira",
+      "referenciaId": "2",
+      "merendeira": "Ana Paula Ferreira",
       "tipos": [
         "Problema com equipamento"
       ],
-      "descricao": "Fogão quebrado",
+      "descricao": "Fogão apresentou falha durante o preparo.",
       "dataReporte": "05/06/2026",
       "dataResolucao": "05/06/2026",
       "status": "Resolvido",
       "id": "1"
     },
     {
-      "origem": "Reporte da Merendeira",
-      "referenciaId": 3,
+      "origem": "Reporte de Merendeira",
+      "referenciaId": "3",
+      "merendeira": "Ana Paula Ferreira",
       "tipos": [
         "Problema com equipamento"
       ],
-      "descricao": "Geladeira não esta gelando!",
+      "descricao": "Geladeira não está refrigerando adequadamente.",
       "dataReporte": "05/06/2026",
       "dataResolucao": "05/06/2026",
       "status": "Resolvido",
@@ -452,20 +436,21 @@
         "Falta de alimento",
         "Alimento impróprio para consumo"
       ],
-      "descricao": "Arroz faltou para preparo de almoço hoje",
+      "descricao": "Estoque de arroz insuficiente para o preparo do almoço.",
       "dataReporte": "05/06/2026",
       "dataResolucao": "11/06/2026",
       "status": "Resolvido",
       "id": "87qkKYw"
     },
     {
-      "origem": "Reporte da Merendeira",
+      "origem": "Reporte de Merendeira",
       "referenciaId": "kCC6bpI",
+      "merendeira": "Ana Paula Ferreira",
       "tipos": [
         "Falta de alimento",
         "Problema com equipamento"
       ],
-      "descricao": "Problema com a geladeira",
+      "descricao": "Geladeira apresentou falha durante o funcionamento.",
       "dataReporte": "11/06/2026",
       "dataResolucao": "11/06/2026",
       "status": "Resolvido",
