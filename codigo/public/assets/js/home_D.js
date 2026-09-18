@@ -13,7 +13,7 @@ function calcularSaudeEstoque(estoques) {
     const total = estoques.length;
     if (total === 0) return { porcentagem: 0, normais: 0, baixo: 0, total: 0 };
  
-    const normais = estoques.filter(e => e.quantidade >= 5).length;
+    const normais = estoques.filter(e => e.quantidade > 5).length;
     const baixo = total - normais;
     const porcentagem = (normais / total) * 100;
  

@@ -23,7 +23,7 @@ function getUltimoDespericio(consumos) {
 }
 
 function contarEstoqueBaixo(estoques) {
-    return estoques.filter(e => e.quantidade < 5).length;
+    return estoques.filter(e => e.quantidade <= 5).length;
 }
 
 function badgeStatus(status) {
