@@ -21,69 +21,32 @@
   ],
   "reportes_Problemas": [
     {
-      "tipos": [
-        "Problema com equipamento"
-      ],
+      "id": "1",
+      "tipos": ["Problema com equipamento"],
       "descricao": "Fogão apresentou falha durante o preparo.",
-      "data": "05/06/2026",
-      "status": "Resolvido",
-      "id": "2"
+      "data": "15/09/2026",
+      "status": "Resolvido"
     },
     {
-      "tipos": [
-        "Problema com equipamento"
-      ],
-      "descricao": "Geladeira não está refrigerando adequadamente.",
-      "data": "05/06/2026",
-      "status": "Resolvido",
-      "id": "3"
+      "id": "2",
+      "tipos": ["Falta de alimento"],
+      "descricao": "Estoque de arroz ficou abaixo do necessário para o preparo do almoço.",
+      "data": "16/09/2026",
+      "status": "Resolvido"
     },
     {
-      "tipos": [
-        "Falta de alimento",
-        "Alimento impróprio para consumo"
-      ],
-      "descricao": "Estoque de arroz insuficiente para o preparo do almoço.",
-      "data": "05/06/2026",
-      "status": "Resolvido",
-      "id": "4"
-    },
-    {
-      "tipos": [
-        "Falta de alimento",
-        "Problema com equipamento"
-      ],
-      "descricao": "Geladeira apresentou falha durante o funcionamento.",
-      "data": "11/06/2026",
-      "status": "Resolvido",
-      "id": "kCC6bpI"
-    },
-    {
-      "tipos": [
-        "Problema na entrega"
-      ],
+      "id": "3",
+      "tipos": ["Problema na entrega"],
       "descricao": "Foram identificados alimentos impróprios durante o recebimento da entrega.",
-      "data": "11/06/2026",
-      "status": "Pendente",
-      "id": "UksRZ_f"
+      "data": "18/09/2026",
+      "status": "Pendente"
     },
     {
-      "tipos": [
-        "Problema com equipamento"
-      ],
+      "id": "4",
+      "tipos": ["Problema com equipamento"],
       "descricao": "Freezer apresentou falha de refrigeração.",
-      "data": "11/06/2026",
-      "status": "Pendente",
-      "id": "UoFTsHo"
-    },
-    {
-      "tipos": [
-        "Cardápio não atendido"
-      ],
-      "descricao": "Foi necessário preparar um cardápio alternativo devido à falta de ingredientes.",
-      "data": "11/06/2026",
-      "status": "Pendente",
-      "id": "VVI1AfX"
+      "data": "19/09/2026",
+      "status": "Pendente"
     }
   ],
   "refeicoesPrevistas": {
@@ -92,79 +55,75 @@
   "cardapios": [
     {
       "id": "1",
-      "data": "2026-06-22",
+      "data": "2026-09-19",
       "refeicao": "Almoço",
       "pratoPrincipal": "Carne com Batata",
       "acompanhamento": "Arroz e Feijão",
       "sobremesa": "Banana",
-      "quantidadePrevista": 130,
+      "quantidadePrevista": 120,
       "observacao": "",
-      "status": "Alterado"
+      "status": "Planejado"
     },
     {
       "id": "2",
-      "data": "2026-06-23",
+      "data": "2026-09-21",
       "refeicao": "Almoço",
       "pratoPrincipal": "Frango Assado",
       "acompanhamento": "Arroz e Salada",
       "sobremesa": "Maçã",
-      "quantidadePrevista": 120,
+      "quantidadePrevista": 125,
       "observacao": "",
       "status": "Planejado"
     }
   ],
   "estoque": [
     {
-      "id": "4",
-      "nome": "Macarrão",
-      "quantidade": 12,
+      "id": "1",
+      "nome": "Arroz",
+      "quantidade": 25,
       "unidade": "kg",
-      "validade": "2026-07-01"
+      "validade": "2026-12-15"
     },
     {
+      "id": "2",
       "nome": "Carne",
-      "quantidade": 30,
+      "quantidade": 18,
       "unidade": "kg",
-      "validade": "2026-06-19",
-      "id": "UBstmS6EixY"
+      "validade": "2026-09-24"
     },
     {
-      "nome": "oleo de soja",
+      "id": "3",
+      "nome": "Óleo de soja",
       "quantidade": 5,
-      "unidade": "kg",
-      "validade": "2026-06-10",
-      "id": "IkDCSVTXPVw"
+      "unidade": "L",
+      "validade": "2026-12-20"
     }
   ],
   "preparos": [
     {
       "id": "1",
-      "data": "2026-05-18",
+      "data": "2026-09-19",
       "refeicao": "Almoço",
-      "prato": "Carne com batata",
+      "prato": "Carne com Batata",
       "alimentos": [
         {
           "nome": "Carne",
           "quantidade": "4 kg"
         },
         {
-          "nome": "Feijão",
-          "quantidade": "5 kg"
-        },
-        {
           "nome": "Arroz",
           "quantidade": "5 kg"
         },
         {
-          "nome": "Batata",
+          "nome": "Feijão",
           "quantidade": "4 kg"
         },
         {
-          "nome": "Farofa",
-          "quantidade": "2 kg"
+          "nome": "Batata",
+          "quantidade": "4 kg"
         }
       ],
-      "observacao": "Substituído óleo por azeite"
+      "observacao": "Preparo realizado conforme o cardápio planejado."
     }
   ],
   "relatorios": [
@@ -302,77 +261,45 @@
   "consumos": [
     {
       "id": "1",
-      "refeicaoDoDia": "Carne, batata, feijão e salada",
-      "data": "2026-05-18",
+      "refeicaoDoDia": "Carne com Batata | Arroz e Feijão | Banana",
+      "data": "2026-09-18",
       "refeicaoTipo": "Almoço",
-      "quantidadeServida": 120,
-      "quantidadeSobra": 10,
-      "desperdicio": 7.7
+      "quantidadeServida": 118,
+      "quantidadeSobra": 8,
+      "desperdicio": 6.8
     },
     {
-      "refeicaoDoDia": "Frango Assado | Arroz e Salada | Maçã",
-      "data": "2026-06-25",
+      "id": "2",
+      "refeicaoDoDia": "Carne com Batata | Arroz e Feijão | Banana",
+      "data": "2026-09-19",
       "refeicaoTipo": "Almoço",
-      "quantidadeServida": 200,
-      "quantidadeSobra": 10,
-      "desperdicio": 8.33,
-      "id": "jDA50-E"
+      "quantidadeServida": 120,
+      "quantidadeSobra": 6,
+      "desperdicio": 5
     }
   ],
   "historico_alertas": [
     {
+      "id": "1",
+      "origem": "Reporte de Merendeira",
+      "referenciaId": "1",
+      "merendeira": "Ana Paula Ferreira",
+      "tipos": ["Problema com equipamento"],
+      "descricao": "Fogão apresentou falha durante o preparo.",
+      "dataReporte": "15/09/2026",
+      "dataResolucao": "16/09/2026",
+      "status": "Resolvido"
+    },
+    {
+      "id": "2",
       "origem": "Reporte de Merendeira",
       "referenciaId": "2",
       "merendeira": "Ana Paula Ferreira",
-      "tipos": [
-        "Problema com equipamento"
-      ],
-      "descricao": "Fogão apresentou falha durante o preparo.",
-      "dataReporte": "05/06/2026",
-      "dataResolucao": "05/06/2026",
-      "status": "Resolvido",
-      "id": "1"
-    },
-    {
-      "origem": "Reporte de Merendeira",
-      "referenciaId": "3",
-      "merendeira": "Ana Paula Ferreira",
-      "tipos": [
-        "Problema com equipamento"
-      ],
-      "descricao": "Geladeira não está refrigerando adequadamente.",
-      "dataReporte": "05/06/2026",
-      "dataResolucao": "05/06/2026",
-      "status": "Resolvido",
-      "id": "2"
-    },
-    {
-      "origem": "Reporte de Merendeira",
-      "referenciaId": "4",
-      "merendeira": "Ana Paula Ferreira",
-      "tipos": [
-        "Falta de alimento",
-        "Alimento impróprio para consumo"
-      ],
-      "descricao": "Estoque de arroz insuficiente para o preparo do almoço.",
-      "dataReporte": "05/06/2026",
-      "dataResolucao": "11/06/2026",
-      "status": "Resolvido",
-      "id": "87qkKYw"
-    },
-    {
-      "origem": "Reporte de Merendeira",
-      "referenciaId": "kCC6bpI",
-      "merendeira": "Ana Paula Ferreira",
-      "tipos": [
-        "Falta de alimento",
-        "Problema com equipamento"
-      ],
-      "descricao": "Geladeira apresentou falha durante o funcionamento.",
-      "dataReporte": "11/06/2026",
-      "dataResolucao": "11/06/2026",
-      "status": "Resolvido",
-      "id": "D17zl5C"
+      "tipos": ["Falta de alimento"],
+      "descricao": "Estoque de arroz ficou abaixo do necessário para o preparo do almoço.",
+      "dataReporte": "16/09/2026",
+      "dataResolucao": "17/09/2026",
+      "status": "Resolvido"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
