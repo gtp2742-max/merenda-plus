@@ -38,9 +38,7 @@ function initLoginApp () {
         RETURN_URL = returnURL || RETURN_URL
         
         // INICIALIZA BANCO DE DADOS DE USUÁRIOS
-        carregarUsuarios(() => {
-            console.log('Usuários carregados...');
-        });
+        carregarUsuarios(() => {});
     }
 };
 
@@ -104,7 +102,7 @@ function addUser (nome, login, senha, email,role,status) {
     })
     .then(response => response.json())
     .then(data => {
-        db_usuarios.push(data); // <- CORRETO
+        db_usuarios.push(data);
         displayMessage("Usuário inserido com sucesso");
     })
     .catch(error => {

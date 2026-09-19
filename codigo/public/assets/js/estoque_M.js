@@ -16,14 +16,13 @@ const dadosSalvos = localStorage.getItem('meuEstoque');
 fetch("/estoque")
   .then(res => res.json())
   .then(dados => {
-    console.log("Conectado ao Banco de Dados com sucesso!");
     estoque = dados;
     salvarNoLocal();
     renderizarIniciando(estoque);
     carregarValidade(); 
   })
   .catch(err => {
-    console.log("Banco de dados offline. Tentando carregar do LocalStorage...", err);
+    console.warn("Banco de dados offline. Tentando carregar do LocalStorage...", err);
 
     if (dadosSalvos) {
       estoque = JSON.parse(dadosSalvos);

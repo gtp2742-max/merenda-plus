@@ -30,8 +30,6 @@ function mostrarDados(mes) {
 
             });
 
-            console.log(grafico)
-
             if (grafico != null) {
                 grafico.destroy()
             }
