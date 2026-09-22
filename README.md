@@ -211,7 +211,7 @@ Entre os dados armazenados estão:
 ### 1. Clone o repositório
 
 ```bash
-git clone <URL-DO-REPOSITORIO>
+git clone https://github.com/gtp2742-max/merenda-plus.git
 ```
 
 ### 2. Entre na aplicação
