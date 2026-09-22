@@ -186,3 +186,19 @@ Entre as principais funcionalidades implementadas estão:
 * Perfil do usuário e navegação padronizada por meio de barras de navegação específicas para cada perfil.
 
 A aplicação integra todas essas funcionalidades em um único ambiente, permitindo que informações registradas por um perfil sejam utilizadas por outro, como ocorre no fluxo de reportes → alertas → resolução → histórico, tornando o gerenciamento da merenda mais organizado, seguro e eficiente. Essa integração atende ao objetivo principal do projeto de oferecer uma solução digital para melhorar o controle da alimentação escolar e apoiar a tomada de decisão pelos responsáveis.
+
+## Screenshots da aplicação
+
+Para a apresentação do projeto em portfólio, foram registradas capturas da versão final preparada para demonstração.
+
+As imagens estão disponíveis em [`portfolio/screenshots/`](portfolio/screenshots/) e apresentam os principais fluxos e interfaces do sistema, incluindo:
+
+- login;
+- painel da merendeira;
+- reporte de problemas;
+- painel da diretora;
+- gerenciamento de reportes;
+- controle de estoque;
+- alertas e ocorrências.
+
+Para uma visão geral do projeto, tecnologias utilizadas, instruções de execução e contribuições individuais, consulte o [README principal](../README.md).
