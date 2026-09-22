@@ -6,6 +6,12 @@ O projeto foi desenvolvido no **1º período de Engenharia de Software da PUC Mi
 
 A proposta surgiu da necessidade de substituir controles manuais e informações dispersas por um fluxo digital simples, permitindo acompanhar desde a preparação das refeições até problemas operacionais e alertas relacionados ao estoque.
 
+### 🌐 Demo online
+
+Acesse a aplicação: **[merenda-plus.onrender.com](https://merenda-plus.onrender.com)**
+
+> O projeto está hospedado em uma instância gratuita do Render. Após um período de inatividade, o primeiro acesso pode levar alguns segundos enquanto o serviço é iniciado.
+
 <p align="center">
   <img src="docs/portfolio/screenshots/home-diretora.png" alt="Painel da Diretora do Merenda+" width="850">
 </p>
